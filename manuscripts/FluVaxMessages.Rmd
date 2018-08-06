@@ -1,0 +1,89 @@
+---
+title             : "Protection Motivation Theory Seasonal Influenza Vaccine"
+shorttitle        : "PMT - Flu vax"
+
+author: 
+  - name          : "Mathew Ling"
+    affiliation   : "1"
+    corresponding : yes    
+    address       : "Deakin University Locked Bag 20000"
+    email         : "m.ling@deakin.edu.au"
+  - name          : "Emily J. Kothe"
+    affiliation   : "1"
+  - name          : "Barbara A. Mullan"
+    affiliation   : "2"  
+
+affiliation:
+  - id            : "1"
+    institution   : "Deakin University, Geelong, Australia, Misinformation Lab, School of Psychology"
+  - id            : "2"
+    institution   : "Health Psychology and Behavioural Medicine Research Group, School of Psychology and Speech Pathology, Curtin University, Perth, Australia"
+
+
+author_note: |
+  
+  Mathew Ling, Misinformation Lab, School of Psychology, Deakin University, Australia; Emily J. Kothe, Misinformation Lab, School of Psychology, Deakin University, Australia; Barbara A. Mullan, Health Psychology and Behavioural Medicine Research Group, School of Psychology and Speech Pathology, Curtin University, Perth, Australia.
+  
+  This research was supported in part by the Deakin University's Health ResAarch Capacity Building Grant ScHeme (HAtCH).  
+
+abstract: |
+  Enter abstract here. Each new line herein must be indented, like this line.
+  
+keywords          : "Protection Motivation Theory, Immunisation, Seasonal Influenza"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+figsintext        : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : yes
+mask              : no
+
+class             : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r load_packages, include = FALSE}
+library("papaja")
+```
+
+```{r analysis_preferences}
+# Seed for random number generation
+set.seed(42)
+```
+
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+## Material
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+
+# Results
+
+# Discussion
+
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
