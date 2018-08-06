@@ -5,3 +5,10 @@
 .dropbox
 desktop.ini
 data/
+*.pdf
+*.ttt
+*.out
+*.tex
+*.docx
+*.aux
+*.Rproj
