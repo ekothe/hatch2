@@ -1,20 +1,14 @@
 ### add libraries
 #devtools::install_github("lingtax/Qualtrics")
 
-library(Qualtrics)
 library(readr)
 library(pointblank)
 library(dplyr)
 
 ## Set the filename for the data you want to work with in this session
-filename <- "data/final_raw_data.csv"
+filename <- "data/raw_anon.csv"
 
-## Read in data
-dat<-read_qualtrics(filename)
-
-##  Read in variable names from metadata and rename according to old name match
-metadata <- read_csv("metadata.csv")
-names(dat)[match(metadata$import_name,names(dat))] <- metadata$var_name
+dat <- read_csv(filename)
 
 ## Change column types for the columns I potentially care about 
 dat <- dat %>% 
@@ -113,7 +107,6 @@ col_check <-
     col_exists(column = finished) %>%
     col_exists(column = recorded_date) %>%
     col_exists(column = response_id) %>%
-    col_exists(column = distribution_channel) %>%
     col_exists(column = user_language) %>%
     col_exists(column = age) %>%
     col_exists(column = gender) %>%
@@ -584,7 +577,4 @@ col_check <-
       incl_na = TRUE,
       notify_count = 1) %>%
   interrogate()
-get_html_summary(col_check, output_file = "col_check_validation_report-2018-07-24.html", output_dir = "validation")
-
-write_csv(dat, "data/dat_col_passed.csv")
-  
+get_html_summary(col_check, output_file = "col_check_validation_report-2018-08-06.html", output_dir = "validation")
