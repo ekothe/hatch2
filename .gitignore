@@ -12,3 +12,4 @@ data/
 *.docx
 *.aux
 *.Rproj
+manuscripts/r-references.bib
