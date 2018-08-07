@@ -179,7 +179,7 @@ sev<-apa_print(t_out)
 ```
 
 ```{r plotsev, warning=FALSE}
-sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot() + theme_apa()
+sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Severity Score")
 ```
 
 
@@ -193,8 +193,9 @@ sus<-apa_print(t_out)
 ```
 
 ```{r plotsus, warning=FALSE}
-susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot() + theme_apa()
+susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Susceptibility Score")
 ```
+
 
 ```{r mrr_int, warning=FALSE}
 
@@ -206,7 +207,7 @@ mrr<-apa_print(t_out)
 ```
 
 ```{r plotmrr, warning=FALSE}
-mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()
+mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()  + labs(x = "Message", y = "MRR Score")
 ```
 
 ```{r se_int}
@@ -219,7 +220,7 @@ se<-apa_print(t_out)
 ```
 
 ```{r plotse, warning=FALSE}
-seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot() + theme_apa()
+seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Self-Efficacy Score")
 ```
 
 ```{r re_int}
@@ -232,7 +233,7 @@ re<-apa_print(t_out)
 ```
 
 ```{r plotre, warning=FALSE}
-replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot() + theme_apa()
+replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot() + theme_apa()  + labs(x = "Message", y = "Response Efficacy Score")
 ```
 
 ```{r rc_int, warning=FALSE}
@@ -245,18 +246,18 @@ rc<-apa_print(t_out)
 ```
 
 ```{r plotrc, warning=FALSE}
-rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot() + theme_apa() 
+rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Response Costs Score")
 ```
 
 A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to reduce fossil fuel consumption relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
 
 
 ```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
-ggplot(climate, aes(condition, cc_int)) + geom_boxplot() + theme_apa() + coord_flip()
+ggplot(climate, aes(condition, cc_int)) + geom_boxplot() + theme_apa() + coord_flip() + labs(x = "", y = "Intention")
 ```
 
 ```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
-plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2)
+plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2, labels = c("A", "B", "C", "D", "E", "F"))
 ```
 
 ```{r int, results="asis"}
