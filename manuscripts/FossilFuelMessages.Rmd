@@ -50,7 +50,6 @@ library(readr)
 library(dplyr)
 library(broom)
 library(here)
-library(kableExtra)
 library(ggplot2)
 library(cowplot)
 ```
@@ -200,14 +199,14 @@ susplot <- ggplot(filter(climate, condition =="Control" | condition == "Suscepti
 ```{r mrr_int, warning=FALSE}
 
 t_out <- t.test(cc_int ~ as.factor(condition), 
-                data = filter(climate, condition =="Control" | condition == "Maladpative Response Rewards"))
+                data = filter(climate, condition =="Control" | condition == "MRR"))
 
 mrr_tidy<-tidy(t_out)
 mrr<-apa_print(t_out)
 ```
 
 ```{r plotmrr, warning=FALSE}
-mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "Maladpative Response Rewards"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()
+mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()
 ```
 
 ```{r se_int}
@@ -249,7 +248,7 @@ rc<-apa_print(t_out)
 rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot() + theme_apa() 
 ```
 
-A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to vaccinate relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
+A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to reduce fossil fuel consumption relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
 
 
 ```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
@@ -275,7 +274,7 @@ int_tidy$p.value <- printp(int_tidy$p.value)
 int_tidy <- int_tidy %>% 
   select(comparisons, estimate1, estimate2, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to vaccinate relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
 ```
 
 ```{r severity_coi}
@@ -302,7 +301,7 @@ sus<-apa_print(t_out)
 
 ```{r mrr_coi}
 
-test <-  filter(climate, condition =="Control" | condition == "Maladpative Response Rewards")
+test <-  filter(climate, condition =="Control" | condition == "MRR")
 t_out <- t.test(test$cc_mrr ~ as.factor(test$condition))
 
 mrr_tidy<-tidy(t_out)
