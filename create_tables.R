@@ -15,17 +15,6 @@ dat<-dat %>%
     ideology_economic = "Ideology - Economic",
     ideology_social = "Ideology - Social")
 
-tab<-CreateTableOne(vars = c("age", 
-                             "education",
-                             "gender",
-                             "household_income", 
-                             "ideology_general", 
-                             "ideology_economic", 
-                             "ideology_social"), 
-                    data = dat, strata = "study", test = FALSE)
-
-write.csv(print(tab, varLabels = T), row.names = TRUE, "manuscripts/demo.csv")
-
 climate <- dat %>% 
   filter(study=="Climate Change")
 
@@ -58,7 +47,7 @@ write.csv(print(tab, varLabels = T), row.names = TRUE, "manuscripts/flu_demo.csv
 
 dat<-dat %>% 
   set_variable_labels(
-    flu_mrr = "Maladaptive response rewards",
+    flu_mrr = "MRR",
     flu_sev = "Severity",
     flu_sus = "Susceptibility",
     flu_re = "Response Efficacy",
@@ -76,7 +65,6 @@ flu_measures<-CreateTableOne(vars = c("flu_mrr",
                              data = flu, strata = "condition", test = FALSE)
 
 write.csv(print(flu_measures, varLabels = T), row.names = TRUE, "manuscripts/flu_measures.csv")
-
 
 
 climate_measures<-CreateTableOne(vars = c("cc_mrr", 
