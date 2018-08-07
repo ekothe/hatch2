@@ -51,6 +51,8 @@ library(dplyr)
 library(broom)
 library(here)
 library(kableExtra)
+library(ggplot2)
+library(cowplot)
 ```
 
 ```{r setglobal, cache = FALSE, include = TRUE}
@@ -73,7 +75,7 @@ We report how we determined our sample size, all data exclusions (if any), all m
 
 ## Participants
 
-Participants were recruited via Amazon MTurk to take part in a study on "Short study of responses to messages about scientific issues" in exchange for $1.10USD in Amazon credit.  Sample size was determined *a priori*, we aimed to recruit a minimum of 526 participants per cell in order to detect an effect of d =.2, with 80% power, and an alpha of 0.0083. To account for missingness, we oversampled each cell by 20, leading to recruitment target of 546 per condition a total recruitment target of 3822. After removal of duplicate and incomplete submissions\footnote{Complete removal of data from participants with duplicate submissions was required in order to avoid contamination between conditions. Removal of incomplete submissions was required because submission of the completed survey indicated consent}, `r printnum(nrow(climate))` participants were included in this study. The final number of participants in each condition is shown in Table \@ref(tab:cond).
+Participants were recruited via Amazon MTurk to take part in a study on "Short study of responses to messages about scientific issues" in exchange for $1.10USD in Amazon credit.  Sample size was determined *a priori*, we aimed to recruit a minimum of 526 participants per cell in order to detect an effect of d =.2, with 80% power, and an alpha of 0.0083. To account for missingness, we oversampled each cell by 20, leading to recruitment target of 546 per condition and a total recruitment target of 3822. After removal of duplicate and incomplete submissions\footnote{Complete removal of data from participants with duplicate submissions was required in order to avoid contamination between conditions. Removal of incomplete submissions was required because submission of the completed survey indicated consent}, `r printnum(nrow(climate))` participants were included in this study. The final number of participants in each condition is shown in Table \@ref(tab:cond).
 
 ```{r cond, results="asis"}
 
@@ -94,7 +96,7 @@ names(tab)[1] <- "Demographic Characteristic"
 
 Variables<-as.list(c(4:10, 12:19, 21:33))
 
-papaja::apa_table(tab, caption="Demographic characteristics by study", stub_indents = Variables, longtable = TRUE)
+papaja::apa_table(tab, caption="Demographic characteristics of participants", stub_indents = Variables, longtable = TRUE)
 ```
 
 ## Procedure
@@ -170,87 +172,111 @@ We used `r cite_r("manuscripts/r-references.bib")` for all our analyses. All t-t
 ## Pre-registered analyses
 ```{r severity_int}
 
-test <-  filter(climate, condition =="Control" | condition == "Severity")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+t_out <- t.test(cc_int ~ as.factor(condition), 
+                data = filter(climate, condition =="Control" | condition == "Severity"))
 
 sev_tidy<-tidy(t_out)
-
 sev<-apa_print(t_out)
-
 ```
+
+```{r plotsev, warning=FALSE}
+sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot() + theme_apa()
+```
+
 
 ```{r susceptibility_int}
 
-test <-  filter(climate, condition =="Control" | condition == "Susceptibility")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+t_out <- t.test(cc_int ~ as.factor(condition), 
+                data=filter(climate, condition =="Control" | condition == "Susceptibility"))
 
 sus_tidy<-tidy(t_out)
-
 sus<-apa_print(t_out)
-
 ```
 
-```{r mrr_int}
+```{r plotsus, warning=FALSE}
+susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot() + theme_apa()
+```
 
-test <-  filter(climate, condition =="Control" | condition == "Maladpative Response Rewards")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+```{r mrr_int, warning=FALSE}
+
+t_out <- t.test(cc_int ~ as.factor(condition), 
+                data = filter(climate, condition =="Control" | condition == "Maladpative Response Rewards"))
 
 mrr_tidy<-tidy(t_out)
-
 mrr<-apa_print(t_out)
+```
 
+```{r plotmrr, warning=FALSE}
+mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "Maladpative Response Rewards"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()
 ```
 
 ```{r se_int}
 
-test <-  filter(climate, condition =="Control" | condition == "Self-Efficacy")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+t_out <- t.test(cc_int ~ as.factor(condition),
+                data = filter(climate, condition =="Control" | condition == "Self-Efficacy"))
 
 se_tidy<-tidy(t_out)
-
 se<-apa_print(t_out)
+```
 
+```{r plotse, warning=FALSE}
+seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot() + theme_apa()
 ```
 
 ```{r re_int}
 
-test <-  filter(climate, condition =="Control" | condition == "Response Efficacy")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+t_out <- t.test(cc_int ~ as.factor(condition), 
+                data = filter(climate, condition =="Control" | condition == "Response Efficacy"))
 
 re_tidy<-tidy(t_out)
-
 re<-apa_print(t_out)
-
 ```
 
-```{r rc_int}
+```{r plotre, warning=FALSE}
+replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot() + theme_apa()
+```
 
-test <-  filter(climate, condition =="Control" | condition == "Response Costs")
-t_out <- t.test(test$cc_int ~ as.factor(test$condition))
+```{r rc_int, warning=FALSE}
+
+t_out <- t.test(cc_int ~ as.factor(condition), 
+                filter(climate, condition =="Control" | condition == "Response Costs"))
 
 rc_tidy<-tidy(t_out)
-
 rc<-apa_print(t_out)
+```
 
+```{r plotrc, warning=FALSE}
+rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot() + theme_apa() 
 ```
 
 A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to vaccinate relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
 
+
+```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
+ggplot(climate, aes(condition, cc_int)) + geom_boxplot() + theme_apa() + coord_flip()
+```
+
+```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
+plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2)
+```
+
 ```{r int, results="asis"}
 int_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
-int_tidy$comparisons <- c("Severity vs. Control", "Susceptibility vs. Control", "MRR vs. Control", "Self-efficacy vs. Control", "Response Efficacy vs. Control", "Response Costs vs. Control")
+int_tidy$comparisons <- c("Control vs. Severity", 
+                          "Control vs. Susceptibility", 
+                          "Control vs. MRR", 
+                          "Control vs. Self-efficacy", 
+                          "Control vs. Response Efficacy", 
+                          "Control vs. Response Costs")
 
 int_tidy$p.value <- printp(int_tidy$p.value)
 
 int_tidy <- int_tidy %>% 
   select(comparisons, estimate1, estimate2, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to vaccinate", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
+apa_table(int_tidy, caption = "Impact of interventions on intention to vaccinate relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
 ```
-
-
-
 
 ```{r severity_coi}
 
@@ -321,9 +347,12 @@ rc<-apa_print(t_out)
 ```{r coi, results="asis"}
 coi_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
-#int_tidy<-cbind(c("Severity vs. Control", "Susceptibility vs. Control", "MRR vs. Control", "Self-efficacy vs. Control", "Response Efficacy vs. Control", "Response Costs vs. Control"), int_tidy)
-
-coi_tidy$comparisons <- c("Severity vs. Control", "Susceptibility vs. Control", "MRR vs. Control", "Self-efficacy vs. Control", "Response Efficacy vs. Control", "Response Costs vs. Control")
+coi_tidy$comparisons <- c("Control vs. Severity", 
+                          "Control vs. Susceptibility", 
+                          "Control vs. MRR", 
+                          "Control vs. Self-efficacy", 
+                          "Control vs. Response Efficacy", 
+                          "Control vs. Response Costs")
 
 coi_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "Response Efficacy", "Response Costs")
 
@@ -332,9 +361,8 @@ coi_tidy$p.value <- printp(coi_tidy$p.value)
 coi_tidy <- coi_tidy %>% 
   select(comparisons, construct, estimate1, estimate2, statistic, p.value)
 
-apa_table(coi_tidy, caption = "Impact of interventions on target construct", placement = "htb", col.names=c("Comparisions", "Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc", small=TRUE)
+apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names=c("Comparisions", "Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc", small=TRUE)
 ```
-
 
 T-tests were also conducted to investigate the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy* message on *self-efficacy*) relative to Control. As shown in Table \@ref(tab:coi), only the Self-Efficacy message was successful in bringing about change in the the construct it was designed to target. 
 
