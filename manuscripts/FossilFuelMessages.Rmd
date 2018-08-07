@@ -63,6 +63,21 @@ dat <- read_rds("./data/dat.rds")
 climate <- dat %>% 
   filter(study=="Climate Change")
 ```
+  Anthropogenic climate change represents an existential threat to humanity, affecting food security, water supply, the spread of infectious diseases, coastal inundation, and extreme weather events. Despite an overwhelming scientific consensus regarding the existence and harms of climate change, community belief in climate change is declining in a number of industrialised economies. The denial of the existence or severity of climate change is suggested to be influential in the support for climate mitigation policies and engagement in behaviours that might contribute to the reduction in harms assocaited with climate change.   
+
+-- Fossil fuel use reduction
+  The consumption of fossil fuels and the consequent increase in atmospheric carbon dioxide is considered the most influential factor in the changing climate. Historical increases in the abundance of greenhouse gasses in the atmosphere as obserrved in ice cores have been shown to be associated with the industrialisation of society. Therefore, strategies for mitigation of climate change focus on a combination of carbon sequestration and minimisation of fossil fuel use. 
+  
+  In 2015, fossil fuel sources produced 85.99% of global energy.  https://www.worldenergy.org/wp-content/uploads/2016/10/World-Energy-Resources-Full-report-2016.10.03.pdf 
+
+-- Local Behaviours
+  Household energy use constitutes one third of total energy use in Europe and the United States of America, (http://person.eu/downloads/PERSON-Stern-et-al-2016.pdf) 
+  Reduction of energy use through behaviours such as using more efficient appliances, avoiding driving, and switching to low emission energy sources such as wind or solar, while unlikely to have any substantial effect in isolation, collectively may lead to substantial reductions with analyses suggesting the adoption of 17 behaviours resulting in up to a 7.4% reduction in total US emissions. (http://www.pnas.org/content/pnas/106/44/18452.full.pdf?spnCategory=155&spnDomain=2&spnContent=28&spnID=42103)
+
+
+  https://s3.amazonaws.com/academia.edu.documents/33137138/1-s2.0-S0301421512008506-main.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1533531297&Signature=nynJvhbTZxLAJUBSNAg61OEco%2BU%3D&response-content-disposition=inline%3B%20filename%3DAnalysis_of_the_performance_of_domestic.pdf
+
+--  Protection Motivation theory
 
 
 # Methods
@@ -96,6 +111,8 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 # Discussion
 
+
+Behaviours such as dietary change (https://www-sciencedirect-com.ezproxy-f.deakin.edu.au/science/article/pii/S0959652614012931#fig1)
 
 \newpage
 
