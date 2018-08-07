@@ -80,7 +80,7 @@ Participants were recruited via Amazon MTurk to take part in a study on "Short s
 
 cond <- as.data.frame(table(climate$condition))
 
-apa_table(cond, caption = "Final N per Condtion", placement = "htb", col.names=c("Condition", "N"))
+apa_table(cond, caption = "Final N per Condition", placement = "htb", col.names=c("Condition", "N"))
 
 ```
 
@@ -179,7 +179,7 @@ sev<-apa_print(t_out)
 ```
 
 ```{r plotsev, warning=FALSE}
-sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Severity Score")
+sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Severity Score")
 ```
 
 
