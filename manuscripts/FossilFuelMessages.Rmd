@@ -276,6 +276,32 @@ plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2, labels = c(
 ```
 
 ```{r int, results="asis"}
+clim_sum <- climate  %>% 
+  group_by(factor(condition)) %>% 
+  summarise(int_sd = sd(cc_int, na.rm=TRUE), int_n = sum(!is.na(cc_int)), 
+            re_sd  = sd(cc_re, na.rm=TRUE),  re_n  = sum(!is.na(cc_re)),
+            rc_sd  = sd(cc_rc, na.rm=TRUE),  rc_n  = sum(!is.na(cc_rc)),
+            mrr_sd = sd(cc_mrr, na.rm=TRUE), mrr_n = sum(!is.na(cc_mrr)),
+            se_sd  = sd(cc_se, na.rm=TRUE),  se_n  = sum(!is.na(cc_se)),
+            sev_sd = sd(cc_sev, na.rm=TRUE), sev_n = sum(!is.na(cc_sev)),
+            sus_sd = sd(cc_sus, na.rm=TRUE), sus_n = sum(!is.na(cc_sus))
+            )
+names(clim_sum)[1] <- "condition"
+
+tab3 <- clim_sum %>%
+  select(condition, int_sd, int_n) %>% 
+  mutate(ctr_sd = clim_sum$int_sd[clim_sum$condition=="Control"],
+         ctr_n = clim_sum$int_n[clim_sum$condition=="Control"], 
+         comparisons = case_when(
+           condition == "MRR" ~ "Control vs. MRR",
+           condition == "Severity" ~ "Control vs. Severity",
+           condition == "Susceptibility" ~ "Control vs. Susceptibility",
+           condition == "Self-Efficacy" ~ "Control vs. Self-efficacy",
+           condition == "Response Efficacy" ~ "Control vs. Response Efficacy",
+           condition == "Response Costs" ~ "Control vs. Response Costs")
+         ) %>% 
+  filter(condition != "Control")
+
 int_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
 int_tidy$comparisons <- c("Control vs. Severity", 
@@ -287,10 +313,11 @@ int_tidy$comparisons <- c("Control vs. Severity",
 
 int_tidy$p.value <- printp(int_tidy$p.value)
 
-int_tidy <- int_tidy %>% 
-  select(comparisons, estimate1, estimate2, statistic, p.value)
+int_tidy <- int_tidy  %>% 
+  left_join(tab3, by = "comparisons") %>% 
+  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n", "\\textit{t}", "\\textit{p}"), align="lcccccccc")
 ```
 
 ```{r severity_coi}
