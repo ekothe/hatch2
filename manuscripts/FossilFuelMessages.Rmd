@@ -47,6 +47,7 @@ output            : papaja::apa6_pdf
 library("papaja")
 library(knitr)
 library(readr)
+library(tidyr)
 library(dplyr)
 library(broom)
 library(here)
@@ -277,6 +278,34 @@ plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2, labels = c(
 ```
 
 ```{r int, results="asis"}
+clim_sum <- climate  %>% 
+  group_by(factor(condition)) %>% 
+  summarise(int_sd = sd(cc_int, na.rm=TRUE), int_n = sum(!is.na(cc_int)), 
+            re_sd  = sd(cc_re, na.rm=TRUE),  re_n  = sum(!is.na(cc_re)),
+            rc_sd  = sd(cc_rc, na.rm=TRUE),  rc_n  = sum(!is.na(cc_rc)),
+            mrr_sd = sd(cc_mrr, na.rm=TRUE), mrr_n = sum(!is.na(cc_mrr)),
+            se_sd  = sd(cc_se, na.rm=TRUE),  se_n  = sum(!is.na(cc_se)),
+            sev_sd = sd(cc_sev, na.rm=TRUE), sev_n = sum(!is.na(cc_sev)),
+            sus_sd = sd(cc_sus, na.rm=TRUE), sus_n = sum(!is.na(cc_sus))
+            )
+names(clim_sum)[1] <- "condition"
+
+tab3 <- clim_sum %>%
+  select(condition, int_sd, int_n) %>% 
+  mutate(ctr_sd = clim_sum$int_sd[clim_sum$condition=="Control"],
+         ctr_n = clim_sum$int_n[clim_sum$condition=="Control"], 
+         comparisons = case_when(
+           condition == "MRR" ~ "Control vs. MRR",
+           condition == "Severity" ~ "Control vs. Severity",
+           condition == "Susceptibility" ~ "Control vs. Susceptibility",
+           condition == "Self-Efficacy" ~ "Control vs. Self-efficacy",
+           condition == "Response Efficacy" ~ "Control vs. Response Efficacy",
+           condition == "Response Costs" ~ "Control vs. Response Costs"),
+          ctr_n = as.character(ctr_n), 
+          int_n = as.character(int_n)
+         ) %>% 
+  filter(condition != "Control")
+
 int_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
 int_tidy$comparisons <- c("Control vs. Severity", 
@@ -288,10 +317,11 @@ int_tidy$comparisons <- c("Control vs. Severity",
 
 int_tidy$p.value <- printp(int_tidy$p.value)
 
-int_tidy <- int_tidy %>% 
-  select(comparisons, estimate1, estimate2, statistic, p.value)
+int_tidy <- int_tidy  %>% 
+  left_join(tab3, by = "comparisons") %>% 
+  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 ```{r severity_coi}
@@ -361,6 +391,39 @@ rc<-apa_print(t_out)
 ```
 
 ```{r coi, results="asis"}
+
+tab4 <- clim_sum %>%
+  select(-one_of("int_sd", "int_n")) %>% 
+  gather(-condition, key = "stat", value = "value") %>%
+  separate(stat, into= c("construct", "stat"), sep="_") %>% 
+  spread(key = stat, value= value)
+
+tab4_ctr <-tab4 %>% 
+  filter(condition=="Control") %>% 
+  select(construct, ctr_n = n, ctr_sd = sd)
+
+tab4 <- tab4 %>% 
+  filter(condition != "Control") %>% 
+  select(condition, construct, int_n = n, int_sd = sd) %>% 
+  inner_join(tab4_ctr, by = "construct") %>% 
+  mutate(construct = case_when(
+          construct == "mrr" ~ "MRR",
+          construct == "sev" ~ "Severity",
+          construct == "sus" ~ "Susceptibility",
+          construct == "se" ~ "Self-efficacy",
+          construct == "re" ~ "Response Efficacy",
+          construct == "rc" ~ "Response Costs"),
+         comparisons = case_when(
+           condition == "MRR" ~ "Control vs. MRR",
+           condition == "Severity" ~ "Control vs. Severity",
+           condition == "Susceptibility" ~ "Control vs. Susceptibility",
+           condition == "Self-Efficacy" ~ "Control vs. Self-efficacy",
+           condition == "Response Efficacy" ~ "Control vs. Response Efficacy",
+           condition == "Response Costs" ~ "Control vs. Response Costs"),
+          ctr_n = as.character(ctr_n), 
+          int_n = as.character(int_n)
+  ) 
+
 coi_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
 coi_tidy$comparisons <- c("Control vs. Severity", 
@@ -375,9 +438,10 @@ coi_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "R
 coi_tidy$p.value <- printp(coi_tidy$p.value)
 
 coi_tidy <- coi_tidy %>% 
-  select(comparisons, construct, estimate1, estimate2, statistic, p.value)
+  left_join(tab4, by = c("comparisons", "construct")) %>% 
+  select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names=c("Comparisions", "Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc", small=TRUE)
+apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 T-tests were also conducted to investigate the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy* message on *self-efficacy*) relative to Control. As shown in Table \@ref(tab:coi), only the Self-Efficacy message was successful in bringing about change in the the construct it was designed to target. 
@@ -387,6 +451,29 @@ T-tests were also conducted to investigate the impact of each message on the PMT
 In order to examine the potential pathway through which the Response Efficacy message leads to change in intention, an exploratory analysis was conducted to examine whether the Response Efficacy group differed from the Control group on any constructs other than response efficacy and intention. As shown in Table \@ref(tab:explor) the Response Efficacy group had significantly higher self-efficacy than the Control group and significantly lower perceieved response costs. 
 
 ```{r explor, results="asis"}
+re_summ <- clim_sum %>% 
+  select(-one_of("int_sd", "int_n")) %>% 
+  gather(-condition, key = "stat", value = "value") %>%
+  separate(stat, into= c("construct", "stat"), sep="_") %>% 
+  spread(key = stat, value= value) 
+
+re_ctr <-re_summ %>% 
+  filter(condition=="Control") %>% 
+  select(construct, ctr_n = n, ctr_sd = sd)
+
+re_summ <- re_summ %>% 
+  filter(condition == "Response Efficacy") %>% 
+  select(condition, construct, int_n =n, int_sd = sd) %>% 
+  inner_join(re_ctr, by = "construct") %>% 
+  mutate(construct = case_when(
+          construct == "mrr" ~ "MRR",
+          construct == "sev" ~ "Severity",
+          construct == "sus" ~ "Susceptibility",
+          construct == "se" ~ "Self-efficacy",
+          construct == "re" ~ "Response Efficacy",
+          construct == "rc" ~ "Response Costs"), 
+         int_n = as.character(int_n), 
+         ctr_n = as.character(ctr_n))
 
 test <-  filter(climate, condition =="Control" | condition == "Response Efficacy")
 t_out_sev <- t.test(test$cc_sev ~ as.factor(test$condition))
@@ -402,9 +489,13 @@ re_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "Re
 re_tidy$p.value <- printp(re_tidy$p.value)
 
 re_tidy <- re_tidy %>% 
-  select(construct, estimate1, estimate2, statistic, p.value)
+  left_join(re_summ, by = "construct") %>% 
+  select(construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(re_tidy, caption="Exploratory analysis: impact of response efficacy message on other constructs", placement = "htb", col.names=c("Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
+apa_table(re_tidy, 
+          caption = "Exploratory analysis: impact of response efficacy message on other constructs", 
+          col.names = c("Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"),
+          placement = "htb", align="lcccccccc", small = TRUE, note = "MRR = Maladaptive Response Rewards")
 
 ```
 
