@@ -81,7 +81,7 @@ climate <- dat %>%
   Reduction of energy use through behaviours such as using more efficient appliances, avoiding driving, and switching to low emission energy sources such as wind or solar, while unlikely to have any substantial effect in isolation, collectively may lead to substantial reductions with analyses suggesting the adoption of 17 behaviours resulting in up to a 7.4% reduction in total US emissions. (http://www.pnas.org/content/pnas/106/44/18452.full.pdf?spnCategory=155&spnDomain=2&spnContent=28&spnID=42103)
 
 
-  https://s3.amazonaws.com/academia.edu.documents/33137138/1-s2.0-S0301421512008506-main.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1533531297&Signature=nynJvhbTZxLAJUBSNAg61OEco%2BU%3D&response-content-disposition=inline%3B%20filename%3DAnalysis_of_the_performance_of_domestic.pdf
+  https://www-sciencedirect-com.ezproxy-f.deakin.edu.au/science/article/pii/S0301421512008506 
 
 --  Protection Motivation theory
 
