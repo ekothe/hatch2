@@ -52,6 +52,7 @@ library(broom)
 library(here)
 library(ggplot2)
 library(cowplot)
+library(psych)
 ```
 
 ```{r setglobal, cache = FALSE, include = TRUE}
@@ -193,7 +194,7 @@ sus<-apa_print(t_out)
 ```
 
 ```{r plotsus, warning=FALSE}
-susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Susceptibility Score")
+susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Susceptibility Score")
 ```
 
 
@@ -207,7 +208,7 @@ mrr<-apa_print(t_out)
 ```
 
 ```{r plotmrr, warning=FALSE}
-mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot() + theme_apa()  + labs(x = "Message", y = "MRR Score")
+mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot(notch = TRUE) + theme_apa()  + labs(x = "Message", y = "MRR Score")
 ```
 
 ```{r se_int}
@@ -220,7 +221,7 @@ se<-apa_print(t_out)
 ```
 
 ```{r plotse, warning=FALSE}
-seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Self-Efficacy Score")
+seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Self-Efficacy Score")
 ```
 
 ```{r re_int}
@@ -233,7 +234,7 @@ re<-apa_print(t_out)
 ```
 
 ```{r plotre, warning=FALSE}
-replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot() + theme_apa()  + labs(x = "Message", y = "Response Efficacy Score")
+replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot(notch = TRUE) + theme_apa()  + labs(x = "Message", y = "Response Efficacy Score")
 ```
 
 ```{r rc_int, warning=FALSE}
@@ -246,14 +247,14 @@ rc<-apa_print(t_out)
 ```
 
 ```{r plotrc, warning=FALSE}
-rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot() + theme_apa() + labs(x = "Message", y = "Response Costs Score")
+rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Response Costs Score")
 ```
 
 A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to reduce fossil fuel consumption relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
 
 
 ```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
-ggplot(climate, aes(condition, cc_int)) + geom_boxplot() + theme_apa() + coord_flip() + labs(x = "", y = "Intention")
+ggplot(climate, aes(condition, cc_int)) + geom_boxplot(notch = TRUE) + theme_apa() + coord_flip() + labs(x = "", y = "Intention")
 ```
 
 ```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
@@ -391,6 +392,24 @@ re_tidy <- re_tidy %>%
 apa_table(re_tidy, caption="Exploratory analysis: impact of response efficacy message on other constructs", placement = "htb", col.names=c("Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), align="lcccc")
 
 ```
+
+We conducted a mediation analysis to investigate the extent to which self-efficacy mediates the relationship between condition (Control vs. Self-Efficacy Message) and intention.
+
+```{r}
+data <- filter(climate, condition =="Control" | condition == "Self-Efficacy")
+
+data <- data %>%
+  mutate(cond_new = case_when(
+    condition == "Control" ~ 0, 
+    condition == "Self-Efficacy" ~ 1
+  ) )
+
+mediation_se <- mediate(cc_int ~ cond_new + (cc_se), data = data, n.iter = 5000)
+
+psych::mediate.diagram(medi = mediation_se, main = "Self-Efficacy as a mediator of the Condition - Intention relationship")
+
+```
+
 
 
 # Discussion
