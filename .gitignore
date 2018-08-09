@@ -13,3 +13,7 @@ data/
 *.aux
 *.Rproj
 manuscripts/r-references.bib
+r-references.bib
+*.fff
+manuscripts/FossilFuelMessages_files/
+manuscripts/FluVaxMessages_files/
