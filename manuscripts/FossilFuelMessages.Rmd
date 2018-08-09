@@ -320,7 +320,7 @@ int_tidy <- int_tidy  %>%
   left_join(tab3, by = "comparisons") %>% 
   select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n", "\\textit{t}", "\\textit{p}"), align="lcccccccc")
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n", "\\textit{t}", "\\textit{p}"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 ```{r severity_coi}
@@ -440,7 +440,7 @@ coi_tidy <- coi_tidy %>%
   left_join(tab4, by = c("comparisons", "construct")) %>% 
   select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE)
+apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 T-tests were also conducted to investigate the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy* message on *self-efficacy*) relative to Control. As shown in Table \@ref(tab:coi), only the Self-Efficacy message was successful in bringing about change in the the construct it was designed to target. 
