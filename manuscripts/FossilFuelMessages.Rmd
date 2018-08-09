@@ -85,6 +85,15 @@ climate <- dat %>%
 
 --  Protection Motivation theory
 
+## Hypotheses 
+1. The primary outcome is protection motivation (defined as the intention to be vaccinated against seasonable influenza). It is hypothesised that intervention messages targeting PMT constructs will increase intention to be vaccinated relative to control.  
+2. The secondary outcomes are the PMT constructs. It is hypothesised that intervention messages targeting a given PMT construct will increase/decrease that construct relative to control. Specifically,  
+    a. Relative to control, the message targeting response cost will decrease perceived response cost 
+    b. Relative to control, the message targeting maladaptive response rewards will decrease perceived maladaptive response rewards  
+    c. Relative to control, the message targeting response efficacy will increase perceived response efficacy 
+    d. Relative to control, the message targeting severity will increase perceived severity 
+    e. Relative to control, the message targeting susceptibility will increase perceived susceptibility 
+    f. Relative to control, the message targeting self efficacy will increase  self-efficacy 
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) --> This study was pre-registered using the template for pre-registration in social psychology developed by @van2016pre. The pre-registration for this project is available at: [https://osf.io/2g6bq/](https://osf.io/2g6bq/).
