@@ -73,7 +73,15 @@ flu <- dat %>%
   filter(study=="Flu vaccination")
 ```
 
-
+## Hypotheses
+1. The primary outcome is protection motivation (defined as the intention to be vaccinated against seasonable influenza). It is hypothesised that intervention messages targeting PMT constructs will increase intention to be vaccinated relative to control. 
+2. The secondary outcomes are the PMT constructs. It is hypothesised that intervention messages targeting a given PMT construct will increase/decrease that construct relative to control. Specifically, 
+    a. Relative to control, the message targeting response cost will decrease perceived response cost
+    b. Relative to control, the message targeting maladaptive response rewards will decrease perceived maladaptive response rewards 
+    c. Relative to control, the message targeting response efficacy will increase perceived response efficacy
+    d. Relative to control, the message targeting severity will increase perceived severity
+    e. Relative to control, the message targeting susceptibility will increase perceived susceptibility
+    f. Relative to control, the message targeting self efficacy will increase  self-efficacy
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->This study was pre-registered using a template for pre-registration of studies within social psychology [@van2016pre]. The pre-registration for this project is available at: [https://osf.io/nhcfv/](https://osf.io/nhcfv/).
@@ -341,6 +349,26 @@ T-tests were also conducted to investigate the impact of each message on the PMT
 
 # Discussion
 
+The aim of the present study was to evaluate the impact of short messages based on PMT on intention to receive the seasonal flu vaccine. Secondarily, we sought to investigate the extent to which messages designed to target specific PMT constructs were successful in changing those constructs. 
+
+The first hypothesis (H1), that messages based on PMT would be successful in increasing intention to vaccinate was not supported. The messages presented to participants in this study were not successful in increasing intention to vaccinate relative to control.
+
+The second hypotheses (H2), that messages designed to target specific PMT constructs would be successful in changing those contructs relative to control was partially supported. Specifically, individuals who received a message designed to increase the perceived severity of seasonal flu (the Severity Message condition) reported higher perceieved severity of seasonal flu relative to individuals who received no message (the Control condition).
+
+Reasons the interventions might not have changed intention...
+
+- They didn't change the underlying constructs so they can't change intention...
+- Intention demonstrated ceiling effects, meaning that there may have been limited capacity to change intention even where/if underlying constructs were changed.
+
+Reasons the interventions might not have changed the underlying constructs
+
+- The messages might just be bad
+- Some constructs appear to be demonstrating ceiling effects
+- The measures of constructs might be misspecified and/or insensitive to change
+
+Some things we can rule out
+
+- Power, to the extent that effects appear to be present but do not reach statistical significance this should not be attributed to lack of power. The study was adequately powered to detect effects that are reasonably of interest. If present, undected effects are sufficently small to be uninteresting. 
 
 \newpage
 
