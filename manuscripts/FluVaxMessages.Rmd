@@ -272,7 +272,7 @@ int_tidy <- int_tidy %>%
 apa_table(int_tidy, 
           caption = "Impact of interventions on intention to recieve a flu vaccination relative to control", 
           placement = "htb", 
-          col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n", "\\textit{t}", "\\textit{p}"), 
+          col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"), 
           align="lcccccccc", 
           landscape = TRUE, 
           note = "MRR = Maladaptive Response Rewards")
@@ -371,7 +371,7 @@ coi_tidy <- coi_tidy %>%
 apa_table(coi_tidy, 
           caption = "Impact of interventions on target construct relative to control", 
           placement = "htb", 
-          col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n",  "\\textit{t}", "\\textit{p}"), 
+          col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}"), 
           align = "llcccccccc", small=TRUE, landscape = TRUE, 
           note = "MRR = Maladaptive Response Rewards")
 ```
