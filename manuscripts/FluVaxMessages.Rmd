@@ -224,6 +224,36 @@ rc      <- apa_print(t_out)
 
 ## This section makes a table based on the t-tests in the previous chunk
 
+flu_sum <- flu  %>% 
+  group_by(factor(condition)) %>% 
+  summarise(int_sd = sd(flu_int, na.rm=TRUE), int_n = sum(!is.na(flu_int)), 
+            re_sd  = sd(flu_re, na.rm=TRUE),  re_n  = sum(!is.na(flu_re)),
+            rc_sd  = sd(flu_rc, na.rm=TRUE),  rc_n  = sum(!is.na(flu_rc)),
+            mrr_sd = sd(flu_mrr, na.rm=TRUE), mrr_n = sum(!is.na(flu_mrr)),
+            se_sd  = sd(flu_se, na.rm=TRUE),  se_n  = sum(!is.na(flu_se)),
+            sev_sd = sd(flu_sev, na.rm=TRUE), sev_n = sum(!is.na(flu_sev)),
+            sus_sd = sd(flu_sus, na.rm=TRUE), sus_n = sum(!is.na(flu_sus))
+            )
+names(flu_sum)[1] <- "condition"
+
+tab3 <- flu_sum %>%
+  select(condition, int_sd, int_n) %>% 
+  mutate(ctr_sd = flu_sum$int_sd[flu_sum$condition=="Control"],
+         ctr_n = flu_sum$int_n[flu_sum$condition=="Control"], 
+         comparisons = case_when(
+           condition == "MRR" ~ "Control vs. MRR",
+           condition == "Severity" ~ "Control vs. Severity",
+           condition == "Susceptibility" ~ "Control vs. Susceptibility",
+           condition == "Self-Efficacy" ~ "Control vs. Self-efficacy",
+           condition == "Response Efficacy" ~ "Control vs. Response Efficacy",
+           condition == "Response Costs" ~ "Control vs. Response Costs"),
+          ctr_n = as.character(ctr_n), 
+          int_n = as.character(int_n)
+         ) %>% 
+  filter(condition != "Control")
+
+
+
 int_tidy <- rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
 int_tidy$comparisons <- c("Control vs. Severity", 
@@ -236,13 +266,15 @@ int_tidy$comparisons <- c("Control vs. Severity",
 int_tidy$p.value <- printp(int_tidy$p.value)
 
 int_tidy <- int_tidy %>% 
-  select(comparisons, estimate1, estimate2, statistic, p.value)
+  left_join(tab3, by = "comparisons") %>% 
+  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
 apa_table(int_tidy, 
           caption = "Impact of interventions on intention to recieve a flu vaccination relative to control", 
           placement = "htb", 
-          col.names=c("Comparisions", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), 
-          align="lcccc", 
+          col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n", "\\textit{t}", "\\textit{p}"), 
+          align="lcccccccc", 
+          landscape = TRUE, 
           note = "MRR = Maladaptive Response Rewards")
 ```
 
@@ -288,6 +320,37 @@ rc      <- apa_print(t_out)
 ```{r coi, results="asis"}
 
 ## This section makes a table based on the t-tests in the previous chunk
+tab4 <- flu_sum %>%
+  select(-one_of("int_sd", "int_n")) %>% 
+  gather(-condition, key = "stat", value = "value") %>%
+  separate(stat, into= c("construct", "stat"), sep="_") %>% 
+  spread(key = stat, value= value)
+
+tab4_ctr <-tab4 %>% 
+  filter(condition=="Control") %>% 
+  select(construct, ctr_n = n, ctr_sd = sd)
+
+tab4 <- tab4 %>% 
+  filter(condition != "Control") %>% 
+  select(condition, construct, int_n = n, int_sd = sd) %>% 
+  inner_join(tab4_ctr, by = "construct") %>% 
+  mutate(construct = case_when(
+          construct == "mrr" ~ "MRR",
+          construct == "sev" ~ "Severity",
+          construct == "sus" ~ "Susceptibility",
+          construct == "se" ~ "Self-efficacy",
+          construct == "re" ~ "Response Efficacy",
+          construct == "rc" ~ "Response Costs"),
+         comparisons = case_when(
+           condition == "MRR" ~ "Control vs. MRR",
+           condition == "Severity" ~ "Control vs. Severity",
+           condition == "Susceptibility" ~ "Control vs. Susceptibility",
+           condition == "Self-Efficacy" ~ "Control vs. Self-efficacy",
+           condition == "Response Efficacy" ~ "Control vs. Response Efficacy",
+           condition == "Response Costs" ~ "Control vs. Response Costs"),
+          ctr_n = as.character(ctr_n), 
+          int_n = as.character(int_n)
+  ) 
 
 coi_tidy<-rbind(sev_tidy, sus_tidy, mrr_tidy, se_tidy, re_tidy, rc_tidy)
 
@@ -301,14 +364,15 @@ coi_tidy$comparisons <- c("Control vs. Severity",
 coi_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "Response Efficacy", "Response Costs")
 
 coi_tidy <- coi_tidy %>% 
-  select(comparisons, construct, estimate1, estimate2, statistic, p.value) %>% 
+  left_join(tab4, by = c("comparisons", "construct")) %>% 
+  select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value) %>% 
   mutate(p.value = printp(p.value))
 
 apa_table(coi_tidy, 
           caption = "Impact of interventions on target construct relative to control", 
           placement = "htb", 
-          col.names=c("Comparisions", "Construct", "Control Mean", "Intervention Mean", "\\textit{t}", "\\textit{p}"), 
-          align="lcccc", small=TRUE,
+          col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Intervention Mean", "Intervention SD", "Intervention n",  "\\textit{t}", "\\textit{p}"), 
+          align = "llcccccccc", small=TRUE, landscape = TRUE, 
           note = "MRR = Maladaptive Response Rewards")
 ```
 
