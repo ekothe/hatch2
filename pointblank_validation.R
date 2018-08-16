@@ -578,3 +578,5 @@ col_check <-
       notify_count = 1) %>%
   interrogate()
 get_html_summary(col_check, output_file = "col_check_validation_report-2018-08-06.html", output_dir = "validation")
+
+get_interrogation_summary()
