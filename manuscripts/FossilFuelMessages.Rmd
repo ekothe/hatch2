@@ -54,6 +54,8 @@ library(here)
 library(ggplot2)
 library(cowplot)
 library(psych)
+library(labelled)
+library(tableone)
 ```
 
 ```{r setglobal, cache = FALSE, include = TRUE}
@@ -69,21 +71,35 @@ dat <- read_rds(here("data", "dat.rds"))
 climate <- dat %>% 
   filter(study=="Climate Change")
 ```
-  Anthropogenic climate change represents an existential threat to humanity, affecting food security, water supply, the spread of infectious diseases, coastal inundation, and extreme weather events. Despite an overwhelming scientific consensus regarding the existence and harms of climate change, community belief in climate change is declining in a number of industrialised economies. The denial of the existence or severity of climate change is suggested to be influential in the support for climate mitigation policies and engagement in behaviours that might contribute to the reduction in harms assocaited with climate change.   
 
--- Fossil fuel use reduction
-  The consumption of fossil fuels and the consequent increase in atmospheric carbon dioxide is considered the most influential factor in the changing climate. Historical increases in the abundance of greenhouse gasses in the atmosphere as obserrved in ice cores have been shown to be associated with the industrialisation of society. Therefore, strategies for mitigation of climate change focus on a combination of carbon sequestration and minimisation of fossil fuel use. 
+Anthropogenic climate change represents an existential threat to humanity, affecting food security, water supply, the spread of infectious diseases, coastal inundation, and extreme weather events <!--- need some references for this point -->. The consumption of fossil fuels and the consequent increase in atmospheric carbon dioxide is considered the most influential factor in the changing climate <!--- need some references for this point -->. Therefore, strategies for mitigation of climate change focus on a combination of carbon sequestration and minimisation of fossil fuel use <!--- need some references for this point -->. Household energy use constitutes one third of total energy use in Europe and the United States of America [@stern2016opportunities]. In turn, the majority of global energy, included that used for household energy, is generated from fossil fuels [@council2016world]. Large scale adoption of behaviours that reduce fossil fuel consumption such as using more efficient appliances, avoiding driving, and switching to low emission energy sources such as wind or solar has the potential to lead to substantial reductions in total emissions [@dietz2009household; @wynes2017climate]. While individual-level behaviour will not be sufficent to meet global emissions targets alone, it plays an important role in the global response to climate change because the speed of uptake of individual behaviour can outpace the speed at which systematic changes such as construction of "green energy" based electricity grids and implementation of carbon pricing and trade policies can occur [@dietz2009household; @wynes2017climate].
+
+[Something about that textbook study showing these behaviours have been widely advocated]. However, individuals' engagement in behaviours to reduce usage of fossil fuels remains low <!--- need some references for this point -->. 
+ 
   
-  In 2015, fossil fuel sources produced 85.99% of global energy.  https://www.worldenergy.org/wp-content/uploads/2016/10/World-Energy-Resources-Full-report-2016.10.03.pdf 
+  In 2015, fossil fuel sources produced 85.99% of global energy.  [@council2016world]
 
 -- Local Behaviours
-  Household energy use constitutes one third of total energy use in Europe and the United States of America, (http://person.eu/downloads/PERSON-Stern-et-al-2016.pdf) 
-  Reduction of energy use through behaviours such as using more efficient appliances, avoiding driving, and switching to low emission energy sources such as wind or solar, while unlikely to have any substantial effect in isolation, collectively may lead to substantial reductions with analyses suggesting the adoption of 17 behaviours resulting in up to a 7.4% reduction in total US emissions. (http://www.pnas.org/content/pnas/106/44/18452.full.pdf?spnCategory=155&spnDomain=2&spnContent=28&spnID=42103)
+
+@aman2013analysis
 
 
-  https://s3.amazonaws.com/academia.edu.documents/33137138/1-s2.0-S0301421512008506-main.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1533531297&Signature=nynJvhbTZxLAJUBSNAg61OEco%2BU%3D&response-content-disposition=inline%3B%20filename%3DAnalysis_of_the_performance_of_domestic.pdf
+## Protection Motivation theory
 
---  Protection Motivation theory
+PMT was specifically developed to understand adaptive and maladaptive responses to persuasive messages17. Adaptive responses are characterised as increased performance of protective behaviours in response to persuasive messages. In contrast, maladaptive responses are those which drive continued failure to engage in protective behaviours. According to PMT, the propensity to engage adaptively with persuasive messages is determined by beliefs that people have about engaging in (or not engaging in) the desired protective behaviour and about the threatened event (i.e. contracting an infectious disease/climate change). Individual’s beliefs are categorised into six constructs:
+- Severity: perceived seriousness of the negative consequences of the threatened event
+- Susceptibility: perceived vulnerability to the negative consequences of the threatened event
+- Maladaptive response rewards: Benefits of the performance of the maladaptive behaviour
+- Response efficacy: The perceived effectiveness of the recommended preventative behaviour in averting the occurrence or negative consequences of the threatened event
+- Self-efficacy: confidence in one’s ability to successfully perform the preventative behaviour
+- Response costs: The barriers to performance of the preventative behaviour
+According to PMT, motivation to engage in the protective behaviour is determined by two parallel processes: Threat Appraisal and Coping Appraisal. Threat Appraisal is determined by beliefs about the severity, susceptibility, and rewards of maladaptive behaviour. Coping Appraisal is determined by response costs, response efficacy, and self-efficacy. Individuals are motivated to engage in protective behaviour when they believe that lack of action poses a threat to themselves (high threat appraisal) and that performing the preventative behaviour can ameliorate that threat (high coping appraisal). In contrast, maladaptive responses may occur when threat appraisal is low (i.e. when the maladaptive behaviour does not pose a sufficiently serious threat) or when threat appraisal is high and coping appraisal is low (i.e. the adverse event is threatening but the recommended behaviour is not thought to be an effective way to reduce the risk). 
+
+Previous studies  have found that coping and threat appraisal predict adaptive behaviours in response to climate change19, 20, 21
+
+Meta-analysis indicates that persuasive messages that seek to manipulate PMT constructs are effective in changing corresponding beliefs25. By investigating messages that vary in the extent to which they elicit change in different PMT constructs researchers have used PMT identify the persuasive messages that are most likely to be effective at provoking adaptive responses. For example, one study found that anti-smoking mass media campaigns were most effective at motivating adolescents (n=1667) to avoid smoking when they emphasised specific severity perceptions (namely risk of social disapproval)26. Importantly, messages that sought to increase perceived severity of health risks were undermined by low perceived susceptibility26. 
+
+However, to date there are no experimental studies investigating whether the targeting of PMT constructs will increase adaptive behaviours climate change denial, and no studies that had systematically investigated the relative impact of messages targeting different PMT constructs within these domains. 
 
 ## Hypotheses 
 1. The primary outcome is protection motivation (defined as the intention to be vaccinated against seasonable influenza). It is hypothesised that intervention messages targeting PMT constructs will increase intention to be vaccinated relative to control.  
@@ -113,15 +129,29 @@ apa_table(cond, caption = "Final N per Condition", placement = "htb", col.names=
 Three participants reported an age value that was not plausible (i.e. below the allowed age for registration on MTurk or above 200 years). These ages were converted to missing but the responses of those participants were otherwise retained. Gender was recorded using a free-text field and then categorised manually, Four participants provided a response to this item that could not be meaningfully catergorised (in all cases these representated responses that did not appear to reflect gender identity e.g. "%" or "40"). These responses were converted to missing but the responses of those participants were otherwise retained. See Table \@ref(tab:demo) for a summary of participant characteristics. 
 
 ```{r demo, results='asis', warning=FALSE}
-## climate_demo.csv is generated by create_tables.R
 
-tab <- read_csv(here("manuscripts", "climate_demo.csv"))
+climate <- climate %>% 
+  set_variable_labels(
+    age = "Age in years",
+    education = "Highest level of education",
+    gender = "Gender",
+    household_income = "Annual household income", 
+    ideology_general = "Ideology - General", 
+    ideology_economic = "Ideology - Economic",
+    ideology_social = "Ideology - Social")
 
-names(tab)[1] <- "Demographic Characteristic"
+tab <- CreateTableOne(vars = c("age", 
+                             "education",
+                             "gender",
+                             "household_income", 
+                             "ideology_general", 
+                             "ideology_economic", 
+                             "ideology_social"), 
+                    data = climate, test = FALSE)
 
-Variables<-as.list(c(4:10, 12:19, 21:33))
+tab <- print(tab, varLabels = T, printToggle = FALSE)
 
-papaja::apa_table(tab, caption="Demographic characteristics of participants", stub_indents = Variables, longtable = TRUE)
+papaja::apa_table(tab, caption="Demographic characteristics of participants", longtable = TRUE)
 ```
 
 ## Procedure
@@ -530,7 +560,7 @@ psych::mediate.diagram(medi = mediation_se, main = "Self-Efficacy as a mediator 
 # Discussion
 
 
-Behaviours such as dietary change (https://www-sciencedirect-com.ezproxy-f.deakin.edu.au/science/article/pii/S0959652614012931#fig1)
+Behaviours such as dietary change [@hallstrom2015environmental]
 
 \newpage
 
