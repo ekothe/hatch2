@@ -95,7 +95,11 @@ PMT was specifically developed to understand adaptive and maladaptive responses 
 - Response costs: The barriers to performance of the preventative behaviour
 According to PMT, motivation to engage in the protective behaviour is determined by two parallel processes: Threat Appraisal and Coping Appraisal. Threat Appraisal is determined by beliefs about the severity, susceptibility, and rewards of maladaptive behaviour. Coping Appraisal is determined by response costs, response efficacy, and self-efficacy. Individuals are motivated to engage in protective behaviour when they believe that lack of action poses a threat to themselves (high threat appraisal) and that performing the preventative behaviour can ameliorate that threat (high coping appraisal). In contrast, maladaptive responses may occur when threat appraisal is low (i.e. when the maladaptive behaviour does not pose a sufficiently serious threat) or when threat appraisal is high and coping appraisal is low (i.e. the adverse event is threatening but the recommended behaviour is not thought to be an effective way to reduce the risk). 
 
+
 Previous studies  have found that coping and threat appraisal predict adaptive behaviours in response to climate change19, 20, 21
+
+https://www-sciencedirect-com.ezproxy-f.deakin.edu.au/science/article/pii/S0301421512008506 
+
 
 Meta-analysis indicates that persuasive messages that seek to manipulate PMT constructs are effective in changing corresponding beliefs25. By investigating messages that vary in the extent to which they elicit change in different PMT constructs researchers have used PMT identify the persuasive messages that are most likely to be effective at provoking adaptive responses. For example, one study found that anti-smoking mass media campaigns were most effective at motivating adolescents (n=1667) to avoid smoking when they emphasised specific severity perceptions (namely risk of social disapproval)26. Importantly, messages that sought to increase perceived severity of health risks were undermined by low perceived susceptibility26. 
 
