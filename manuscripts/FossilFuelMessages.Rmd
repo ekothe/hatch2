@@ -563,6 +563,10 @@ psych::mediate.diagram(medi = mediation_se, main = "Self-Efficacy as a mediator 
 
 # Discussion
 
+Results from this study suggest intervening in Coping-appraisal may be more efficatious than attmepting to increase threat-appraisal. 
+
+Coping appriasal does not necessitate a change in belief regarding the existence or severity of climate change, and therefore is an effective strategy irrespective of threat appraisal.  
+As past literature suggests economic factors Lorenzoni et al. (2007)
 
 Behaviours such as dietary change [@hallstrom2015environmental]
 
