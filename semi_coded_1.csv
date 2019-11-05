@@ -1,0 +1,465 @@
+state,age,gender,education,ideology_general,household_size,sus_1,sus_2,sus_3,re_1,re_2,re_3,sev_1,sev_2,sev_3,se_1,se_2,se_3,mrr_1,mrr_2,mrr_3,rc_1,rc_2,rc_3,proto_caring,proto_informed,proto_dedicated,proto_pushy,proto_stubborn,proto_arrogant,proto_patriotic,proto_responsible,proto_similarity,willingness_1,willingness_2,att_1,att_2,att_3,att_4,att_5,att_6,sn_1,sn_2,sn_3,sn_4,sn_5,int_1,int_2,int_3,beh_1,beh_2,beh_3,feedback
+TX Texas,30,Male,4 year degree,6,2,4,2,4,2,3,2,3,2,4,3,2,3,3,3,2,2,2,2,0,0,1,0,0,1,0,1,2,1,1,3,3,3,2,3,2,3,3,4,3,3,4,4,4,11,11,NA,NA
+MI Michigan,24,Male,High school graduate,5,2,2,4,3,3,2,2,2,2,3,2,4,3,4,4,3,4,3,4,1,1,1,0,0,0,0,1,2,4,2,2,4,2,2,4,2,2,2,2,5,5,2,2,2,11,11,NA,NA
+NY New York,25,Male,4 year degree,8,3,3,2,1,3,2,3,2,2,1,1,3,2,2,2,3,4,3,2,1,0,0,0,0,0,0,0,2,4,4,3,5,4,5,4,2,3,1,2,3,4,2,2,3,10,10,10,GOOD
+CA California,21,Male,4 year degree,4,4,2,1,1,1,2,1,1,2,1,1,1,2,2,1,1,1,2,1,1,0,0,0,0,0,0,1,5,5,4,1,4,5,1,5,1,2,2,1,1,2,1,2,1,10,11,NA,NO
+NY New York,41,Male,High school graduate,0,2,5,3,5,1,1,1,2,2,3,5,1,4,4,3,1,5,2,1,1,1,1,0,0,0,0,1,5,5,2,1,5,1,1,5,1,1,1,1,5,5,1,1,1,11,11,NA,NA
+IA Iowa,25,Male,Some college,3,1,1,5,1,1,1,1,1,1,1,2,2,4,2,2,3,2,1,2,0,1,0,0,0,0,0,1,4,2,4,1,5,1,1,5,1,2,2,2,4,4,2,2,2,11,11,NA,Thank you!
+TX Texas,29,Female,4 year degree,9,3,1,1,1,2,2,1,1,1,2,1,2,2,2,2,1,2,2,1,0,0,1,0,0,0,0,0,5,5,4,2,4,3,2,5,2,1,1,1,2,1,1,1,1,10,10,10,good
+TX Texas,27,Female,4 year degree,10,4,1,2,2,1,2,1,1,2,1,1,1,1,2,1,2,1,2,1,0,0,0,0,0,1,1,1,5,5,2,3,5,5,2,5,1,1,1,2,2,1,1,1,1,10,10,7,good
+AK Alaska,32,Female,4 year degree,2,3,1,5,1,2,2,2,2,2,2,2,5,1,1,2,2,4,3,4,1,1,1,0,0,0,0,1,4,3,2,1,5,1,1,5,1,1,1,1,2,1,2,2,2,11,10,10,none
+TX Texas,31,Male,4 year degree,8,3,2,2,2,1,2,2,2,2,1,2,4,1,2,2,3,4,2,3,0,0,0,0,1,0,0,0,2,5,4,1,2,1,2,5,1,1,1,1,2,2,2,2,2,10,10,5,NA
+TX Texas,29,Female,4 year degree,7,4,1,1,2,2,1,2,2,1,2,3,1,2,2,1,2,1,2,1,1,0,1,0,0,1,1,1,4,3,4,2,2,2,2,3,3,2,1,3,2,2,1,2,2,10,10,10,good survey
+CA California,39,Male,Some college,5,2,1,5,1,1,1,1,1,1,1,2,4,2,5,5,3,4,3,4,1,1,0,0,0,0,0,1,3,3,3,2,4,2,2,4,2,1,1,1,3,3,2,2,2,12,11,NA,"Thank you very much for this HIT, and best of luck with your research"
+FL Florida,24,Male,4 year degree,4,4,2,3,3,3,3,3,1,2,3,3,3,3,3,5,3,5,3,3,0,0,1,0,0,0,0,0,3,1,1,2,3,2,3,4,1,3,2,2,3,3,3,3,3,12,11,NA,NA
+TX Texas,22,Male,Some college,5,2,2,4,2,2,2,2,2,3,2,2,2,4,5,5,2,2,2,2,1,1,0,0,0,0,0,1,2,1,5,3,3,2,2,4,2,3,3,3,5,5,4,4,4,11,11,NA,NA
+TX Texas,35,Male,Professional degree,9,4,1,2,2,2,1,1,2,1,1,1,1,2,2,2,1,3,1,1,1,0,1,0,0,0,0,0,2,5,4,2,5,5,4,5,1,1,1,1,1,2,1,1,2,10,10,10,very nice
+TX Texas,61,Female,4 year degree,8,4,1,3,2,2,2,2,2,3,2,2,3,1,1,2,2,1,3,2,0,0,1,0,0,0,1,0,2,4,3,2,5,4,2,5,3,1,2,2,1,2,1,3,2,10,10,10,This is nice survey.
+PA Pennsylvania,61,Female,2 year degree,0,2,2,5,2,2,2,2,2,2,2,5,1,5,5,5,2,4,2,2,1,1,0,0,0,0,0,1,4,4,2,1,5,1,1,5,1,1,4,1,5,5,4,4,4,11,11,NA,I live in a state where coal burning is still the norm.
+TX Texas,35,Female,4 year degree,8,4,2,3,2,3,2,3,2,2,2,2,3,2,2,2,3,3,2,2,0,1,0,0,0,0,0,0,2,4,4,3,2,4,3,4,2,2,1,2,2,2,2,2,1,10,10,7,NA
+NY New York,24,Male,4 year degree,7,3,1,2,1,3,2,3,3,3,2,2,2,2,3,4,3,4,3,2,1,0,1,1,1,0,1,1,2,3,3,3,2,4,2,4,4,3,3,1,3,2,5,3,3,11,11,NA,great
+AZ Arizona,29,Female,2 year degree,0,2,1,5,1,2,2,2,1,1,1,4,2,2,5,5,5,2,4,4,1,1,1,0,0,0,0,1,3,5,1,1,5,1,1,5,1,1,1,1,4,4,1,1,1,11,11,NA,NA
+TX Texas,27,Male,4 year degree,8,4,2,1,3,5,3,4,5,1,1,1,2,2,1,2,1,1,2,3,0,0,0,1,0,1,0,1,3,4,5,5,4,5,5,3,4,2,1,2,1,2,1,2,2,10,10,10,good and nice
+OR Oregon,26,Male,2 year degree,7,3,2,3,4,2,4,4,4,2,4,4,2,4,4,3,4,3,3,2,0,1,0,0,0,0,0,0,2,2,4,2,4,3,3,4,2,4,3,2,4,3,4,4,3,11,11,NA,NA
+TX Texas,35,Female,Professional degree,7,5,2,3,3,3,2,4,3,4,3,1,3,2,3,3,2,1,3,2,1,1,0,0,1,0,0,0,3,3,3,3,4,4,3,4,4,2,3,2,2,3,2,3,2,10,10,7,NA
+CA California,58,Male,4 year degree,8,4,1,1,1,2,1,1,3,2,2,2,2,2,2,3,2,2,2,2,0,0,0,0,0,0,0,1,2,2,2,3,4,4,4,4,4,2,2,2,2,1,1,1,1,10,10,10,"In short, a green superfood powder contain many servings of vegetables and superfoods in a scoop of water-soluble powder. In addition to veggies and superfoods, the powder may also contain other health-supporting ingredients like probiotics and immune-supporting herbs."
+TX Texas,27,Male,Professional degree,9,4,1,1,2,1,2,2,2,1,1,1,2,1,1,1,2,1,2,1,1,0,1,0,0,0,0,1,3,4,4,3,4,3,3,4,3,1,1,1,1,2,2,1,1,10,10,10,nice
+LA Louisiana,46,Female,Some college,9,4,4,1,4,2,2,2,4,4,4,4,2,4,5,4,2,4,2,3,0,0,0,0,0,0,0,1,1,1,1,1,5,1,1,5,1,3,3,3,5,5,4,4,5,11,11,NA,I think using green power whenever available is a great way to go. However at this time I cannot afford the necessary changes to be able to do so.
+CA California,28,Male,4 year degree,8,4,3,2,2,2,2,1,2,2,2,2,4,2,1,2,2,4,4,3,1,0,1,0,0,0,0,0,4,4,4,1,4,3,1,5,2,2,1,2,1,1,2,1,2,11,10,10,none
+CA California,27,Female,Professional degree,8,5,4,3,4,3,2,3,2,3,3,2,4,2,3,2,3,2,2,2,1,1,1,0,0,0,0,1,4,4,4,2,4,2,2,4,2,2,2,2,2,2,2,2,2,10,10,7,green power is very important to all of us.
+TX Texas,69,Male,4 year degree,8,15,2,3,2,2,2,1,2,3,2,2,3,2,3,2,3,2,2,2,0,1,1,0,1,1,1,1,2,4,3,4,4,4,3,3,3,2,2,3,2,2,2,2,2,10,10,10,NA
+PA Pennsylvania,25,Female,4 year degree,9,3,3,3,2,3,2,2,3,3,4,1,3,2,3,3,3,3,2,3,0,0,1,0,0,0,0,0,4,4,4,1,5,2,2,5,1,3,2,1,2,2,2,1,2,10,10,10,IT WAS GOOD
+MI Michigan,35,Female,4 year degree,4,4,2,4,2,4,2,2,2,2,2,2,4,2,2,2,4,4,2,4,0,1,1,0,0,0,0,1,3,2,4,2,4,2,2,4,2,3,3,3,4,4,3,3,3,11,11,NA,NA
+TX Texas,27,Female,4 year degree,9,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,1,5,5,5,5,5,4,5,5,4,1,1,1,1,1,1,1,1,10,10,10,THE STUDY IS VERY NICE.
+TX Texas,27,Male,4 year degree,9,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,5,5,0,0,1,0,0,0,0,0,2,4,4,4,5,4,4,5,5,1,1,1,2,2,5,5,5,10,10,10,NICE
+TX Texas,32,Female,4 year degree,5,2,3,2,2,2,3,2,3,3,3,2,3,3,2,3,4,3,3,3,1,1,1,0,0,0,1,1,2,3,2,3,3,3,3,4,3,2,2,2,2,3,3,3,3,12,12,NA,NA
+TX Texas,27,Male,4 year degree,8,4,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,0,1,1,0,0,1,1,0,4,4,4,2,4,4,5,4,5,2,2,2,2,2,2,2,2,10,10,10,NICE
+IL Illinois,25,Female,4 year degree,6,3,1,3,3,3,2,2,4,3,1,4,4,4,2,3,3,2,1,4,1,0,0,0,0,0,0,0,4,3,3,4,4,3,3,3,4,1,2,4,2,2,2,2,2,10,10,10,it was good
+KS Kansas,28,Female,4 year degree,8,3,3,2,2,4,2,2,2,2,4,2,2,2,2,2,2,4,4,4,1,1,1,0,0,0,0,1,2,5,5,1,5,1,2,5,1,3,2,2,1,2,1,1,1,10,10,5,nothing
+TX Texas,27,Female,Professional degree,9,4,1,2,2,2,1,2,1,2,2,5,5,4,4,4,4,2,2,1,1,0,0,0,0,0,0,1,3,5,4,5,5,4,4,5,5,2,1,2,5,4,2,1,2,10,10,10,NICE
+MN Minnesota,38,Male,High school graduate,0,1,4,1,4,5,4,4,3,4,5,4,1,5,4,1,1,1,1,1,1,0,1,0,0,0,0,1,2,1,5,4,2,3,3,3,3,2,3,2,5,5,4,4,5,11,11,NA,green power is simply too expensive for many americans. i think climate change is happening but it's not gonna matter in my lifetime i'll be long gone by the time it matters. i also think it will improve temps in my area for the winter months we go a few months with the temps never getting above 0 degrees farenheit it's miserable in northern minnesota near the canadian border we could use warmer temps here
+TX Texas,27,Male,Professional degree,8,5,2,3,3,3,2,1,3,2,1,2,2,1,3,2,1,1,2,3,0,0,0,1,1,1,0,0,4,2,4,2,5,5,2,4,3,2,1,1,1,2,2,1,1,10,10,5,VERY NICE
+TX Texas,27,Male,4 year degree,8,3,1,2,1,1,2,1,2,1,1,1,2,2,2,1,2,1,2,2,1,0,1,0,0,1,1,0,3,2,4,3,5,4,2,4,1,2,2,1,1,2,1,2,1,10,10,10,NICE
+LA Louisiana,32,Female,High school graduate,5,6,1,5,1,1,1,1,1,1,2,1,5,2,3,3,5,4,5,5,1,1,1,0,0,0,0,1,3,4,1,1,5,1,1,5,1,1,1,1,2,2,1,1,1,11,11,NA,NA
+TX Texas,27,Female,4 year degree,8,3,1,2,2,1,2,2,2,1,1,2,1,2,2,1,2,2,2,1,1,0,1,0,0,1,1,1,3,3,2,2,4,3,2,5,2,2,2,2,2,2,2,2,1,10,10,10,NICE
+CA California,23,Male,Some college,5,4,2,2,1,2,2,2,2,1,2,3,2,4,1,5,4,2,2,2,0,1,0,0,0,0,0,1,5,1,1,2,5,1,3,5,1,1,1,1,3,3,2,2,2,11,11,NA,NA
+NY New York,30,Female,4 year degree,7,3,3,2,3,3,1,2,2,3,3,4,5,1,3,4,4,3,2,2,1,0,0,0,0,0,0,0,4,2,3,1,4,1,1,5,1,1,1,1,2,3,4,2,3,10,10,10,nice
+TX Texas,68,Female,Professional degree,7,4,2,4,3,3,2,2,3,2,2,3,2,3,2,4,2,2,2,3,0,0,0,0,0,1,0,0,3,2,2,1,5,1,2,4,1,3,2,4,3,2,3,2,4,10,10,10,good
+NH New Hampshire,32,Male,4 year degree,6,5,2,4,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,1,1,1,0,0,0,0,1,3,3,3,2,4,1,2,4,1,1,1,1,2,2,2,2,2,11,11,NA,none
+VA Virginia,45,Male,4 year degree,1,2,2,4,2,3,3,3,1,1,2,5,1,5,3,5,3,5,3,5,1,1,1,0,0,0,0,1,4,4,3,1,5,1,1,5,1,1,1,1,5,5,3,3,3,11,11,NA,I don't have the possibility of using green power in any way shape or form currently. Either through my current energy provider or my own personal ability (I live in a very shady area that does not receive sunshine). Wish it weren't so. But it is. Good luck.
+TX Texas,26,Female,4 year degree,9,10000,3,4,3,1,2,2,1,1,2,1,1,2,1,2,1,4,4,4,0,1,1,0,0,0,1,0,4,4,4,5,5,4,5,4,4,1,1,1,2,1,2,1,1,10,10,7,VERY NICE
+SC South Carolina,21,Male,Some college,3,1,3,4,3,3,2,2,1,2,3,5,3,3,5,5,5,3,3,3,1,1,1,0,0,0,0,1,3,2,2,1,5,1,1,5,1,2,3,2,2,2,2,2,2,11,11,NA,NA
+TX Texas,28,Male,Professional degree,8,4,3,1,1,3,3,1,1,2,2,2,3,1,3,2,2,1,3,2,1,1,0,0,1,0,0,1,3,3,4,3,5,3,2,4,2,1,1,3,3,1,1,1,2,10,10,5,good and very interesting study
+MA Massachusetts,26,Male,4 year degree,7,5,2,3,2,2,3,2,2,3,2,3,3,3,3,2,3,2,4,3,0,0,1,0,0,0,0,0,3,3,2,2,2,1,1,4,1,2,4,2,3,2,3,4,2,10,10,5,NA
+VA Virginia,28,Male,Some college,0,1,1,5,1,2,1,1,1,1,1,2,2,4,5,5,1,2,2,4,1,1,1,0,0,0,1,1,4,3,3,1,5,1,1,5,1,1,1,1,2,3,1,1,1,11,11,NA,NA
+CA California,29,Female,2 year degree,0,2,1,5,1,4,4,4,1,1,1,4,2,4,5,5,5,4,4,4,1,1,1,0,0,0,0,1,4,3,2,1,5,1,1,5,1,2,1,1,4,4,2,2,2,12,11,NA,NA
+TX Texas,28,Male,4 year degree,8,4,3,4,3,2,2,3,2,2,3,2,3,3,3,3,2,3,2,3,1,0,0,0,0,0,0,1,2,3,4,3,4,3,3,4,2,3,2,2,3,2,2,2,3,11,11,NA,Very interesting survey
+NY New York,21,Male,2 year degree,9,4,2,1,1,1,1,2,2,1,2,1,1,1,1,1,1,2,1,1,0,0,0,0,0,0,0,1,2,4,3,3,4,4,4,3,3,2,2,2,3,2,1,1,1,10,10,10,good
+IL Illinois,29,Male,High school graduate,5,4,1,5,1,1,1,2,1,1,2,1,5,1,5,4,1,4,2,4,0,1,1,0,0,0,0,1,3,3,3,1,5,1,1,5,1,1,1,1,2,2,1,1,2,12,11,NA,NA
+VA Virginia,30,Female,Some college,0,4,3,5,3,2,2,2,2,1,2,4,4,4,4,5,2,3,2,2,1,0,1,0,0,0,0,1,2,3,4,1,5,1,1,5,1,1,1,1,4,4,3,3,3,11,11,NA,Thanks for the survey hopefully taking this survey a lot of people will research and look into green power I know I am going to.
+MO Missouri,23,Male,2 year degree,6,3,1,5,2,2,2,2,1,1,1,4,1,4,5,5,1,2,4,2,1,1,1,0,0,0,1,1,4,4,5,1,5,1,2,5,1,2,2,2,4,4,3,2,3,11,11,NA,NA
+VA Virginia,27,Male,High school graduate,2,2,2,4,2,2,2,2,2,1,2,4,2,4,5,4,2,4,2,4,1,1,1,0,0,0,0,1,3,4,2,1,5,1,4,5,1,1,1,1,2,2,2,2,2,11,11,NA,NA
+TX Texas,31,Male,4 year degree,6,3,2,2,3,3,3,4,3,2,3,2,2,3,4,3,2,2,2,4,0,0,1,0,0,0,1,1,2,3,2,1,4,2,1,4,2,1,2,2,4,2,2,1,1,11,12,NA,NA
+NC North Carolina,35,Female,4 year degree,5,4,2,3,2,2,2,1,3,3,3,3,3,3,4,4,2,2,2,3,1,1,0,0,0,0,0,1,3,2,2,1,5,1,1,5,1,2,3,2,4,4,3,3,3,11,11,NA,NA
+TN Tennessee,60,Male,Professional degree,6,4,4,2,4,5,4,4,4,4,4,3,2,4,3,3,2,2,2,2,0,0,0,1,0,1,0,0,1,1,1,3,3,3,4,3,3,3,3,3,5,5,4,5,4,11,11,NA,"natural or human induced climate change ?  which ?  how do we know ?  what if we spend 90 trillion dollars trying to alter the climate and find out the sun's ultraviolet rays or some other natural phenomena are way more influential in climate change than any marginal effect humans have - is that good if we starve the world to feel better ?   let's get the facts then act, even if it does make you feel better"
+IL Illinois,30,Female,4 year degree,6,5,3,3,2,2,3,1,1,2,5,2,2,1,4,2,3,3,2,5,1,0,0,0,0,0,0,0,2,2,3,4,2,3,3,4,4,4,1,2,2,3,2,3,1,10,10,10,THIS VERY EXCELLENT
+OR Oregon,26,Female,2 year degree,7,3,2,2,4,4,2,4,4,4,3,4,3,2,4,4,4,4,4,3,0,0,0,0,0,0,1,0,4,2,4,2,4,2,2,4,2,3,4,2,3,3,4,2,3,11,11,NA,NA
+TX Texas,27,Female,4 year degree,8,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,4,4,4,4,4,5,5,4,4,1,1,1,2,1,1,1,1,10,10,10,NICE
+TX Texas,27,Female,Professional degree,8,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,0,1,1,1,1,0,0,2,2,2,2,4,5,2,5,4,2,2,2,2,2,2,2,2,10,10,5,I AM USED FACEBOOK THIS IS VERY USEFULL OF ALL TYPE OF PEOPLE. THEN SAFETY THIS FACEBOOK
+MA Massachusetts,22,Female,Some college,4,3,1,5,1,4,4,4,1,1,2,2,2,3,5,5,1,2,1,3,1,1,0,0,0,0,0,1,2,1,5,3,3,2,1,3,3,1,2,1,5,5,4,4,4,11,11,NA,NA
+GA Georgia,23,Male,4 year degree,0,3,1,5,1,2,2,2,1,2,2,1,5,1,5,5,1,4,3,3,1,1,1,0,0,0,0,1,3,3,3,2,5,1,1,4,1,3,3,3,3,3,3,3,3,11,11,NA,NA
+AZ Arizona,29,Male,2 year degree,7,1,2,4,2,4,3,2,4,4,2,2,2,2,4,4,2,2,2,2,0,1,1,0,0,0,0,1,2,3,2,2,4,2,2,4,2,2,2,2,4,4,2,2,3,12,11,NA,NA
+MD Maryland,30,Male,Some college,2,1,1,5,1,2,1,2,1,1,1,1,4,2,5,5,5,5,5,5,0,1,1,0,0,0,0,1,4,2,3,1,5,1,1,5,1,1,1,1,5,5,1,1,1,11,11,NA,NA
+MD Maryland,28,Male,Some college,0,1,1,5,1,4,2,2,1,1,1,1,5,1,5,5,4,5,4,5,1,1,0,0,0,0,0,1,3,4,4,1,5,1,1,5,1,1,1,1,2,2,1,1,1,12,11,NA,NA
+PA Pennsylvania,37,Male,Some college,4,2,1,5,1,1,2,2,1,1,1,4,4,3,1,5,1,5,3,4,0,1,1,0,0,0,0,1,4,4,4,2,5,1,2,5,1,2,3,2,4,4,1,2,2,11,11,NA,NA
+CT Connecticut,29,Male,4 year degree,6,1,2,3,2,3,3,2,3,3,3,4,2,4,4,3,1,2,2,3,0,0,1,0,0,1,0,0,3,2,2,2,4,2,3,3,2,3,2,3,3,3,4,3,3,11,11,NA,NA
+GA Georgia,29,Male,2 year degree,6,2,2,1,5,3,4,3,5,5,5,3,2,4,4,4,1,1,2,2,1,1,0,0,0,0,0,1,1,1,5,2,3,2,2,4,2,3,3,3,4,4,3,3,3,11,11,NA,NA
+CT Connecticut,66,Male,4 year degree,5,2,3,1,5,2,3,3,3,5,5,3,1,3,5,5,1,3,3,3,1,1,0,0,0,0,1,1,5,2,3,1,5,1,1,5,1,1,1,1,3,3,2,2,2,12,11,NA,No comments.  Thank you.
+PA Pennsylvania,25,Male,4 year degree,5,1,1,5,1,2,2,2,1,1,1,2,2,4,5,5,1,4,3,2,1,0,1,0,0,0,0,1,1,1,1,2,5,2,2,4,2,3,3,3,5,5,2,2,2,11,11,NA,NA
+TX Texas,27,Male,4 year degree,10,4,1,1,1,1,3,3,3,3,1,2,2,4,2,2,1,2,2,1,0,1,1,0,0,1,0,0,1,2,1,4,4,3,2,2,3,1,1,2,1,1,2,1,2,10,10,10,IT IS VERY INTRESTING SURVEY
+GA Georgia,42,Female,4 year degree,3,4,2,4,2,3,3,3,2,2,2,3,3,3,4,4,4,3,3,3,0,1,0,0,0,0,0,1,3,3,3,3,3,3,3,3,3,3,3,3,4,4,3,3,3,11,11,NA,None
+NY New York,28,Female,High school graduate,9,5,1,1,2,2,2,1,1,1,1,1,1,2,1,1,1,1,1,1,1,0,1,0,0,0,0,0,5,3,5,1,5,5,1,5,1,1,1,2,1,1,1,2,1,10,10,10,this survey is very nice
+ID Idaho,29,Male,Professional degree,9,4,1,1,2,1,1,1,1,3,2,1,5,1,1,1,2,1,3,1,1,0,1,0,0,0,0,1,4,5,5,1,5,1,1,5,1,1,1,1,1,1,1,1,1,10,10,5,NA
+NY New York,46,Female,4 year degree,7,4,3,2,3,3,2,3,3,2,3,1,3,2,2,2,2,2,2,2,0,0,0,0,0,0,1,0,2,2,3,3,4,2,3,4,4,3,2,2,3,3,3,2,2,10,10,10,good
+MN Minnesota,23,Male,High school graduate,5,1,3,3,4,1,4,2,3,4,3,3,2,4,4,4,3,4,3,2,1,1,1,0,0,0,0,1,3,1,1,2,4,2,2,4,2,3,3,3,3,3,4,4,4,11,11,NA,NA
+CA California,26,Male,Professional degree,7,3,3,3,4,2,1,1,5,5,1,2,2,2,1,1,3,2,1,1,1,1,1,0,0,0,0,1,4,4,3,1,5,1,1,5,1,1,1,1,1,2,1,1,1,10,10,7,NICE
+OH Ohio,26,Female,Some college,2,3,1,5,1,2,1,2,1,1,2,4,1,3,5,5,1,2,1,5,1,1,1,0,0,0,0,1,4,3,2,1,5,1,1,5,1,1,1,1,5,5,2,2,3,12,11,NA,NA
+TX Texas,28,Male,Professional degree,9,4,1,2,1,1,2,3,3,4,3,3,4,1,3,2,2,3,3,2,0,0,0,0,0,0,0,1,4,4,5,3,4,4,3,2,3,2,3,4,2,3,3,4,3,10,10,10,GOOD
+SC South Carolina,33,Male,4 year degree,1,3,2,1,2,2,2,1,2,2,1,2,2,1,1,2,2,2,1,1,0,0,0,1,1,1,1,0,2,4,4,5,5,4,3,4,5,2,2,1,2,2,1,2,2,10,10,5,nice
+IN Indiana,25,Female,2 year degree,9,5,2,2,2,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,1,0,0,0,0,0,0,0,3,3,3,1,5,1,1,5,1,1,1,1,2,2,2,2,2,10,10,10,THIS SURVEY IS VERY NICE
+NY New York,38,Female,4 year degree,2,4,2,4,2,5,5,5,3,2,2,2,4,2,4,2,2,2,4,4,1,1,1,0,0,0,0,1,3,1,4,2,4,2,2,4,2,1,2,2,1,1,2,2,2,11,11,NA,NA
+TX Texas,27,Male,4 year degree,4,4,1,3,1,2,4,5,2,2,5,3,2,2,2,2,3,1,2,5,0,0,0,0,0,0,0,1,1,3,2,1,5,5,1,1,1,5,3,1,2,1,2,1,2,10,10,NA,good
+TX Texas,31,Male,4 year degree,2,1,1,5,1,5,4,4,1,1,1,2,2,4,5,5,4,2,4,2,0,0,1,1,0,0,0,1,3,2,4,2,3,2,1,3,3,2,2,2,5,5,4,4,4,11,11,NA,NA
+IL Illinois,38,Female,2 year degree,6,4,2,4,2,2,1,1,1,2,2,3,2,4,5,5,3,3,2,3,1,1,1,0,0,0,0,1,2,2,2,1,5,1,1,5,1,1,1,1,5,5,2,2,2,11,11,NA,NA
+MA Massachusetts,65,Male,Professional degree,2,1,4,4,4,4,4,4,3,2,3,4,1,4,4,4,4,2,2,2,0,1,1,0,0,0,0,0,1,1,3,2,4,2,2,4,2,3,3,3,4,4,4,4,4,12,11,NA,n/a
+OH Ohio,41,Male,4 year degree,6,5,3,3,3,2,2,2,3,2,3,3,3,3,4,4,3,3,2,3,1,1,1,0,0,0,0,1,3,2,3,1,5,1,1,5,1,2,2,2,2,2,2,2,2,12,12,NA,none
+NY New York,25,Male,4 year degree,9,3,3,2,3,3,3,3,2,2,2,2,2,2,3,3,3,2,2,2,0,0,0,0,0,0,0,1,3,3,3,3,3,3,3,4,4,2,2,2,2,2,2,2,2,10,10,10,good
+IL Illinois,31,Female,High school graduate,5,6,3,2,3,1,1,1,2,2,2,1,4,2,4,2,3,4,4,4,1,1,0,0,0,0,0,1,2,2,3,1,5,1,1,5,1,1,1,1,3,3,1,1,2,11,11,NA,NA
+NY New York,32,Male,4 year degree,1,1,1,5,1,3,2,3,1,2,2,2,4,3,5,5,2,3,2,4,1,1,0,0,0,0,0,1,3,2,3,2,3,1,2,4,2,1,1,1,3,3,3,3,2,11,11,NA,NA
+VA Virginia,34,Female,Professional degree,5,3,2,4,2,2,2,2,3,2,2,3,3,3,4,4,4,1,1,3,0,1,1,0,0,0,0,1,2,2,3,2,4,2,2,4,2,3,3,3,5,5,3,3,3,11,11,NA,I have used green energy before and it was very expensive.
+CA California,29,Male,Professional degree,10,2,2,3,2,1,2,2,2,2,1,2,2,2,NA,3,3,2,3,3,1,0,0,0,0,0,0,0,3,4,3,1,5,1,1,5,1,3,3,3,2,2,2,2,2,10,10,10,NA
+PA Pennsylvania,36,Female,High school graduate,9,6,4,2,3,2,2,2,2,2,4,2,4,2,5,4,1,3,2,3,1,1,0,0,0,0,0,1,2,5,2,1,4,2,2,5,2,1,1,1,5,5,4,4,5,11,11,NA,NA
+CA California,31,Male,Professional degree,8,2,1,1,2,1,2,1,1,1,1,2,2,2,1,1,1,1,2,2,1,0,0,0,0,0,0,0,3,3,3,1,5,1,1,5,1,4,3,2,1,1,2,2,2,10,10,10,NA
+CA California,29,Male,Professional degree,9,2,1,1,1,1,1,2,2,2,1,1,2,1,1,2,1,1,1,2,1,0,0,0,0,0,0,0,4,4,4,1,5,1,1,5,1,2,1,1,1,2,3,2,1,10,11,NA,NA
+FL Florida,24,Male,Some college,10,1,2,3,4,4,3,2,2,3,4,2,2,3,2,3,4,4,2,3,0,0,1,1,1,0,0,1,3,3,4,3,3,2,2,4,3,4,2,3,3,2,2,2,3,11,11,NA,NA
+PA Pennsylvania,39,Female,4 year degree,1,1,1,5,2,4,2,2,1,1,2,4,1,2,5,5,1,2,4,2,1,1,1,0,0,0,0,1,3,4,2,1,5,1,1,5,1,1,1,1,2,2,4,4,4,11,11,NA,NA
+DE Delaware,21,Male,4 year degree,7,5,2,2,2,2,2,2,2,2,2,2,3,3,5,5,2,3,2,2,1,1,1,0,0,0,0,1,2,1,1,1,5,1,2,5,1,2,2,2,4,4,2,2,3,11,11,NA,NA
+OH Ohio,22,Male,Some college,4,1,1,5,1,2,2,2,1,1,1,1,4,2,5,4,3,4,4,4,1,1,1,0,0,0,0,1,2,2,4,2,4,2,2,4,2,2,1,1,5,5,4,1,1,11,11,NA,NA
+CA California,28,Male,4 year degree,9,5,1,1,2,3,2,1,1,1,1,2,2,1,2,2,1,2,2,2,1,1,0,1,0,1,1,0,2,1,1,4,5,4,4,4,4,1,1,1,2,1,2,1,2,10,10,10,"i happy to paartispate
+we need green energy"
+IN Indiana,27,Female,4 year degree,3,2,1,5,1,1,1,1,1,1,2,1,4,2,4,5,2,3,2,4,1,1,0,0,0,0,0,1,3,4,2,1,5,1,2,5,1,1,1,1,3,3,2,2,2,11,11,NA,NA
+LA Louisiana,40,Female,Some college,10,3,5,1,5,5,5,5,5,5,5,3,1,3,3,3,3,3,3,1,0,0,0,0,0,1,0,0,1,1,5,3,4,2,2,4,2,3,3,3,5,5,5,5,5,11,11,NA,NA
+LA Louisiana,21,Male,Some college,4,1,2,5,2,4,3,4,1,1,2,1,4,2,5,5,2,4,1,4,0,1,1,0,0,0,0,1,2,2,4,1,5,1,1,5,1,1,1,1,5,5,2,2,2,11,11,NA,NA
+CA California,33,Male,4 year degree,5,1,5,5,4,3,4,5,2,5,5,1,1,4,5,3,3,1,1,4,1,1,0,0,0,0,0,0,2,3,5,5,4,2,3,3,3,2,3,5,1,3,2,1,2,11,10,NA,NA
+FL Florida,50,Male,Professional degree,4,1,2,3,2,4,2,2,1,2,2,1,3,4,3,4,2,4,3,2,1,1,0,0,0,0,0,1,2,2,2,1,4,1,2,5,1,1,1,1,3,2,3,3,4,11,11,NA,NA
+TX Texas,28,Female,4 year degree,3,1,1,5,1,4,4,4,1,1,1,4,2,4,5,5,5,2,2,2,1,1,1,0,0,0,0,1,3,2,2,1,5,1,1,5,1,1,1,1,4,2,2,2,2,11,11,NA,Thank you for letting me take part!
+CA California,23,Female,4 year degree,7,4,2,1,3,1,2,3,1,1,3,1,2,2,1,1,2,1,1,1,0,1,0,0,0,0,0,1,2,3,3,2,1,1,2,4,2,3,2,1,2,2,1,2,2,10,10,10,NA
+PA Pennsylvania,34,Male,4 year degree,5,1,2,4,2,2,2,2,2,1,2,4,2,5,4,5,2,2,2,2,0,0,1,0,0,0,0,1,2,3,2,2,4,2,2,4,2,2,3,2,4,5,3,3,4,11,11,NA,"If I really can get green power energy the way it worked in your example, where I simply pay a bit more a month to my electric company, I'd probably do it."
+NY New York,30,Male,Professional degree,3,5,3,4,3,2,2,3,2,3,2,2,4,2,1,2,2,4,2,4,0,0,1,0,0,0,0,0,4,4,3,1,5,4,2,4,1,2,2,2,2,2,1,1,2,10,10,10,nice
+TN Tennessee,61,Male,Professional degree,2,1,3,3,3,3,3,3,2,2,3,2,4,2,3,3,2,2,2,2,1,1,0,0,0,0,0,1,2,4,2,2,4,2,2,4,2,2,3,2,2,2,2,2,2,10,11,NA,NA
+FL Florida,62,Female,Some college,1,2,2,4,3,2,1,2,1,2,3,4,2,3,4,4,3,4,3,3,1,1,1,0,0,0,0,1,3,5,2,2,4,1,1,5,1,2,2,2,3,2,2,3,3,12,11,NA,Thank you for the opportunity to participate
+NJ New Jersey,30,Male,2 year degree,7,1,4,2,4,2,3,3,4,3,3,1,4,2,3,4,3,2,4,2,1,0,1,0,0,0,0,1,3,3,3,2,3,1,2,5,2,1,1,1,2,2,2,1,2,10,10,10,NA
+SC South Carolina,43,Female,Some college,3,7,1,5,1,4,4,2,1,1,1,4,4,4,5,5,3,2,2,5,1,1,1,0,0,0,0,1,5,5,1,1,5,1,1,5,1,1,1,1,5,5,2,2,2,11,11,NA,NA
+TX Texas,26,Female,Less than high school,8,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,0,5,4,2,4,5,4,5,5,5,4,4,4,3,1,1,1,1,10,10,10,nice
+FL Florida,65,Female,2 year degree,10,1,4,2,4,5,4,4,4,4,4,5,1,5,4,4,1,2,1,2,0,0,0,0,0,1,0,1,1,1,4,1,5,1,1,5,1,3,3,3,5,5,4,4,4,11,11,NA,NA
+MD Maryland,23,Female,High school graduate,3,2,2,4,2,3,3,5,1,1,3,4,1,4,5,5,1,1,2,2,0,0,0,0,0,0,0,1,2,1,5,1,5,1,2,5,1,2,2,2,3,3,3,4,5,11,11,NA,NA
+TX Texas,31,Female,High school graduate,3,4,3,3,3,3,1,1,1,3,3,1,5,1,4,3,3,4,3,1,0,1,1,0,0,0,0,1,3,5,3,1,4,1,1,5,1,1,1,1,1,1,1,1,1,10,10,7,NA
+FL Florida,39,Male,2 year degree,2,4,1,4,2,3,2,1,1,1,1,4,1,5,5,5,2,1,1,2,1,1,1,0,0,0,0,1,4,2,4,2,4,1,2,4,3,1,1,3,5,5,3,3,4,11,11,NA,NA
+TX Texas,32,Female,Professional degree,7,4,3,3,3,3,3,3,3,1,3,3,3,3,3,3,3,3,3,3,0,0,0,1,0,0,0,0,3,3,3,4,3,4,4,4,4,3,3,3,3,3,3,2,2,10,10,9,NA
+TX Texas,28,Male,Some college,5,4,1,5,3,3,3,3,3,2,3,3,2,4,3,4,3,3,4,2,1,1,1,0,0,0,0,1,4,1,5,1,5,1,1,5,1,3,3,3,3,3,2,3,2,12,12,NA,NA
+FL Florida,32,Female,Some college,6,5,3,3,3,3,3,3,3,2,2,3,2,3,2,2,3,3,3,2,0,0,0,1,0,0,0,0,3,1,1,1,5,1,2,4,1,1,1,1,3,3,2,2,3,11,11,NA,NA
+VT Vermont,34,Female,Some college,2,3,1,5,1,2,1,1,1,1,1,1,5,2,5,5,3,2,1,2,1,1,1,0,0,0,0,1,2,4,4,1,5,1,2,5,2,1,1,1,3,2,2,3,2,11,11,NA,Thank you for the survey!
+NY New York,30,Male,4 year degree,8,3,1,1,1,1,1,2,1,2,2,1,1,1,1,1,2,2,3,2,0,1,0,1,0,1,0,0,2,2,3,4,5,4,5,5,4,2,1,2,2,2,3,2,1,10,10,10,good
+TX Texas,29,Male,4 year degree,9,6,2,2,4,2,2,1,4,4,4,1,5,2,2,2,4,4,4,2,1,0,1,0,0,0,0,1,4,4,4,1,5,1,1,5,1,1,2,1,1,1,1,1,1,11,11,NA,"Very good study to do, looking forward to more."
+NY New York,36,Male,High school graduate,10,8,5,1,5,5,5,5,5,5,5,3,3,4,5,3,2,2,1,2,0,0,1,0,0,0,0,0,1,1,5,3,4,2,2,3,3,3,3,3,3,3,3,4,4,11,11,NA,NA
+NY New York,35,Female,4 year degree,0,2,1,5,1,5,4,3,1,1,1,1,5,1,4,5,5,3,2,5,1,1,1,0,0,0,0,1,5,5,1,1,5,2,1,5,1,2,3,2,2,2,1,1,1,10,11,NA,NA
+TX Texas,33,Female,Some college,0,6,1,4,1,4,2,2,1,1,1,4,2,4,5,5,2,2,2,2,0,1,0,0,0,0,0,1,2,2,3,1,4,1,1,4,1,3,3,3,3,3,2,2,2,10,11,NA,NA
+FL Florida,40,Female,2 year degree,4,2,2,4,2,2,2,2,2,2,2,4,2,4,4,5,2,4,2,4,1,1,0,0,0,0,0,1,3,3,4,2,4,2,2,4,3,2,2,1,5,5,3,3,3,11,11,NA,NA
+CO Colorado,30,Male,Some college,1,3,2,5,2,2,2,2,1,1,2,1,5,2,5,5,2,5,5,5,1,1,1,0,0,0,1,1,3,4,2,1,5,1,1,5,1,1,1,1,3,3,3,3,3,11,11,NA,NA
+NC North Carolina,57,Male,Some college,8,2,1,5,1,1,1,1,1,1,1,5,1,1,5,5,4,4,4,4,1,0,1,0,0,0,1,1,2,2,2,1,5,1,1,5,1,2,2,2,2,2,1,1,1,11,11,NA,NA
+TX Texas,36,Male,Some college,2,4,2,4,2,2,2,2,1,3,2,2,5,2,5,5,2,5,4,5,1,1,1,0,0,0,0,1,3,3,3,1,4,1,1,5,1,1,1,2,3,3,1,1,1,11,10,10,NA
+TX Texas,39,Male,Some college,5,7,4,4,3,4,4,3,4,2,3,3,3,4,4,4,3,3,2,3,1,1,1,0,0,0,0,1,3,3,2,4,4,3,3,2,3,3,3,2,3,4,3,4,3,11,11,NA,NA
+GA Georgia,27,Male,4 year degree,0,2,1,5,1,4,3,2,1,1,1,2,4,2,5,5,5,3,2,4,0,1,0,1,0,0,0,1,3,5,5,1,5,1,1,5,1,3,3,2,3,3,1,1,1,11,11,NA,Great survey!
+FL Florida,29,Female,High school graduate,5,2,1,5,1,1,1,1,1,1,1,1,5,2,1,1,5,5,3,5,1,1,1,0,0,0,0,1,5,5,5,1,5,1,1,5,1,1,1,1,1,1,1,1,1,11,11,NA,NA
+OH Ohio,29,Female,2 year degree,3,4,1,3,1,2,3,1,3,1,1,5,2,5,1,4,3,5,2,4,0,0,0,1,1,1,0,0,1,3,2,1,3,1,2,5,3,3,3,2,5,2,2,1,3,11,12,NA,no further comments. Thanks!
+MO Missouri,25,Male,4 year degree,2,1,3,4,2,2,2,1,1,1,1,2,4,2,4,4,3,3,3,3,1,0,1,0,0,0,0,1,3,4,1,1,5,1,1,4,1,1,1,1,2,1,2,2,2,11,11,NA,NA
+VA Virginia,32,Female,2 year degree,1,2,1,4,2,2,2,2,2,1,2,3,2,2,5,4,5,4,3,2,0,1,1,0,0,0,1,1,2,3,2,2,4,2,2,4,2,2,2,2,2,2,2,2,2,11,11,NA,NA
+VA Virginia,28,Female,Professional degree,1,3,1,4,1,2,2,2,1,2,2,3,3,2,5,5,3,3,2,4,0,1,1,0,0,1,0,1,2,3,2,2,4,1,3,5,1,1,1,2,3,2,2,3,2,12,10,10,NA
+NJ New Jersey,33,Male,Some college,1,4,2,4,3,5,3,3,1,1,3,2,4,2,5,4,3,4,4,5,0,0,1,0,0,0,0,1,3,4,4,1,5,1,1,5,1,2,3,2,3,3,3,3,3,12,11,NA,NA
+OH Ohio,44,Female,High school graduate,0,2,1,5,1,1,1,1,1,1,1,5,1,5,5,5,3,5,1,5,1,1,1,0,0,0,1,1,4,5,5,1,5,1,1,5,1,1,1,1,4,4,1,1,1,11,11,NA,NA
+MD Maryland,23,Male,High school graduate,5,2,2,4,2,5,5,5,2,4,4,4,2,4,5,5,5,1,2,2,1,1,1,0,0,0,0,1,3,1,5,3,3,3,3,3,3,3,3,3,3,3,4,4,4,11,11,NA,NA
+NJ New Jersey,26,Male,4 year degree,6,2,1,5,2,2,4,2,1,2,2,2,5,2,4,5,4,2,3,4,1,1,1,0,0,0,0,1,2,1,2,1,5,1,1,5,1,1,1,1,4,4,4,4,5,11,11,NA,NA
+NJ New Jersey,20,Female,Some college,0,1,1,3,2,5,5,4,1,1,3,5,1,3,5,5,3,1,2,3,1,0,0,0,0,0,0,1,1,1,1,3,3,3,3,3,3,3,3,3,5,5,4,4,4,11,11,NA,NA
+VA Virginia,32,Male,4 year degree,2,1,2,2,2,3,2,2,1,1,1,3,4,1,3,3,3,1,1,1,0,0,0,0,0,0,0,1,3,3,3,3,3,3,3,3,3,3,3,3,1,1,3,3,3,11,11,NA,NA
+IL Illinois,27,Male,2 year degree,10,2,1,4,1,2,2,2,1,1,1,3,3,3,4,5,5,5,4,3,1,1,1,0,0,0,0,1,3,4,3,1,5,1,1,5,1,3,3,3,5,5,1,1,1,12,10,10,Thank You for the survey
+TX Texas,67,Male,4 year degree,8,5,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,0,1,0,0,1,0,0,1,4,4,4,2,1,5,3,4,2,2,2,2,2,2,2,2,2,10,10,10,GOOD SURVEY
+MI Michigan,34,Male,High school graduate,6,1,1,5,1,3,3,2,1,1,1,4,1,5,3,3,4,4,1,4,1,1,1,0,0,0,0,1,3,2,3,1,5,1,1,5,1,3,3,3,5,5,2,2,2,11,11,NA,NA
+KS Kansas,28,Male,4 year degree,2,4,2,2,2,3,2,3,2,1,2,2,2,3,2,3,1,2,3,2,0,0,1,0,0,0,0,1,2,4,4,3,2,4,4,4,4,2,2,1,1,2,3,2,1,10,10,7,it is very useful to us
+MN Minnesota,39,Male,Some college,1,1,2,4,1,1,1,1,2,2,2,4,2,3,4,3,3,5,3,5,1,1,1,0,0,0,0,1,2,3,3,1,4,1,1,5,1,1,1,1,4,4,3,3,3,12,11,NA,Hmm this has me wondering if we use some green power xcel energy provides our service. Theres a big solar and wind farm near by in Chisago county MN I dont know if they tap in to that
+NC North Carolina,30,Female,4 year degree,6,4,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,0,1,0,0,0,0,0,0,3,3,3,4,4,3,2,4,2,2,2,1,2,1,2,1,2,10,10,7,NA
+NY New York,27,Male,Some college,4,2,3,3,3,3,3,3,2,2,2,2,4,2,5,3,3,3,2,3,0,0,1,0,0,0,0,0,3,2,2,1,5,1,2,5,5,1,1,1,2,2,3,3,3,11,11,NA,NA
+IN Indiana,28,Male,4 year degree,8,3,1,3,2,1,2,2,1,3,2,1,1,2,1,3,2,2,2,1,1,1,0,0,0,0,1,1,3,3,4,3,5,4,2,5,1,2,1,3,2,1,2,1,1,10,10,10,NA
+OK Oklahoma,28,Male,4 year degree,9,4,1,4,3,3,4,2,1,3,2,3,1,3,1,2,2,2,3,3,1,0,0,0,0,0,0,0,1,3,2,5,4,5,5,3,4,3,1,2,3,1,4,4,2,11,10,10,NA
+FL Florida,41,Female,High school graduate,7,4,2,4,2,2,2,2,2,2,2,2,4,2,4,4,4,3,3,4,1,1,1,0,0,0,0,1,3,4,2,1,4,1,2,4,2,2,2,2,3,3,2,2,2,10,10,10,NA
+VA Virginia,38,Female,Some college,8,9,4,3,4,5,4,3,4,4,4,4,2,2,4,3,2,1,1,2,1,0,1,1,0,1,0,1,2,1,1,3,2,4,2,3,3,3,3,2,2,3,4,3,3,11,11,NA,"It all comes down to expense. limited funds=limited options. As soon as it's down to a dollar difference, I'm all for it. Twenty? Can't justify it."
+GA Georgia,47,Female,4 year degree,0,3,3,4,3,2,2,2,2,2,3,2,3,3,4,3,4,4,2,3,0,0,1,0,0,0,0,1,3,1,4,1,4,1,1,4,1,3,3,3,3,3,3,3,2,12,11,NA,NA
+RI Rhode Island,51,Male,High school graduate,9,2,4,2,4,2,2,2,3,5,4,5,1,3,3,4,3,5,3,4,1,1,1,0,0,0,0,0,3,1,5,1,5,1,1,5,1,3,3,3,4,4,3,2,4,11,11,NA,"I rent, I don't own. My scumbag landlord is a slumlord so, there's no way he's going to put solar panels on the roof.
+
+I'm a climate change skeptic; however, I do believe the earth goes through long-term temperature changes-cycles. 
+
+If I did own a home, I probably would get solar panels.
+"
+TN Tennessee,25,Male,High school graduate,5,3,2,4,3,2,2,2,2,2,3,4,2,3,5,4,4,5,4,4,1,1,1,0,0,0,0,0,2,3,3,2,4,1,2,5,2,1,1,1,3,3,2,3,3,11,11,NA,NA
+AK Alaska,22,Male,Some college,10,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,1,1,1,5,5,5,5,5,5,1,1,1,1,1,1,1,1,10,10,9,yes
+MS Mississippi,26,Female,4 year degree,10,80000,1,2,2,1,2,3,2,2,3,1,2,1,2,2,2,1,2,1,0,0,0,1,0,0,0,0,4,5,4,5,4,4,5,5,4,1,2,1,1,5,2,1,2,10,10,10,yes
+VA Virginia,30,Female,4 year degree,0,4,2,4,2,1,1,1,1,1,1,4,4,2,5,5,5,4,4,5,1,1,1,0,0,0,0,1,4,2,2,2,5,1,1,5,1,1,1,1,1,1,2,2,2,11,11,NA,NA
+NJ New Jersey,28,Female,2 year degree,4,4,4,2,2,4,3,3,3,3,3,3,2,3,2,3,3,3,3,3,1,0,0,0,0,0,0,0,3,3,3,3,3,4,3,2,4,3,3,2,3,3,3,2,3,10,12,NA,NA
+FL Florida,26,Male,2 year degree,2,3,1,5,1,2,2,1,1,1,1,2,4,3,5,5,4,2,2,3,1,1,0,0,0,0,0,1,2,2,2,1,4,1,1,5,1,1,3,3,3,2,3,3,2,12,11,NA,NA
+NV Nevada,31,Male,2 year degree,2,2,2,5,1,2,2,2,1,1,1,2,4,3,5,5,1,4,2,4,1,1,0,0,0,0,0,1,2,3,4,1,5,1,1,5,1,3,3,2,3,2,2,2,3,11,11,NA,NA
+FL Florida,26,Female,Professional degree,0,2,2,4,3,2,2,1,1,1,1,3,2,3,5,3,4,2,1,2,1,1,1,0,0,0,0,1,4,4,1,1,5,1,1,5,1,2,2,2,4,4,2,2,2,11,11,NA,NA
+NJ New Jersey,55,Female,2 year degree,2,1,1,5,1,2,2,2,1,5,5,2,4,2,5,5,4,4,4,5,1,1,1,0,0,0,0,1,3,4,4,1,4,1,2,4,1,1,1,1,4,4,2,2,2,11,11,NA,NA
+CA California,37,Female,Some college,2,2,1,5,1,2,2,2,1,1,1,4,2,3,4,4,4,4,2,4,1,1,0,0,0,0,0,0,2,3,2,1,4,1,1,4,1,1,1,1,5,4,5,5,5,11,11,NA,NA
+CA California,39,Female,4 year degree,5,2,3,3,3,5,3,3,4,5,3,4,3,3,2,3,3,3,2,3,0,0,1,1,0,0,0,1,2,1,4,3,4,2,2,3,3,3,3,3,5,5,3,3,4,11,11,NA,NA
+VT Vermont,24,Male,4 year degree,0,3,2,5,2,5,2,2,1,1,3,4,2,4,4,5,3,4,1,2,1,1,0,0,0,0,0,1,3,5,2,2,5,1,2,5,1,1,2,1,2,2,2,2,2,12,11,NA,NA
+FL Florida,27,Female,Professional degree,2,1,2,3,3,4,3,2,2,2,2,3,3,3,4,4,3,2,2,3,1,1,1,1,1,0,0,1,2,3,2,2,4,2,2,4,2,2,1,2,2,2,3,3,3,11,11,NA,NA
+FL Florida,68,Female,4 year degree,8,3,4,2,2,4,2,2,4,3,4,3,2,1,4,3,2,2,4,4,1,0,0,0,0,0,0,0,2,4,3,1,5,5,1,5,1,2,4,2,4,3,2,4,3,10,10,10,Had a nice experience with this study
+CA California,46,Male,4 year degree,7,2,3,4,2,1,3,3,2,2,2,4,2,4,5,3,3,4,2,3,1,1,1,0,0,0,0,0,3,4,2,1,5,1,1,5,1,1,1,1,5,5,2,2,2,12,11,NA,NA
+PA Pennsylvania,34,Male,Professional degree,0,3,1,5,1,2,2,2,1,1,1,2,2,4,5,5,5,5,2,2,1,1,0,0,0,0,0,1,4,4,2,1,5,1,1,5,1,2,2,1,4,4,1,1,1,11,11,NA,NA
+CT Connecticut,24,Female,Professional degree,0,4,1,5,2,1,1,1,1,1,1,2,2,3,5,5,2,2,2,3,1,1,1,0,0,0,0,1,3,3,2,1,5,1,1,5,1,1,1,1,2,2,2,2,2,11,10,10,NA
+NY New York,26,Female,4 year degree,0,2,1,5,1,2,2,2,1,2,1,2,4,2,5,4,2,2,2,2,1,1,1,0,0,0,0,1,4,3,2,1,5,1,1,5,1,1,2,1,1,1,1,1,1,11,11,NA,Good study.
+TX Texas,30,Male,4 year degree,5,3,1,5,1,3,3,5,1,1,1,1,5,1,2,5,2,4,4,5,0,1,0,0,0,0,0,1,3,3,3,1,5,1,1,5,1,2,2,2,3,3,3,3,3,12,12,NA,Thank you
+MA Massachusetts,26,Female,Some college,0,2,1,5,1,1,1,1,1,1,1,5,1,3,5,5,5,5,4,4,1,1,1,0,0,0,1,1,4,5,2,1,5,1,1,5,1,1,1,1,3,3,2,2,2,12,11,NA,NA
+TX Texas,58,Male,4 year degree,7,5,2,3,2,3,2,2,3,2,2,3,2,3,2,2,2,2,2,2,0,0,0,0,0,0,0,1,2,2,3,3,4,3,2,4,2,2,2,3,3,2,4,3,2,10,10,10,none
+GA Georgia,32,Male,Some college,5,4,3,3,3,5,4,3,3,4,3,3,2,4,4,4,3,1,2,2,1,0,1,1,0,1,0,0,2,3,2,3,3,3,5,3,3,3,3,3,5,5,4,3,4,11,11,NA,Thank you for the survey
+CA California,27,Female,4 year degree,1,4,2,4,2,2,2,2,1,1,1,4,1,4,1,4,2,2,1,4,1,0,1,0,0,0,0,1,3,2,3,2,4,1,2,4,1,2,2,2,5,5,4,4,4,11,11,NA,NA
+FL Florida,31,Male,High school graduate,5,2,2,4,2,2,2,2,2,2,2,4,3,5,4,4,2,4,1,2,1,1,0,0,0,0,0,1,1,1,5,1,5,1,1,5,1,3,3,3,4,4,4,4,4,11,11,NA,NA
+UT Utah,34,Female,4 year degree,6,3,5,2,5,5,5,5,5,5,5,4,3,4,4,3,2,4,2,3,0,0,1,0,1,0,0,0,3,2,4,3,3,2,3,3,2,4,4,4,4,4,3,3,4,11,11,NA,Thanks
+NY New York,50,Male,Some college,5,2,2,4,2,2,2,2,2,2,2,1,5,1,3,3,3,5,2,5,1,1,1,0,0,0,0,1,4,4,4,1,5,1,1,5,1,3,2,3,3,3,1,1,1,11,11,NA,NA
+MD Maryland,31,Male,2 year degree,0,2,2,4,2,2,2,2,1,1,1,2,2,4,5,5,1,2,2,2,1,1,1,0,0,0,0,1,2,1,1,3,4,1,1,4,2,3,3,3,5,5,5,5,5,11,11,NA,NA
+CA California,30,Male,Some college,2,5,1,5,1,1,1,1,1,1,1,2,2,2,4,4,3,3,4,4,0,1,0,0,0,0,0,1,2,2,2,1,5,1,1,5,1,3,3,3,3,3,2,2,2,11,11,NA,NA
+NY New York,28,Female,4 year degree,5,3,1,5,1,2,2,2,1,1,1,2,4,2,5,5,3,2,2,4,1,1,1,0,0,0,1,1,5,4,4,1,5,1,1,5,1,2,1,2,1,1,1,1,1,10,10,10,NA
+TX Texas,50,Male,4 year degree,7,4,2,2,4,3,2,1,1,2,2,1,2,1,1,2,2,1,2,1,1,0,0,0,1,0,1,1,4,4,4,3,5,5,1,4,4,2,2,2,2,2,1,2,2,10,10,5,good
+IL Illinois,51,Female,4 year degree,7,4,3,4,3,1,3,3,2,2,2,1,4,2,5,5,1,5,4,4,0,1,1,0,0,0,0,1,4,1,4,1,5,1,1,5,1,2,2,2,5,5,3,3,4,11,11,NA,NA
+TN Tennessee,41,Male,High school graduate,8,4,1,5,1,1,1,1,1,1,1,1,2,4,1,5,2,2,1,4,1,0,1,0,0,0,0,1,4,5,1,1,5,1,1,5,1,2,2,2,5,5,1,1,1,11,11,NA,NA
+FL Florida,33186,Male,High school graduate,3,4,2,2,4,2,4,5,2,5,1,5,4,1,5,2,3,5,2,1,0,0,1,0,0,0,0,0,1,1,4,1,3,3,5,1,4,2,4,3,1,4,1,2,4,11,11,NA,NA
+AL Alabama,42,Female,4 year degree,6,2,2,4,2,4,4,4,2,4,4,4,2,4,4,4,2,4,4,4,0,1,1,1,0,1,0,1,3,1,4,1,4,1,1,5,2,1,1,1,5,5,4,4,4,11,11,NA,NA
+FL Florida,34,Male,High school graduate,3,1,1,3,2,3,2,2,1,1,1,5,1,4,1,1,2,5,3,4,1,1,1,0,0,0,1,1,4,3,2,1,5,1,1,5,1,2,1,2,3,4,1,1,1,11,11,NA,Thanks for survey.
+IL Illinois,41,Male,High school graduate,5,3,2,3,2,5,2,2,3,3,3,1,1,4,3,3,3,2,2,4,1,1,1,0,0,0,0,1,3,1,3,1,5,1,1,5,1,1,1,1,3,3,1,1,1,12,12,NA,NA
+IL Illinois,35,Male,Professional degree,9,2,2,4,2,2,1,2,1,2,2,2,4,3,4,4,4,5,4,4,1,1,1,0,0,0,0,1,2,2,3,2,5,1,2,4,1,2,2,2,3,3,2,2,1,11,11,NA,NA
+NE Nebraska,30,Male,4 year degree,1,1,1,5,1,2,2,2,1,1,1,1,1,1,1,1,1,4,4,5,1,1,0,0,0,0,0,1,5,3,3,2,4,2,2,4,2,1,1,1,2,1,1,1,1,11,11,NA,Thank you!
+CA California,32,Female,Some college,2,2,1,5,2,2,2,2,2,1,2,4,2,3,5,5,5,4,1,2,1,1,1,0,0,0,0,1,3,5,5,1,5,1,1,5,1,2,1,1,5,5,3,2,3,11,11,NA,NA
+MI Michigan,38,Female,Some college,9,4,5,1,5,5,5,5,5,5,5,3,1,5,3,3,1,1,1,1,0,0,0,1,0,0,0,0,1,1,5,5,1,3,5,3,3,5,5,5,5,5,5,5,5,11,11,NA,NA
+TX Texas,76,Male,4 year degree,8,3,2,5,2,2,2,2,2,2,2,1,5,1,5,5,1,5,4,5,1,1,0,0,0,0,0,1,3,3,3,1,5,1,1,5,1,2,2,2,3,3,2,2,2,12,11,NA,NA
+IL Illinois,35,Male,2 year degree,1,1,2,4,2,1,2,3,1,1,1,4,2,2,5,5,5,2,2,4,0,1,0,0,0,0,0,1,2,3,2,1,4,1,1,5,1,2,2,2,2,2,3,3,3,12,12,NA,Thanks
+CA California,42,Female,2 year degree,5,3,1,5,1,4,4,4,1,1,1,4,2,4,5,5,4,2,2,2,0,1,1,0,0,0,0,1,1,3,3,1,5,1,1,5,1,1,4,1,3,3,2,2,2,11,11,NA,"Some points not addressed: greenwashing with these type products (mfr practices, etc). Also, some products, such as solar panels and wind turbines are not cost effective for many in uncertain economic times- these technologies should be more affordable! Also, industry plays the most important factor in climate change."
+TX Texas,25,Female,Less than high school,5,2,4,3,3,3,3,3,3,3,4,4,1,5,3,3,3,2,1,2,0,0,0,0,0,0,0,1,2,1,5,1,5,1,1,5,1,2,2,2,3,3,4,4,4,11,11,NA,NA
+NC North Carolina,27,Female,4 year degree,1,2,2,5,2,3,1,1,1,1,2,3,2,4,5,5,3,2,3,3,0,1,1,0,1,0,0,1,3,4,3,1,4,1,2,4,1,2,2,1,3,3,2,2,2,11,11,NA,NA
+NM New Mexico,34,Female,4 year degree,1,4,2,4,2,2,2,2,2,2,3,2,4,2,3,4,4,5,5,5,1,1,1,0,0,0,0,1,3,5,5,1,5,1,1,5,1,2,2,2,3,3,2,2,2,11,11,NA,NA
+FL Florida,43,Male,Some college,0,2,1,5,1,4,1,2,1,1,1,5,2,5,5,5,3,2,1,5,1,0,1,0,0,1,0,1,3,1,5,3,5,1,1,5,1,1,1,1,3,3,3,3,3,11,11,NA,NA
+AR Arkansas,34,Male,4 year degree,1,2,1,4,1,4,2,2,1,1,1,4,1,4,5,5,3,3,2,3,1,1,1,0,0,0,0,1,4,2,4,1,5,1,1,5,1,1,1,1,5,5,3,4,4,11,11,NA,NA
+AR Arkansas,40,Female,Some college,1,2,1,5,1,1,1,1,1,1,1,3,2,4,5,5,5,4,2,5,1,1,1,0,0,0,0,1,3,3,2,1,5,1,1,5,1,1,1,1,2,2,2,2,3,11,11,NA,NA
+NY New York,32,Male,Some college,1,2,1,5,1,1,1,1,1,1,1,5,1,5,5,5,5,2,2,2,1,1,1,0,0,0,0,1,2,5,2,1,5,1,1,5,1,1,1,1,5,5,5,5,5,11,11,NA,NA
+CA California,29,Female,4 year degree,8,4,3,2,2,3,2,4,2,3,3,4,2,2,3,3,2,3,3,3,0,0,0,0,0,0,1,0,3,4,2,5,4,3,4,3,3,2,4,3,2,3,4,3,3,10,10,10,none
+ME Maine,31,Male,4 year degree,4,2,2,3,4,5,2,2,2,2,3,2,4,2,4,4,1,1,2,2,1,1,0,0,0,0,0,1,2,3,4,2,4,2,2,4,2,1,1,1,4,4,2,2,2,10,11,NA,NA
+NV Nevada,25,Male,4 year degree,8,1,4,3,3,4,5,3,1,1,1,3,2,4,1,3,4,4,2,2,1,0,1,0,0,0,0,0,2,2,2,3,3,3,2,4,3,4,3,2,3,3,4,4,4,11,11,NA,NA
+NC North Carolina,31,Male,Some college,8,1,2,4,2,1,4,2,2,1,2,2,1,5,1,5,1,2,2,1,1,1,1,1,0,0,0,1,2,2,4,4,3,2,1,5,2,1,1,2,5,2,4,4,5,11,11,NA,thanks!
+MA Massachusetts,31,Male,Professional degree,2,2,1,4,1,2,2,2,4,4,2,3,3,3,4,4,2,1,1,3,1,1,0,0,0,0,0,1,2,3,2,2,2,2,2,4,1,3,2,3,3,3,2,1,1,11,11,NA,NA
+IL Illinois,31,Male,Some college,3,3,4,2,4,5,5,2,2,2,4,4,2,4,4,4,4,3,2,2,0,1,1,0,0,0,0,1,3,2,2,2,4,2,2,4,2,3,3,3,4,4,3,3,3,11,11,NA,NA
+PA Pennsylvania,39,Female,4 year degree,1,2,4,2,4,4,3,3,3,2,4,5,4,4,2,3,4,4,2,3,1,1,0,0,0,0,0,1,4,3,3,2,3,2,2,4,2,2,1,2,5,5,2,2,2,11,11,NA,I rent and don't see myself purchasing a home in the near future so I have no control over using majorly green energy. I would have an interest in using small removable solar panels or something similar
+MO Missouri,19,Female,Some college,0,2,1,5,1,2,2,3,1,1,1,3,2,2,5,4,2,4,3,4,1,1,1,0,0,0,0,1,3,3,2,1,5,1,1,5,1,1,2,1,4,4,2,2,3,11,11,NA,NA
+AZ Arizona,32,Female,4 year degree,6,4,3,3,3,2,2,2,3,3,3,3,3,4,3,3,3,3,2,2,1,0,1,0,0,0,0,0,2,2,3,2,4,2,2,4,2,3,3,3,5,5,4,4,4,11,11,NA,NA
+MT Montana,27,Male,Some college,0,1,3,3,3,1,1,1,1,1,3,2,2,4,5,5,4,2,2,2,1,1,1,0,1,0,1,1,4,4,2,2,4,2,2,4,2,1,1,1,4,4,2,2,2,11,11,NA,NA
+FL Florida,20,Female,Some college,1,4,2,4,2,2,2,2,1,2,2,2,3,3,2,3,4,3,2,4,1,1,0,0,0,0,0,1,3,3,3,2,4,2,2,4,2,2,2,2,2,2,2,2,2,11,11,NA,NA
+TX Texas,30,Male,4 year degree,9,4,1,1,1,1,2,2,1,1,2,2,1,2,2,2,1,2,1,1,1,1,0,0,1,0,0,0,5,4,4,1,5,4,2,5,1,1,1,1,1,1,1,1,3,10,10,10,good one.
+PA Pennsylvania,26,Male,4 year degree,2,3,5,1,4,3,4,5,4,3,2,3,5,2,1,3,2,1,2,1,0,0,0,1,0,1,0,0,1,1,4,1,3,1,1,4,2,2,3,2,4,5,5,4,4,11,11,NA,NA
+KY Kentucky,24,Male,4 year degree,2,1,1,5,1,5,2,2,1,1,1,1,2,4,5,5,5,2,2,4,1,1,1,0,0,0,0,1,4,5,1,1,5,1,1,5,1,1,1,1,2,2,1,1,2,12,12,NA,NA
+IL Illinois,27,Male,4 year degree,8,4,2,1,3,1,2,3,4,2,3,1,3,2,4,2,2,4,2,2,0,0,1,1,0,1,0,1,2,2,3,2,3,2,1,4,2,2,1,2,1,2,3,2,2,10,11,NA,NA
+TN Tennessee,25,Male,4 year degree,6,4,2,5,3,4,4,1,4,3,4,2,1,4,2,1,1,2,2,2,0,1,0,0,0,0,1,0,4,2,5,4,5,4,5,3,3,5,5,1,3,3,2,4,4,10,11,NA,this is study is very useful for me
+MI Michigan,55,Female,4 year degree,7,1,2,4,2,2,1,1,2,2,3,4,2,4,4,4,1,2,1,2,1,1,1,0,0,0,0,1,3,2,3,2,3,2,2,4,2,2,2,3,2,3,4,4,3,11,11,NA,"I would love to go green, but just like with e-cars, I cannot justify the initial costs.  I have done the math, and I would not recoop the finances over my projected lifetime."
+MO Missouri,47,Female,4 year degree,8,4,4,2,4,3,2,2,4,3,4,3,3,3,3,3,2,3,4,4,1,1,0,0,0,0,0,1,3,3,3,1,5,1,3,4,1,2,2,2,5,5,3,3,3,11,11,NA,NA
+TX Texas,30,Female,Some college,6,1,1,5,1,1,1,1,1,1,1,3,2,3,1,1,2,2,2,2,1,1,1,0,0,0,0,1,5,2,2,1,5,1,1,5,1,1,1,1,2,2,1,1,1,11,11,NA,NA
+VA Virginia,33,Male,4 year degree,0,3,2,4,2,5,4,4,1,1,1,5,1,5,5,5,2,1,1,1,0,0,0,0,0,0,0,1,3,1,4,3,4,2,2,5,2,2,3,2,4,2,4,3,4,12,11,NA,NA
+MN Minnesota,44,Male,4 year degree,5,4,2,3,2,4,4,3,3,4,4,1,4,2,4,3,2,4,1,4,1,0,0,0,0,0,0,1,3,2,4,2,4,1,3,3,2,3,3,3,3,3,3,3,3,11,11,NA,NA
+ID Idaho,35,Male,Some college,5,1,3,3,3,5,5,5,1,1,1,4,5,3,2,1,3,1,2,1,0,0,0,1,0,1,0,1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,1,1,1,11,10,10,"No further relevant comment, at this time."
+OH Ohio,30,Male,2 year degree,2,2,1,5,1,2,2,2,1,1,1,5,1,4,5,5,4,4,2,2,1,1,0,0,0,0,0,1,3,4,2,1,5,1,1,5,1,1,1,1,4,4,2,2,2,11,11,NA,"I would have difficulty switching to green energy simply because I'm in a rental situation, and don't foresee owning a home for a while. Also, I'd have to think long and hard about parting with an extra $18 a month, as money is already tight, but I'd want to make that positive change for the greater good."
+NY New York,31,Male,4 year degree,6,5,2,4,2,4,4,2,1,2,2,1,3,3,4,4,1,4,3,3,0,1,0,1,0,0,0,1,2,3,3,3,4,1,2,5,1,2,3,2,5,5,2,2,2,11,11,NA,NA
+NV Nevada,63,Female,2 year degree,10,2,5,1,5,5,5,5,5,5,5,4,2,4,5,5,5,2,2,2,1,1,0,0,0,0,0,1,2,2,3,3,3,3,3,3,3,3,3,3,5,5,5,5,5,11,11,NA,NA
+NC North Carolina,25,Male,High school graduate,5,4,3,4,3,3,3,3,4,3,2,4,2,4,4,4,4,3,1,3,0,0,1,1,0,1,0,1,1,1,5,2,2,2,2,3,2,3,3,3,5,5,4,4,4,11,11,NA,NA
+MI Michigan,29,Female,Some college,10,4,4,2,4,4,4,3,4,3,4,2,4,2,2,2,2,2,2,2,1,1,1,0,0,0,0,1,2,2,4,2,3,2,2,5,1,3,4,3,4,4,3,3,4,11,11,NA,none
+VA Virginia,31,Male,4 year degree,6,1,1,5,1,2,2,2,1,1,1,1,5,1,5,5,2,3,4,4,1,1,0,0,0,0,0,1,4,4,3,1,5,1,1,5,1,1,1,1,2,2,2,2,2,11,11,NA,NA
+TN Tennessee,23,Female,4 year degree,0,3,1,5,1,1,1,1,1,1,1,4,4,1,5,5,3,2,1,4,0,1,0,0,0,0,0,1,4,5,2,1,5,1,2,4,2,1,1,1,2,4,1,1,1,12,11,NA,NA
+CT Connecticut,30,Male,2 year degree,6,2,5,2,5,4,4,4,4,4,5,4,2,2,3,3,2,4,4,4,0,1,1,0,1,0,0,0,3,2,4,1,5,1,1,5,1,1,1,1,3,3,2,2,2,11,11,NA,NA
+MD Maryland,49,Female,4 year degree,7,4,2,5,3,5,4,2,2,2,4,3,2,4,5,3,2,3,2,2,1,1,1,0,0,0,0,1,3,2,3,2,3,2,2,5,2,3,3,3,3,3,3,3,3,12,11,NA,NA
+TX Texas,27,Female,Professional degree,5,1,1,5,1,4,3,2,1,1,2,4,3,3,5,5,3,3,2,3,1,1,1,0,0,0,0,1,4,3,3,2,4,2,2,4,2,1,1,1,2,2,2,2,3,11,11,NA,NA
+IN Indiana,22,Female,4 year degree,2,2,1,5,2,2,3,2,1,2,2,3,3,3,5,4,4,4,3,4,1,1,1,0,0,0,0,1,4,4,2,1,5,1,1,5,1,1,2,1,3,3,3,3,3,12,12,NA,NA
+FL Florida,37,Male,Some college,1,2,1,5,1,1,1,1,1,1,1,1,1,4,5,5,4,2,2,4,1,1,1,0,0,0,1,1,3,5,1,1,5,1,1,5,1,3,1,1,4,4,1,1,1,10,11,NA,Thank you for the survey!  Everyone should go as green as they can!
+NC North Carolina,26,Female,2 year degree,5,3,3,2,4,4,2,2,2,2,4,2,3,3,4,3,2,2,2,3,1,1,1,0,0,0,1,1,3,3,1,2,4,2,2,4,2,2,2,2,2,2,3,3,3,12,11,NA,NA
+SD South Dakota,28,Male,High school graduate,0,2,1,5,1,4,3,2,1,1,1,3,2,4,5,5,1,2,4,2,1,1,0,0,0,0,0,1,4,4,2,2,4,1,2,4,2,1,1,1,3,4,3,3,2,12,11,NA,NA
+VA Virginia,46,Female,2 year degree,6,3,2,4,2,2,1,1,2,2,3,4,2,4,4,5,2,4,3,3,1,1,1,0,0,0,0,1,4,5,1,1,4,1,1,5,2,1,1,1,5,5,3,4,4,11,11,NA,Thank you.
+MI Michigan,50,Female,Professional degree,0,2,1,5,1,5,2,2,1,1,1,2,2,4,5,5,1,2,1,2,1,1,1,0,0,0,0,1,4,5,5,1,5,1,1,5,1,1,1,1,2,2,2,2,2,10,11,NA,NA
+FL Florida,28,Female,Less than high school,6,20,1,1,1,2,1,1,1,2,1,1,1,2,4,3,1,4,1,1,0,0,0,1,0,0,0,0,1,1,1,4,5,5,4,5,4,1,1,1,1,2,1,1,2,10,10,9,COMPUYTER
+IL Illinois,22,Male,Some college,5,4,2,5,1,2,2,1,2,3,2,4,2,2,2,2,4,4,1,4,1,1,1,0,0,0,1,1,4,3,2,2,4,1,2,5,1,1,1,1,4,1,2,1,1,11,11,NA,I hope you find that a lot of people support green energy. Please do your best to help inform people on a large scale of the consequences of climate change. Thank you for the opportunity to take this great survey.
+FL Florida,49,Male,Professional degree,10,3,5,1,5,5,5,5,5,5,5,5,1,5,3,3,3,5,1,1,0,0,1,1,0,0,0,0,1,1,5,5,2,4,5,2,4,3,3,3,5,5,5,5,5,11,11,NA,NA
+FL Florida,44,Female,2 year degree,1,1,1,5,1,1,1,1,1,1,1,2,4,2,5,5,5,4,1,4,1,1,1,0,0,0,1,1,5,3,3,1,5,1,1,5,1,1,1,1,1,1,2,2,2,11,11,NA,NA
+NY New York,23,Female,Some college,7,3,4,4,4,2,4,2,4,4,3,2,2,2,3,2,2,5,2,2,1,0,0,0,0,0,0,0,2,2,2,2,4,2,2,4,2,1,1,1,2,2,1,1,2,10,10,10,its very good
+FL Florida,35,Male,Some college,0,1,1,5,1,1,1,1,1,1,1,1,5,1,5,5,5,5,5,5,1,1,1,0,0,0,0,1,5,5,1,1,5,1,1,5,1,1,1,1,1,1,1,1,1,11,11,NA,ty
+IL Illinois,34,Male,4 year degree,6,2,2,5,2,1,1,1,2,2,2,4,1,5,5,5,5,5,2,5,1,1,0,0,0,0,0,1,4,2,4,1,5,1,1,5,1,1,1,1,3,3,2,2,2,10,11,NA,NA
+PA Pennsylvania,43,Female,2 year degree,0,2,1,5,1,1,1,1,1,1,1,3,2,3,5,5,2,5,4,4,0,1,1,0,0,0,0,1,3,3,2,1,5,1,1,5,1,1,1,1,2,2,2,2,2,11,11,NA,NA
+VA Virginia,28,Female,4 year degree,3,2,2,4,1,2,1,5,1,2,2,3,4,3,4,2,2,4,2,4,1,1,1,0,0,0,0,1,3,4,1,1,5,1,1,5,1,2,2,2,3,3,2,2,2,11,11,NA,NA
+FL Florida,54,Female,2 year degree,1,1,1,5,1,1,1,1,1,1,1,2,4,2,5,5,5,5,4,5,1,1,1,0,0,0,0,1,5,5,1,1,5,1,1,5,1,1,1,1,1,1,1,1,1,11,11,NA,NA
+NJ New Jersey,26,Male,4 year degree,2,2,2,4,3,4,2,2,2,2,2,4,3,3,4,4,3,4,2,3,1,1,1,0,0,0,0,1,3,3,2,2,4,1,3,4,2,2,3,2,4,4,3,3,3,11,11,NA,Good survey!!
+TX Texas,31,Male,Some college,2,5,3,4,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,3,1,1,1,0,0,0,0,1,4,4,3,2,5,2,2,5,2,1,1,1,2,2,2,2,2,10,10,10,NA
+IL Illinois,30,Female,4 year degree,6,5,4,2,4,4,4,4,3,3,4,5,1,4,4,4,2,2,2,2,1,0,1,0,0,0,0,1,2,3,2,3,3,3,2,4,2,2,2,2,4,3,4,4,4,11,11,NA,NA
+FL Florida,35,Female,Professional degree,3,4,2,3,3,3,2,2,1,2,2,3,4,2,4,4,4,4,3,4,1,0,1,0,0,0,0,1,4,4,3,1,5,1,1,5,1,3,1,3,3,2,2,1,1,10,10,10,No
+TX Texas,30,Male,4 year degree,6,2,2,2,3,1,2,3,2,2,3,2,2,2,2,2,1,2,3,1,0,0,1,0,0,0,1,1,2,4,3,4,5,3,5,3,3,3,2,2,2,2,2,2,2,10,10,10,very well
+MO Missouri,23,Male,2 year degree,3,3,1,5,4,2,1,1,1,1,1,4,3,5,3,5,2,2,1,4,1,1,1,0,0,0,0,1,5,4,2,1,5,2,1,4,1,1,1,1,1,2,2,2,2,11,11,NA,NA
+GA Georgia,35,Female,High school graduate,8,3,1,5,2,1,1,2,1,1,2,1,4,2,4,5,1,5,4,4,1,1,1,0,0,0,0,1,4,3,4,1,5,1,1,5,1,1,1,2,4,2,1,1,1,10,10,10,NA
+PA Pennsylvania,26,Male,High school graduate,6,5,3,3,3,4,2,2,3,4,4,2,2,5,2,2,3,2,1,4,1,1,0,0,0,1,0,0,4,1,2,3,4,1,3,4,4,3,3,3,4,4,4,4,4,11,11,NA,NA
+NC North Carolina,27,Female,4 year degree,3,4,2,4,3,3,3,2,1,1,1,4,2,3,2,4,3,5,4,5,1,1,0,0,0,0,0,1,4,1,2,3,3,2,4,4,2,2,3,2,3,4,3,3,2,12,12,NA,NA
+ME Maine,42,Female,4 year degree,2,3,1,5,1,1,1,1,1,1,1,3,1,5,5,5,5,4,1,4,0,0,0,0,0,0,0,1,4,3,3,1,5,1,1,5,1,3,3,3,3,3,2,2,2,11,11,NA,NA
+TX Texas,41,Male,High school graduate,5,3,1,1,1,2,3,3,1,1,1,2,4,2,1,4,3,2,2,2,1,1,1,0,0,1,0,1,1,3,3,2,3,2,2,4,2,3,2,2,5,5,3,3,3,11,11,NA,NA
+MO Missouri,28,Male,Some college,0,5,1,5,1,4,2,2,1,1,1,2,2,2,5,5,3,4,4,5,1,1,1,0,0,0,0,1,4,5,1,1,5,1,1,5,1,1,1,1,4,4,1,1,1,11,11,NA,NA
+IL Illinois,38,Male,4 year degree,2,5,4,3,4,4,3,2,2,2,2,4,1,5,3,4,3,1,1,1,1,0,1,0,0,0,0,0,3,2,5,2,3,1,3,5,1,2,2,2,4,4,2,3,3,12,11,NA,"some of these questions could use better wording. 'leave your electric company as is,' for example was confusing, and you may get inaccurate answers because some people read 'leave your electric company...' and answer based on that."
+PA Pennsylvania,25,Male,4 year degree,4,2,2,4,2,5,2,2,1,1,2,4,4,2,5,5,4,4,4,5,0,1,0,0,0,0,0,1,3,2,2,2,4,2,2,4,1,3,3,3,3,3,2,2,3,11,11,NA,"Green power could and should be equally priced compared to fossil fuel powered electricity. If that were the case, it would get widespread acceptance."
+TX Texas,27,Male,Professional degree,10,4,1,1,2,2,2,1,1,1,2,1,2,2,2,2,1,2,1,1,1,0,0,1,0,0,0,1,4,5,4,2,3,2,1,2,1,2,1,2,2,1,1,2,1,10,10,5,Improve our knowledge
+NV Nevada,56,Male,4 year degree,9,3,3,2,3,3,4,3,5,4,4,1,2,4,3,3,3,3,4,2,1,0,0,0,0,0,0,1,2,1,1,3,4,3,2,4,2,2,2,2,3,3,2,2,2,10,10,10,NA
+NJ New Jersey,29,Female,4 year degree,8,3,1,4,4,1,4,3,1,1,4,1,5,1,5,5,2,5,5,2,1,1,1,0,0,0,1,1,2,2,5,1,5,1,1,5,1,1,1,1,5,5,2,1,2,11,11,NA,NA
+NC North Carolina,19,Female,Some college,1,4,3,4,4,2,1,1,2,1,2,3,2,4,2,3,4,4,2,2,1,1,1,0,0,0,0,1,1,3,2,2,5,1,3,4,2,1,2,2,4,3,5,4,4,12,12,NA,NA
+CA California,29,Male,Professional degree,10,2,1,2,1,1,2,1,1,1,2,1,1,2,2,1,5,1,1,2,0,0,0,0,0,0,0,1,3,2,2,1,5,1,1,5,1,1,2,1,1,1,1,1,1,10,10,7,good
+NM New Mexico,30,Male,2 year degree,1,2,1,2,1,4,2,2,1,1,1,4,2,4,4,5,5,4,2,3,0,0,0,1,0,0,1,0,2,4,4,2,4,2,2,5,1,1,1,2,4,1,1,2,1,11,11,NA,fun survey and interesting!:)
+NJ New Jersey,34,Male,Professional degree,6,2,1,5,1,2,1,1,1,1,1,1,4,1,5,5,3,2,1,4,1,1,1,0,0,0,0,1,4,5,2,2,5,1,1,4,1,1,1,1,1,1,1,1,1,11,10,5,NA
+NY New York,24,Male,4 year degree,8,4,1,2,4,4,2,1,2,2,1,3,2,1,3,1,2,1,3,2,0,0,0,0,0,0,0,1,2,2,3,5,4,1,3,2,3,3,1,2,3,2,1,3,2,10,10,7,great
+IN Indiana,29,Male,Professional degree,2,1,1,5,1,2,2,2,1,1,1,2,3,2,5,5,3,3,2,4,0,0,1,0,0,0,0,1,2,3,2,2,5,1,2,4,2,1,1,1,2,2,2,1,1,11,11,NA,NA
+GA Georgia,39,Female,Some college,7,3,2,3,3,5,5,5,3,3,3,5,1,5,3,3,3,3,1,1,0,0,0,1,0,1,0,0,2,1,4,3,3,3,2,3,3,2,2,1,5,5,5,4,4,11,11,NA,"climate change is a reality, it will happen regardless of ""green"" energy or not.  Manufacture and impact of ""green"" energy is expensive, and uses non-renewable resources. There is no such thing as a free ride."
+CA California,27,Male,High school graduate,1,5,2,5,4,1,1,1,1,1,1,4,1,5,5,5,4,3,1,3,1,1,1,0,0,0,0,1,3,3,3,1,5,1,1,5,1,1,1,1,1,1,2,2,2,12,11,NA,NA
+TX Texas,30,Male,Professional degree,8,3,2,1,1,3,2,2,2,2,1,1,2,1,2,2,1,2,3,3,0,0,0,0,0,0,0,1,5,4,2,3,4,2,2,3,2,1,2,2,2,2,2,3,2,11,11,NA,GOOD AND USEFUL STUDY
+NY New York,29,Male,4 year degree,10,4,1,2,1,1,1,1,2,2,2,2,1,2,1,1,2,1,1,1,1,0,1,0,0,0,0,1,2,4,4,1,4,2,2,4,2,2,2,1,1,1,2,1,1,10,10,5,NA
+TX Texas,27,Male,4 year degree,8,4,4,2,2,2,2,2,4,2,3,2,3,2,2,2,3,4,2,3,0,1,0,0,0,0,0,1,4,3,4,2,4,3,2,4,2,2,2,2,2,2,2,1,2,10,11,NA,nice
+NY New York,34,Female,4 year degree,0,2,1,5,1,1,1,1,1,1,1,4,2,4,5,5,1,2,2,2,0,1,0,1,1,0,0,1,1,2,5,2,4,1,1,5,2,4,4,2,5,5,5,5,5,11,11,NA,NA
+TX Texas,27,Male,Professional degree,9,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0,0,1,3,4,5,4,5,5,5,5,4,1,1,1,1,1,1,1,1,10,10,10,very nice
+MD Maryland,32,Female,4 year degree,3,3,1,5,3,1,1,1,1,1,1,1,5,1,5,5,5,5,4,5,1,1,1,0,0,0,0,1,2,4,1,1,5,1,1,5,1,1,1,1,1,1,1,1,1,10,10,10,thank you
+CA California,25,Female,4 year degree,9,3,1,1,3,3,2,2,3,1,2,1,2,1,1,2,2,1,1,2,1,1,0,0,0,0,0,0,3,3,3,2,4,2,2,5,1,2,2,2,2,1,1,1,2,10,10,10,it was good
+SD South Dakota,35,Male,4 year degree,4,1,1,5,1,2,2,2,1,1,1,2,5,2,5,4,2,4,2,2,0,0,0,0,0,0,0,1,4,4,2,1,4,1,2,5,1,2,2,2,2,2,1,1,1,11,11,NA,NA
+OH Ohio,19,Male,Some college,6,5,2,4,2,4,2,4,1,1,2,4,2,5,2,4,2,2,2,5,1,1,0,0,0,0,0,1,2,4,3,1,5,1,1,5,1,1,1,2,3,4,2,2,1,11,11,NA,I think the use of green energy is very important and plan to use it in my household one day.
+WI Wisconsin,21,Female,Professional degree,0,1,2,4,2,4,2,2,1,1,1,5,1,4,5,5,1,5,4,4,0,1,1,0,1,0,0,1,2,2,1,2,5,1,1,5,1,2,2,2,2,2,2,2,2,11,11,NA,NA
+TX Texas,37,Female,4 year degree,6,5,3,4,3,2,2,2,2,2,2,2,4,4,2,4,2,2,1,2,1,1,1,0,0,0,0,1,2,3,2,2,4,2,2,4,2,3,3,3,5,5,3,2,3,11,11,NA,NA
+FL Florida,33,Male,Some college,8,3,5,1,5,5,5,5,1,1,1,2,2,5,4,4,4,2,1,1,0,1,1,0,0,0,0,0,3,1,5,3,3,3,3,3,3,3,3,3,5,5,5,5,5,11,11,NA,NA
+MI Michigan,24,Male,4 year degree,5,1,1,5,2,1,1,1,1,1,1,1,4,2,5,5,5,4,3,5,1,1,1,0,0,0,0,1,5,5,1,1,5,1,1,5,1,1,1,1,2,2,1,1,1,11,10,10,Great study.
+AZ Arizona,47,Male,4 year degree,10,1,2,4,3,5,4,4,3,3,3,4,2,4,3,3,2,1,1,2,0,0,0,1,1,1,0,0,2,1,1,4,2,3,4,3,3,1,1,2,3,3,4,4,4,11,11,NA,NA
+TX Texas,29,Male,4 year degree,10,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,0,1,1,5,5,4,1,5,5,1,5,1,1,2,1,1,1,1,1,1,10,10,7,it's good useful survey.
+CA California,30,Male,Professional degree,9,3,1,5,4,3,1,2,4,1,1,2,4,1,1,1,5,4,2,1,1,1,1,0,0,0,0,1,4,3,3,2,4,1,2,5,1,2,1,1,1,1,1,1,2,10,10,10,this survey is very interesting and exciting
+CT Connecticut,36,Male,Doctorate,0,2,1,4,1,1,1,1,1,1,2,2,2,2,5,5,5,5,3,4,1,1,1,0,0,0,0,1,4,4,2,1,5,1,1,5,1,1,1,1,5,5,1,1,1,11,11,NA,NA
+AL Alabama,28,Male,4 year degree,6,2,3,3,3,3,2,2,4,2,3,2,3,3,1,3,4,4,2,4,1,1,1,0,0,0,0,1,4,4,2,1,4,2,2,4,2,2,2,2,4,4,2,2,2,12,11,NA,none
+NJ New Jersey,42,Female,Some college,6,3,3,4,2,4,3,3,1,1,1,3,2,4,5,5,1,4,2,2,1,1,1,0,0,0,0,1,2,3,2,1,3,1,3,4,1,3,2,2,4,4,2,2,1,12,12,NA,NA
+MS Mississippi,29,Female,High school graduate,7,3,3,4,4,1,1,2,4,4,4,2,1,2,2,1,2,3,4,4,0,0,0,1,0,0,0,0,2,4,5,5,3,4,2,4,5,2,2,2,3,3,2,2,3,10,10,10,good
+LA Louisiana,24,Male,4 year degree,5,2,1,5,1,3,2,2,1,1,1,3,4,3,5,5,1,2,1,4,1,0,1,1,0,0,0,1,3,2,4,1,4,2,1,4,1,1,1,1,4,4,4,4,4,11,11,NA,I live in south Louisiana so I am definitely at risk from climate change! There aren't many green forms of energy here as compared to others. Solar would be great because the sun is always out and it is flat here but it is still expensive. The survey itself was nice. It was straight forward.
+CA California,28,Male,Professional degree,9,25000,2,2,1,2,1,1,2,5,5,2,2,2,1,1,1,2,1,4,0,1,0,0,0,0,0,0,3,3,3,4,4,4,4,4,4,2,4,2,1,2,5,2,3,10,10,10,no
+NC North Carolina,21,Female,Some college,2,3,1,5,2,2,2,2,2,2,4,1,3,1,5,2,5,3,2,3,1,1,1,0,0,0,0,1,3,3,4,1,4,1,3,4,1,1,1,1,2,1,1,1,2,12,12,NA,n/a
+CT Connecticut,38,Male,4 year degree,5,1,3,2,4,5,4,4,3,3,4,3,4,2,3,3,2,2,1,4,0,0,1,0,0,0,0,0,2,2,4,3,3,3,2,3,3,3,3,3,4,4,4,4,3,10,11,NA,"Hello, Australia. Internet speed aside, you guys really have the best country in the world."
+NV Nevada,23,Male,Some college,1,3,2,5,1,1,2,2,2,2,1,4,2,4,2,2,4,2,2,2,1,1,1,0,0,0,0,1,3,3,2,3,4,2,3,4,1,2,4,1,5,5,4,4,5,11,11,NA,NA
+IL Illinois,49,Female,4 year degree,5,2,4,2,4,4,4,4,3,5,4,1,5,1,4,3,3,5,5,5,1,1,1,0,0,0,0,0,5,1,5,1,5,1,1,5,1,1,1,1,5,5,1,1,1,11,11,NA,NA
+TN Tennessee,37,Male,Professional degree,0,5,4,4,4,3,3,4,4,4,4,2,5,3,2,3,3,5,3,4,0,0,0,0,0,0,0,1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,11,11,NA,nice survey
+TX Texas,28,Male,4 year degree,7,3,3,1,2,1,2,3,2,2,1,2,2,1,2,1,3,2,1,1,1,0,0,0,0,0,0,0,2,3,2,3,4,4,4,3,3,2,2,1,2,1,1,1,2,10,10,10,GOOD
+WA Washington,34,Male,4 year degree,7,5,3,4,2,1,1,2,5,1,2,1,2,1,1,4,3,2,4,5,0,0,0,0,0,0,0,1,2,4,3,2,3,2,1,5,1,1,1,3,1,2,1,2,1,11,10,5,very useful survey .
+MO Missouri,42,Female,2 year degree,7,7,4,2,4,3,4,3,4,4,4,5,3,4,3,3,3,3,3,3,0,1,1,0,0,0,0,1,4,1,5,3,3,3,3,3,3,1,1,2,5,5,3,3,3,12,11,NA,NA
+LA Louisiana,32,Male,4 year degree,5,1,1,5,1,1,1,1,1,1,1,3,3,2,5,5,3,5,5,5,1,1,0,0,0,0,1,1,5,4,4,1,5,1,1,5,1,2,2,3,3,1,2,2,2,11,11,NA,NA
+NV Nevada,50,Male,4 year degree,5,3,2,4,3,3,3,2,3,2,2,3,4,2,5,4,4,1,4,3,1,1,1,0,1,0,1,1,5,4,1,1,4,2,1,5,1,1,1,1,2,1,1,1,1,10,10,10,Interesting! Have a nice day!
+CA California,45,Male,4 year degree,7,4,2,3,2,2,2,2,2,2,1,2,3,2,3,2,2,2,2,2,1,0,0,1,0,0,0,1,2,4,4,4,4,2,2,4,2,1,1,1,2,2,2,2,2,10,10,5,good
+CA California,38,Male,4 year degree,0,3,4,4,4,2,1,2,2,2,2,2,4,2,2,2,4,4,4,4,1,1,0,0,0,0,0,1,5,5,5,1,5,1,1,5,1,2,2,2,2,2,2,2,2,11,11,NA,NA
+CA California,32,Male,Some college,3,2,2,4,2,3,3,3,3,2,2,2,2,4,4,4,4,2,1,2,1,0,1,0,0,0,0,1,3,2,4,2,4,2,2,4,2,2,3,2,4,4,3,4,3,11,11,NA,NA
+CA California,25,Male,4 year degree,8,1,5,2,5,5,5,5,5,5,5,4,2,4,3,3,1,5,3,5,1,1,1,0,0,0,0,1,4,1,5,2,4,2,2,4,2,2,3,3,4,4,3,3,3,11,11,NA,NA
+WV West Virginia,45,Female,Some college,0,2,3,3,3,3,3,3,2,2,2,3,2,3,4,4,4,2,4,2,1,0,0,0,0,0,0,1,3,3,3,3,3,3,3,3,2,3,3,3,4,3,2,2,2,11,11,NA,NA
+CA California,40,Female,Some college,9,3,2,4,2,2,2,2,3,3,2,5,1,4,4,5,4,3,2,2,1,1,1,0,0,0,0,1,3,1,4,2,4,2,3,5,1,3,3,3,4,5,4,4,5,11,11,NA,NA
+CA California,36,Male,Some college,0,0,4,2,4,2,2,2,1,1,5,3,2,4,5,5,3,2,4,1,1,1,1,0,0,0,0,1,3,1,2,1,5,1,1,5,1,2,2,2,5,5,5,5,5,10,11,NA,NA
+GA Georgia,30,Female,4 year degree,8,4,3,2,4,2,3,2,3,2,2,2,2,3,3,2,3,3,2,3,1,1,0,0,0,0,1,1,2,2,3,2,3,4,2,4,2,2,2,3,3,2,2,3,2,10,10,10,IT'S VERY INTERESTING AND VERY NICE EXPERIENCE.
+SC South Carolina,31,Female,4 year degree,3,1,2,4,2,2,2,2,2,1,2,4,2,4,5,5,3,3,2,4,1,1,0,0,0,0,0,1,2,2,3,1,4,2,3,5,2,2,2,2,4,4,2,3,4,11,11,NA,NA
+WA Washington,49,Female,Professional degree,1,1,1,5,1,1,2,1,1,1,1,2,4,2,5,5,4,2,2,3,1,1,1,0,0,0,0,1,3,2,2,1,5,1,1,5,1,1,1,1,2,1,1,1,1,10,11,NA,"We have our electric provided by a hydroelectric dam, so are very lucky. Over the last 50 years, our local climate/ecology has changed noticeably due to climate change. We plan to build on to the family home (to care for parents) and very much hope to be able to implement some solar -- but have concerns with current legislation making it increasingly financially difficult."
+AL Alabama,25,Female,2 year degree,5,3,4,2,5,1,1,2,4,4,5,1,5,2,1,2,1,4,5,5,1,1,1,0,0,0,1,1,4,4,1,1,5,1,1,5,1,2,1,1,3,3,1,1,1,10,10,5,NA
+AK Alaska,27,Male,4 year degree,8,4,1,1,1,2,3,2,1,1,1,4,4,2,3,2,2,5,1,1,1,0,1,0,0,0,1,0,2,4,3,2,5,1,4,5,1,1,1,1,2,1,2,1,1,10,10,5,"good gives more ideas
+"
+TX Texas,35,Male,4 year degree,8,4,2,2,2,2,2,2,2,1,3,2,2,2,2,1,3,3,2,1,1,1,1,0,0,0,0,1,3,4,4,2,4,2,2,4,2,1,1,2,2,2,2,2,2,10,10,5,GOOD
+TX Texas,27,Male,4 year degree,9,4,1,NA,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,2,2,3,5,5,5,5,5,5,1,1,1,1,1,1,1,1,10,10,5,GOOD
+TX Texas,24,Male,4 year degree,6,4,2,3,3,2,3,2,3,3,3,2,3,3,3,2,3,3,3,3,0,0,1,0,0,0,0,0,3,3,4,3,2,3,3,2,2,3,3,2,3,3,3,3,3,12,12,NA,this survey is good
+NC North Carolina,52,Female,Professional degree,2,1,3,4,3,3,2,2,2,3,3,2,4,3,3,3,4,4,2,3,0,1,0,0,0,0,0,1,3,3,3,2,4,2,3,4,2,2,2,2,4,4,3,3,3,11,11,NA,NA
+CA California,53,Male,4 year degree,2,4,2,1,2,2,2,1,1,2,2,2,2,2,2,1,2,1,2,2,0,0,0,1,0,1,0,1,4,3,2,2,5,4,2,4,2,1,2,2,2,1,1,1,2,10,10,10,good
+TX Texas,30,Female,High school graduate,5,7,1,5,1,3,4,2,1,1,1,1,5,1,3,4,3,2,2,5,1,1,1,0,0,1,0,1,5,2,4,1,5,1,1,5,1,1,1,1,4,4,2,2,3,12,11,NA,NA
+TX Texas,27,Male,High school graduate,8,3,2,1,1,2,2,2,4,4,4,4,4,4,1,2,4,2,1,1,0,0,1,0,0,0,0,0,2,4,5,3,4,3,3,5,4,4,2,2,1,1,2,1,2,10,10,9,good
+NY New York,36,Female,4 year degree,5,2,1,4,1,4,3,2,1,2,3,2,2,4,4,5,4,1,2,2,1,1,1,0,0,0,1,1,3,4,2,1,4,2,2,4,2,1,1,2,2,3,2,2,2,10,11,NA,NA
+MA Massachusetts,49,Female,4 year degree,2,4,1,5,2,3,4,2,1,1,1,2,2,4,5,5,2,3,1,2,0,1,0,0,0,0,0,0,3,2,4,2,5,1,2,5,1,2,3,3,3,3,3,3,3,11,11,NA,NA
+WA Washington,25,Male,2 year degree,7,4,2,1,3,2,2,1,2,2,1,1,4,2,3,1,2,3,4,3,1,0,1,0,0,0,1,1,2,3,4,1,5,1,2,5,1,3,1,2,2,2,1,1,1,10,10,10,good
+OR Oregon,43,Female,2 year degree,2,1,2,4,2,1,2,1,1,1,2,4,4,2,5,5,2,4,2,5,1,1,0,0,0,0,0,1,4,4,4,1,5,1,1,5,1,1,1,1,2,2,2,2,2,11,11,NA,"Just to clarify - people like myself who rent don't have a say whether or not to use ""green power"" for the home itself. However, I do use energy saving appliances, light bulbs, etc., within my home, always unplug appliances not in use, etc."
+IL Illinois,30,Male,Professional degree,1,3,4,1,5,1,1,1,4,4,5,1,5,1,1,1,1,5,5,5,0,0,1,0,0,0,0,0,4,4,2,1,5,1,1,5,1,1,1,1,1,1,1,5,5,10,10,7,nice survey
+CA California,33,Male,4 year degree,1,4,1,2,2,2,2,1,1,2,1,1,2,2,2,2,1,1,1,2,0,1,1,0,0,1,0,0,2,2,2,1,5,5,1,5,1,1,2,2,2,2,2,1,1,10,10,10,good study
+TX Texas,27,Male,High school graduate,8,3,1,3,2,2,3,1,2,2,4,2,2,2,2,1,1,3,2,1,0,0,1,0,0,0,0,0,2,5,4,3,4,5,4,4,3,1,1,2,2,2,2,2,2,10,11,NA,good
+KY Kentucky,23,Female,2 year degree,6,3,2,4,2,2,2,2,3,2,4,2,4,3,3,4,4,4,3,4,1,1,1,0,0,0,1,1,4,4,1,1,5,1,1,5,1,1,1,1,2,3,2,2,2,10,11,NA,I really enjoyed this survey.
+GA Georgia,63,Female,4 year degree,9,1,5,1,5,5,5,5,4,5,5,4,2,5,3,3,3,2,1,2,0,0,0,1,0,1,0,0,2,1,5,4,3,3,4,3,4,3,3,3,5,5,5,5,5,11,11,NA,NA
+CA California,19,Female,Some college,1,2,2,5,2,2,1,2,1,1,1,2,4,2,5,5,3,4,2,3,1,1,1,0,0,0,0,1,3,4,2,1,5,1,1,5,1,1,1,1,2,2,1,1,1,12,12,NA,NA
+TX Texas,30,Female,4 year degree,2,4,2,2,2,1,1,1,2,2,2,2,3,2,3,2,2,3,2,2,1,0,0,0,0,0,0,0,3,4,3,2,4,2,4,4,2,1,1,1,1,1,1,1,1,10,10,7,no comments
+AK Alaska,42,Female,Professional degree,3,4,1,5,1,2,1,1,1,1,1,4,2,4,1,3,4,4,3,4,1,1,1,0,0,0,0,1,3,4,2,1,5,1,1,5,1,1,1,2,4,4,1,1,2,10,11,NA,NA
+AZ Arizona,27,Male,4 year degree,6,4,1,5,1,1,1,1,1,1,1,1,5,3,5,5,5,3,3,5,1,1,1,0,0,0,0,1,3,3,3,1,5,1,1,5,1,1,1,1,2,2,1,1,1,11,11,NA,NA
+NY New York,25,Male,4 year degree,9,5,2,4,3,3,4,3,3,2,3,2,3,3,3,2,4,3,4,1,0,0,0,1,0,0,0,1,3,3,3,2,4,4,2,3,4,2,2,2,2,3,2,1,3,10,10,10,"Click the Design Survey tab. ... Below the answer options, click Add an ""Other"" Answer Option for Comments. ... By default, the label will say ""Other (please specify)"". ... When you add an ""Other"" textbox to a Multiple Choice or Dropdown question, the ... If you choose the option to Use Weights on a Matrix question, you will see"
+TX Texas,29,Male,Some college,4,5,2,3,2,4,1,4,1,2,2,2,4,3,4,4,5,2,5,2,1,1,0,0,0,0,1,1,2,2,3,1,5,1,2,5,1,1,1,1,5,5,1,1,1,11,11,NA,"I realize the focus of the survey is household green energy, but I strongly believe there are a lot of other contributing factors to climate change, such as automobiles, and airplanes.
+
+I also wish there was questions in the survey about respondents opinions on the different types of green energy (such as solor, hydroelectric, biomass, etc)"
+TX Texas,85,Female,Professional degree,10,4,1,1,2,2,1,2,2,2,2,1,2,2,2,2,2,2,2,1,1,0,0,0,0,0,0,0,3,3,3,4,3,4,5,5,3,2,1,2,2,2,2,3,3,10,10,10,NA
+OH Ohio,41,Male,Some college,3,1,2,4,2,2,2,2,2,2,2,2,4,3,2,2,3,3,1,3,1,1,1,0,0,0,0,1,3,3,3,1,4,2,2,5,1,3,2,3,5,4,2,2,3,10,11,NA,NA
+NY New York,43,Male,High school graduate,1,1,2,4,2,3,3,2,2,2,3,4,2,3,4,3,4,3,3,4,1,1,1,0,0,0,0,1,2,1,4,2,4,2,2,4,2,2,2,2,4,4,3,3,4,12,12,NA,NA
+AZ Arizona,22,Male,Some college,5,2,1,5,1,1,3,1,1,1,1,1,5,1,5,5,1,3,3,5,0,1,0,0,0,0,0,0,3,3,1,1,5,1,1,5,1,1,1,1,1,1,2,2,2,11,11,NA,NA
+GA Georgia,25,Male,4 year degree,2,5,3,2,2,2,2,3,3,2,2,2,4,2,1,2,2,2,2,2,0,0,1,0,0,0,0,1,3,4,2,1,4,2,2,4,1,2,2,1,2,2,1,2,2,10,10,5,good study
+NY New York,35,Female,4 year degree,0,2,2,4,3,4,4,4,3,2,2,3,2,4,4,3,1,2,2,2,1,1,1,0,0,0,0,1,2,1,5,1,5,1,3,5,1,3,1,1,5,5,4,4,4,11,11,NA,I thought this was an interesting study. I am always confused as to why things that are good for people cost more money. Healthy food costs more and it seems green energy might as well. I think an incentive for people to change their habits would include a decrease in the amount of money spent to adapt a new lifestyle such as eating healthy and/or being more environmentally friendly.
+HI Hawaii,36,Male,4 year degree,7,2,1,5,1,4,1,1,1,1,1,2,2,3,5,5,4,2,3,4,1,1,0,0,0,0,0,1,2,4,4,1,5,1,1,5,1,1,1,1,4,4,1,1,1,10,12,NA,NA
+CO Colorado,30,Male,Professional degree,2,4,5,3,3,2,4,3,4,3,2,2,4,3,3,5,2,3,2,4,1,0,0,0,0,0,0,1,4,2,3,2,3,3,1,4,3,4,2,4,2,3,2,4,3,11,12,NA,nice survey
+OK Oklahoma,41,Male,2 year degree,8,1,4,2,4,4,4,3,4,4,4,5,1,4,4,4,2,4,2,4,1,0,0,0,0,0,0,1,3,3,2,3,4,2,2,4,2,2,2,2,4,4,4,4,4,11,11,NA,NA
+GA Georgia,38,Male,Some college,4,1,2,4,2,4,2,2,1,1,2,4,2,4,5,5,2,2,2,3,1,1,0,0,0,1,0,1,3,2,4,1,4,1,1,5,1,1,1,1,4,4,3,3,2,11,11,NA,NA
+TX Texas,29,Male,Some college,8,6,1,1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1,0,0,0,1,0,0,0,0,1,2,4,3,3,2,5,4,4,1,1,1,1,1,1,3,2,10,10,9,good
+NC North Carolina,26,Female,Professional degree,1,3,1,4,2,2,1,2,2,2,1,1,4,2,4,4,2,5,2,4,1,1,1,0,0,0,0,1,4,4,3,2,4,2,1,4,2,1,1,1,1,2,2,1,1,10,10,10,NA
+CA California,31,Male,Professional degree,1,5,1,5,1,1,1,1,1,1,1,1,5,1,5,1,2,5,2,2,1,0,1,0,0,0,0,1,5,4,4,2,5,1,1,5,1,1,1,2,1,1,1,1,2,11,12,NA,"No Feedback 
+"
+MN Minnesota,30,Female,Some college,2,2,1,5,1,3,3,3,1,1,1,3,4,2,5,5,2,3,2,4,1,1,1,0,0,0,0,1,4,3,2,1,5,1,1,5,1,2,3,2,3,3,2,2,2,11,11,NA,n/a
+VA Virginia,39,Female,Some college,5,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,4,2,0,1,1,0,0,0,0,1,2,3,3,3,3,3,2,3,3,2,2,2,3,3,3,3,3,11,12,NA,Thank you and have a wonderful day
+NY New York,56,Male,Professional degree,8,2,4,2,4,4,4,4,4,4,4,4,2,4,2,2,2,4,2,2,1,0,0,0,0,0,0,1,2,2,5,2,4,2,2,4,2,3,3,3,4,4,3,3,3,12,11,NA,NA
+FL Florida,32,Male,Professional degree,8,3,1,4,2,4,3,4,3,3,2,2,2,4,4,4,1,2,3,2,0,1,1,0,0,0,1,1,2,1,1,1,3,1,1,5,1,1,1,1,1,1,1,1,2,11,11,NA,NA
+WA Washington,27,Male,High school graduate,0,3,1,5,1,2,2,1,1,1,1,2,3,3,5,5,1,5,5,3,1,1,1,0,0,0,0,1,3,3,3,1,5,5,5,5,5,1,1,1,2,3,5,5,4,11,11,NA,No comments.
+KY Kentucky,41,Male,Some college,9,6,5,2,4,3,3,2,4,4,4,2,2,4,3,4,1,4,2,2,0,0,1,0,0,0,0,0,1,2,2,3,2,3,3,3,3,3,3,3,4,4,5,5,5,11,11,NA,NA
+NJ New Jersey,33,Female,Professional degree,8,3,4,2,4,4,4,4,4,4,4,2,2,5,2,4,4,2,1,2,1,0,0,1,0,1,0,0,2,1,5,4,2,2,4,3,2,2,3,2,5,5,4,4,4,11,11,NA,NA
+IL Illinois,30,Male,High school graduate,5,4,1,5,2,5,4,4,1,3,1,3,1,3,3,5,1,3,2,4,1,1,0,0,0,0,0,1,5,5,3,1,5,1,1,5,1,1,1,1,2,2,1,3,1,11,11,NA,NA
+MA Massachusetts,34,Female,4 year degree,7,4,3,3,2,2,2,2,2,2,3,1,5,1,4,5,3,5,3,5,1,1,1,0,0,0,1,1,4,3,4,1,5,1,1,5,1,1,1,1,2,2,1,1,1,10,10,7,none
+TX Texas,25,Male,4 year degree,7,5,1,1,1,1,2,2,3,2,3,2,1,2,3,2,1,2,2,1,0,0,0,0,0,1,0,0,2,3,2,2,4,4,3,3,2,2,2,2,2,2,1,2,2,10,10,9,NOTING
+NY New York,27,Male,Professional degree,7,2,2,5,3,4,3,2,3,2,5,4,2,3,2,4,3,4,3,3,1,0,0,0,0,0,0,0,5,2,3,4,5,3,2,4,3,2,2,3,2,3,3,2,1,10,10,7,nothing
+NY New York,33,Female,Professional degree,3,1,2,4,2,2,2,2,1,1,2,2,3,3,4,2,2,4,2,4,0,0,0,0,0,0,0,1,2,2,4,1,5,2,2,4,1,2,2,2,2,2,2,2,2,11,11,NA,NA
+VA Virginia,38,Female,Professional degree,5,3,2,5,1,1,1,1,1,2,1,5,2,5,5,4,3,3,2,2,1,1,1,0,0,0,0,1,3,1,1,1,5,1,1,5,1,1,1,1,3,3,4,4,3,11,11,NA,"I'd like to share that cost, access, and overall support for set up (e.g. how to get started, or the utility company isn't a provider) are a significant constraints to using green energy."
+GA Georgia,44,Male,4 year degree,5,3,2,2,2,2,2,1,2,1,2,4,3,2,5,4,2,2,4,3,1,1,1,0,0,0,0,1,2,3,3,1,5,1,1,5,1,3,1,1,2,2,2,2,3,11,11,NA,NA
+MI Michigan,22,Female,4 year degree,3,1,2,4,2,2,2,2,3,2,2,2,3,4,2,2,3,3,1,2,0,1,0,0,0,1,0,0,2,2,2,2,4,2,3,4,2,3,2,2,4,3,3,3,3,11,11,NA,NA
+TX Texas,73,Male,Professional degree,10,4,2,4,4,3,3,2,3,1,2,3,1,2,1,2,3,3,2,3,1,1,1,0,0,0,0,1,3,2,3,1,5,5,1,5,1,3,1,2,1,3,2,3,2,10,10,7,"good, nice"
+TX Texas,35,Male,4 year degree,5,4,4,2,1,4,3,2,3,2,2,2,3,4,2,4,3,1,3,3,1,0,1,0,0,0,0,1,2,4,2,2,5,4,3,5,1,2,3,3,4,2,3,3,2,10,10,5,no comments
+TX Texas,27,Male,4 year degree,2,1,3,3,4,2,2,2,2,2,2,2,3,4,4,5,3,3,4,2,0,1,0,0,0,0,0,1,3,3,4,3,4,3,2,4,2,2,2,2,4,3,4,4,4,11,11,NA,NA
+CA California,27,Male,4 year degree,7,5,3,4,2,2,3,3,3,2,2,3,3,3,3,3,2,3,3,2,0,1,0,0,0,0,0,0,3,3,3,3,2,3,4,3,3,3,3,3,3,3,3,2,3,11,10,10,NOTHING
+NY New York,51,Female,Some college,9,3,3,4,2,3,2,2,3,3,2,2,2,4,2,3,4,4,2,2,1,1,0,0,0,0,0,1,2,3,2,1,4,2,1,5,2,3,2,2,4,4,4,4,4,11,11,NA,NA
+MI Michigan,20,Male,Some college,9,6,3,2,4,4,4,4,4,4,4,4,2,3,3,3,2,3,2,4,1,0,0,1,1,0,0,0,1,1,5,3,2,2,4,3,3,4,4,3,5,5,4,3,4,11,11,NA,NA
+NJ New Jersey,31,Male,4 year degree,5,1,2,4,2,2,2,2,2,2,2,2,4,2,4,3,2,3,2,4,1,1,0,0,0,0,0,1,3,3,2,1,5,1,1,1,1,2,2,2,2,2,2,2,2,11,11,NA,NA
+TX Texas,28,Male,4 year degree,6,4,2,3,4,2,1,2,2,2,1,1,3,1,2,1,2,3,3,3,0,1,1,0,0,0,0,1,3,4,2,1,5,1,1,5,1,1,2,2,1,2,2,1,2,10,10,10,green power is use full in my life....
+MA Massachusetts,28,Female,Some college,2,3,2,4,2,3,2,2,1,1,2,3,2,4,4,4,3,4,3,4,1,1,1,0,0,0,0,1,3,4,2,2,5,3,2,4,2,2,2,2,2,1,2,2,2,11,11,NA,NA
+NC North Carolina,23,Male,Some college,8,2,1,3,2,5,4,1,2,2,3,4,4,2,3,4,1,2,3,2,0,0,1,1,0,0,0,1,1,2,4,3,3,4,3,4,1,2,2,1,5,5,4,4,5,11,11,NA,NA
+GA Georgia,35,Female,4 year degree,7,3,1,4,2,1,2,2,1,1,3,2,5,2,2,2,4,4,2,4,1,1,1,0,0,0,0,1,2,2,3,1,4,1,2,4,2,3,2,1,2,2,1,1,2,10,10,10,NA
+GA Georgia,41,Female,4 year degree,2,4,2,5,2,4,4,4,1,1,2,3,4,3,5,5,4,3,4,4,1,1,0,0,0,0,0,1,2,4,2,1,4,2,1,4,1,1,2,1,4,4,2,2,2,10,11,NA,NA
+TX Texas,29,Male,4 year degree,3,1,2,4,2,2,3,2,2,2,2,5,1,5,4,4,2,2,4,4,1,1,1,1,1,0,0,1,3,1,4,2,4,1,2,4,1,2,2,1,4,5,2,2,2,11,11,NA,no comments
+SC South Carolina,34,Female,Professional degree,3,4,1,5,1,2,3,2,2,1,2,2,2,4,5,5,4,4,2,2,1,1,1,0,0,0,0,1,4,4,2,2,5,2,1,5,1,2,2,1,5,5,2,2,3,11,11,NA,NA
+TX Texas,38,Male,4 year degree,8,4,2,3,2,4,4,3,2,3,2,3,1,2,4,3,3,3,2,2,0,1,1,0,0,0,1,1,4,2,3,4,5,3,4,5,1,2,2,2,2,3,2,3,2,10,10,10,i like they survey
+TX Texas,25,Male,4 year degree,9,3,1,1,1,1,1,2,3,1,1,1,1,1,1,3,1,1,1,1,0,0,0,0,0,0,1,0,5,3,4,1,4,2,2,5,1,1,1,1,1,1,1,1,1,10,10,7,nice survey
+IL Illinois,28,Male,2 year degree,0,2,1,5,1,1,1,1,1,1,1,4,1,4,5,5,5,5,2,4,1,1,1,0,0,0,0,1,3,5,1,1,5,1,1,5,1,1,1,1,3,3,1,1,2,11,11,NA,NA
+WI Wisconsin,31,Male,Doctorate,1,4,1,5,1,3,1,1,1,1,2,2,3,3,5,5,3,3,3,2,1,1,1,0,1,0,0,1,4,4,4,1,5,1,1,5,1,1,1,1,2,2,1,3,2,12,11,NA,thanks
+FL Florida,50,Female,4 year degree,3,2,2,4,2,4,2,2,1,2,2,1,5,1,5,5,4,5,4,5,1,1,1,0,1,0,0,1,3,5,1,1,5,1,1,5,1,1,2,2,5,5,1,1,1,11,11,NA,Great topic!  Good format.
+GA Georgia,30,Male,Some college,4,2,2,4,2,2,2,2,2,2,2,4,2,4,4,4,2,4,3,3,0,1,1,0,0,0,0,1,3,3,2,1,4,1,2,4,2,2,2,2,4,4,3,3,3,11,10,10,There needs to be more awareness and education about this issue. I have no idea how I could implement a greener energy policy other than buying super expensive solar panels or if my provider even has the option. Interesting stuff.
+FL Florida,29,Male,Professional degree,10,3,2,2,2,4,4,4,2,2,2,2,4,2,3,4,2,3,3,3,1,1,1,0,0,0,1,1,2,1,5,1,4,2,1,5,2,1,1,1,2,2,2,2,2,12,11,NA,NA
+LA Louisiana,29,Male,4 year degree,0,2,1,1,1,1,1,1,1,1,1,2,2,2,1,2,2,1,1,1,1,0,1,0,0,0,0,1,3,5,5,3,3,2,3,3,3,1,3,1,1,2,1,2,3,11,11,NA,NA
+KY Kentucky,32,Female,4 year degree,2,5,4,3,4,4,4,4,2,2,4,4,2,4,4,4,2,2,2,2,1,1,1,0,0,1,0,1,1,1,5,3,2,2,3,4,2,3,3,3,4,4,4,4,4,11,11,NA,NA
+IN Indiana,31,Female,4 year degree,2,4,1,5,1,4,2,2,1,1,1,3,2,4,5,5,3,2,2,2,1,1,1,0,0,0,0,1,2,4,4,1,5,1,1,5,1,1,1,2,4,4,2,2,2,11,11,NA,i wish to do more to save the environment.
+MA Massachusetts,35,Female,4 year degree,8,5,2,5,1,1,1,1,1,1,1,1,5,1,4,4,3,5,5,5,1,1,1,0,0,0,0,1,4,5,5,1,5,1,1,5,1,1,1,1,2,2,1,1,1,11,11,NA,NA
+NJ New Jersey,50,Male,4 year degree,1,4,2,4,3,1,2,2,2,2,3,1,2,4,4,4,3,4,2,2,1,1,0,0,0,0,0,1,4,2,4,2,4,2,2,5,2,2,2,2,3,4,3,4,4,11,11,NA,NA
+TN Tennessee,27,Male,Professional degree,3,1,3,3,3,3,3,3,3,1,2,2,2,2,2,3,2,5,4,4,0,0,1,0,0,0,0,1,2,3,2,1,5,1,1,5,2,1,1,1,2,2,3,3,2,12,11,NA,NA
+FL Florida,36,Male,4 year degree,0,1,2,4,3,5,5,5,2,3,3,4,2,4,5,5,4,2,2,2,1,0,1,0,0,1,0,1,2,2,3,3,3,3,1,5,1,2,2,1,3,4,2,3,2,11,11,NA,NA
+TX Texas,27,Female,Professional degree,7,5,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,0,0,0,0,0,1,0,0,2,2,2,4,4,3,4,4,4,2,2,2,2,2,2,2,2,10,10,10,NICE
+AK Alaska,27,Female,4 year degree,6,4,1,2,1,1,2,2,1,1,1,4,1,2,2,1,2,1,1,1,0,0,0,0,1,0,0,0,1,4,3,4,5,5,5,3,5,1,1,1,2,2,2,2,2,10,10,9,NOTHING
+CO Colorado,28,Male,Less than high school,5,2,3,2,2,3,3,2,3,2,2,4,2,2,1,3,3,2,3,4,1,1,1,0,0,0,0,1,2,3,2,4,5,4,4,5,3,3,1,3,3,5,3,3,3,11,11,NA,NA
+NJ New Jersey,22,Male,Some college,5,5,1,5,1,4,3,2,2,1,1,4,2,4,3,4,2,3,4,1,0,1,1,0,0,0,0,1,3,1,5,2,4,2,2,4,2,3,3,3,3,3,2,2,3,12,11,NA,NA
+PA Pennsylvania,40,Female,High school graduate,9,3,1,5,1,1,1,1,1,1,1,4,4,4,5,2,2,2,2,2,1,1,0,0,0,0,0,1,4,5,5,1,4,1,1,5,1,3,3,2,4,4,2,2,2,11,11,NA,NA
+AZ Arizona,55,Female,4 year degree,6,2,1,5,1,1,1,1,1,1,1,2,2,3,5,5,1,2,2,2,1,1,1,0,0,0,0,1,4,1,1,1,5,1,1,5,1,1,1,1,3,3,1,1,1,11,11,NA,NA
+MA Massachusetts,30,Female,2 year degree,4,6,2,4,3,2,3,3,2,2,2,3,2,3,4,4,2,2,1,2,1,1,1,0,0,0,0,1,2,3,2,1,5,2,1,5,1,2,2,2,3,3,3,3,3,11,11,NA,Thank you for this study. I love doing them in general but I also feel like I learned something and want to look into green energy.
+WA Washington,69,Male,Professional degree,9,5,1,1,2,1,2,1,2,1,2,1,2,1,2,2,1,2,2,1,1,0,0,0,0,0,0,0,2,2,2,2,4,3,1,5,2,1,2,1,2,2,1,2,1,10,10,10,good
+NC North Carolina,37,Female,Professional degree,10,5,5,1,5,5,5,5,5,5,5,2,5,2,5,5,5,1,1,5,1,1,0,1,1,1,0,1,1,1,5,3,3,3,3,3,3,3,5,3,5,5,5,5,5,11,11,NA,NA
+NC North Carolina,54,Female,4 year degree,5,2,1,5,1,1,1,1,1,1,1,1,5,1,5,5,2,4,2,5,1,1,0,0,0,0,0,1,4,3,3,1,5,1,1,5,1,1,1,1,3,3,2,2,2,12,11,NA,NA
+WI Wisconsin,28,Male,High school graduate,5,1,3,2,3,3,4,4,3,2,4,4,1,5,3,2,1,1,1,1,1,0,0,0,0,0,0,0,2,1,5,4,4,3,3,3,3,2,2,2,5,5,4,4,4,12,11,NA,Thank you for the survey. Have a good day.
+CA California,28,Male,4 year degree,6,3,2,5,2,2,2,2,2,1,1,1,5,1,1,2,2,5,2,5,1,0,1,0,1,0,1,0,2,5,1,1,5,1,1,5,1,2,1,2,2,2,2,2,1,10,10,10,no comments.Survey is very intresting.
+SC South Carolina,38,Female,4 year degree,4,3,2,4,2,2,2,2,2,2,2,4,2,4,5,4,2,3,2,2,0,1,0,1,1,1,0,0,2,2,3,2,5,1,2,4,2,3,3,3,5,5,2,2,2,11,11,NA,NA
+PA Pennsylvania,30,Female,4 year degree,8,2,3,2,3,4,4,4,4,4,4,4,2,3,4,5,2,2,2,2,1,0,1,0,0,1,0,1,2,3,3,2,4,2,3,4,2,1,1,1,5,5,2,3,3,12,11,NA,NA
+PA Pennsylvania,32,Male,4 year degree,9,2,4,2,4,5,5,5,5,5,5,1,4,4,2,3,2,3,2,3,0,1,1,0,0,0,0,0,2,1,1,2,4,2,2,4,3,3,4,3,4,4,2,2,2,11,11,NA,"I intend to use green energy not because it is green, but because I am interested in self-sufficiency and have an electrical background."
+FL Florida,33,Male,High school graduate,5,6,2,4,2,3,1,1,5,5,4,2,3,3,5,5,5,4,2,3,1,1,1,0,0,0,0,1,4,4,2,1,5,1,1,5,1,1,1,1,3,3,1,2,2,12,10,10,"When it asked if any of the electricity was generated using green power sources for the home, it wasn't much but just an attic fan to help vent excess heat that operates using solar power - so it's not directly connected to my electricity, but it does save a little. I do hope to increase the amount of Green sources I can use for the household however."
+MI Michigan,46,Male,4 year degree,1,3,1,5,1,2,2,2,1,1,1,2,4,4,5,5,3,5,5,5,0,1,0,0,0,0,0,1,5,5,1,1,5,1,1,5,1,1,1,1,2,2,2,2,3,11,11,NA,NA
+IN Indiana,54,Female,4 year degree,7,1,2,4,2,3,3,3,1,1,2,3,4,2,5,5,4,3,2,3,1,1,0,0,0,0,0,1,2,1,4,2,4,1,1,5,2,1,1,1,4,4,3,3,2,12,11,NA,NA
+OR Oregon,56,Female,Doctorate,0,1,1,5,1,5,2,2,1,1,1,1,4,1,4,5,3,5,5,5,1,1,1,0,0,0,0,1,4,1,1,1,5,1,1,5,1,1,1,1,2,2,1,1,1,10,11,NA,NA
+TX Texas,32,Male,4 year degree,10,3,3,3,2,2,1,1,2,1,2,2,2,2,2,2,2,5,4,4,0,0,0,0,0,0,0,1,2,2,3,1,4,2,1,4,2,2,2,1,2,1,1,1,1,10,10,10,do no thank
+NY New York,29,Male,High school graduate,1,1,1,5,1,1,1,1,1,1,1,1,5,1,5,5,4,4,5,5,0,1,1,0,0,0,0,1,3,1,3,1,5,1,1,5,1,1,1,1,1,1,2,2,2,11,11,NA,NA
+WA Washington,20,Male,Some college,6,2,3,3,2,2,3,3,1,1,1,2,4,3,3,3,2,3,3,4,1,0,0,0,0,0,0,1,3,3,3,3,3,3,4,4,4,3,2,2,3,3,2,3,2,12,12,NA,NA
+ID Idaho,61,Female,4 year degree,8,2,5,1,5,5,5,5,5,5,5,5,1,5,5,4,1,1,1,1,1,0,1,0,0,0,0,1,1,1,5,5,1,5,5,1,5,3,3,3,5,5,5,5,5,11,11,NA,NA
+FL Florida,56,Female,4 year degree,0,1,1,4,2,2,2,1,1,1,2,3,4,3,5,5,2,3,2,4,1,1,1,0,0,0,0,1,4,2,3,2,5,1,1,5,1,1,2,1,3,3,2,2,2,12,11,NA,I very much want to use green sources of power but the main hindrance is the expense.
+OH Ohio,42,Female,4 year degree,6,4,3,2,4,2,4,2,4,4,4,3,4,3,3,4,3,2,2,2,1,0,0,0,1,0,0,0,2,3,3,3,2,3,2,2,3,3,3,3,4,4,4,4,4,11,11,NA,NA
+NY New York,25,Female,High school graduate,0,5,1,5,1,1,1,1,1,1,1,1,5,2,3,3,3,5,3,3,1,1,1,0,0,0,0,1,3,3,3,2,5,2,2,5,2,1,1,1,4,4,2,2,2,11,11,NA,NA
+IL Illinois,50,Male,4 year degree,3,3,2,4,2,2,2,2,1,2,2,3,4,3,4,4,3,2,3,3,1,1,1,0,0,0,0,1,3,2,2,2,4,2,2,4,2,1,1,1,2,2,2,2,2,12,12,NA,NA
+OH Ohio,40,Female,Some college,7,5,3,4,2,2,4,4,2,2,4,2,4,2,4,4,2,4,2,3,0,0,0,0,0,0,0,1,2,2,4,1,5,1,1,5,1,2,2,2,4,4,4,4,4,11,11,NA,NA
+OK Oklahoma,33,Female,High school graduate,8,5,1,5,5,2,1,1,1,1,1,2,2,2,5,5,2,4,4,5,1,1,1,0,0,0,0,1,3,2,2,1,5,1,1,5,1,2,2,2,2,4,2,2,2,11,11,NA,NA
+FL Florida,30,Female,4 year degree,1,2,1,5,1,5,5,5,1,1,1,5,1,5,5,5,3,3,2,2,1,1,0,0,0,0,0,1,3,2,5,2,5,1,1,5,1,1,1,1,5,5,5,5,5,11,11,NA,"I live in apartment complex and will for the foreseeable future, so I can't choose my energy provider."
+IN Indiana,34,Female,2 year degree,8,2,2,5,2,2,2,1,1,1,2,4,2,4,4,5,4,5,4,4,1,1,1,0,0,0,1,1,3,2,2,2,4,1,1,4,1,1,1,1,4,4,2,2,2,11,11,NA,NA
+NJ New Jersey,41,Male,Some college,4,2,1,5,1,2,1,1,1,1,1,1,5,1,4,5,4,5,2,2,1,1,0,0,0,0,0,1,4,3,3,1,5,1,1,5,1,1,1,1,4,4,4,4,4,11,11,NA,None
+MN Minnesota,26,Male,2 year degree,6,2,2,3,3,3,2,4,2,3,4,3,4,2,3,3,2,2,4,3,0,0,0,0,0,0,0,1,3,3,2,3,3,3,2,2,1,4,3,2,2,3,3,3,2,11,11,NA,na
+NY New York,31,Male,4 year degree,0,1,1,5,5,1,1,1,1,1,1,1,5,1,5,5,3,5,5,5,1,1,1,0,0,0,1,1,4,5,1,1,5,1,1,5,1,1,1,1,5,5,1,3,3,11,11,NA,NA
+MI Michigan,40,Female,High school graduate,6,5,2,5,1,2,2,2,1,1,1,1,5,1,4,3,4,4,5,5,0,1,1,0,0,0,0,1,5,4,4,2,5,1,1,5,1,1,1,1,2,2,1,1,1,10,11,NA,NA
+IN Indiana,55,Female,Some college,5,2,1,5,1,5,4,3,1,1,1,3,4,3,5,5,5,4,3,5,1,1,1,0,0,1,0,1,2,4,1,1,5,1,1,5,1,3,3,3,3,3,1,1,1,12,12,NA,NA
+TX Texas,38,Female,4 year degree,0,4,2,3,2,1,1,1,1,1,1,2,5,2,4,5,3,4,2,4,0,1,1,0,0,0,0,1,5,4,4,1,5,1,1,5,1,2,1,2,1,1,1,1,1,10,10,10,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+OR Oregon,21,Female,High school graduate,5,5,5,3,4,2,3,2,4,5,4,4,2,2,2,3,2,2,2,3,0,0,0,0,0,0,0,0,NA,4,4,5,4,4,5,4,5,1,3,2,3,2,3,2,2,11,11,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+FL Florida,18,Female,4 year degree,8,4,3,2,2,4,4,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,3,3,1,1,0,0,0,0,0,0,1,2,NA,NA,5,5,4,3,4,2,2,4,2,2,3,NA,NA,NA,10,10,10,NA
+TX Texas,36,Male,Some college,2,7,2,4,2,5,4,3,NA,NA,NA,5,2,4,3,3,2,2,2,2,1,0,1,0,0,0,1,0,1,1,2,3,3,2,3,3,4,2,3,2,4,1,4,4,4,12,11,NA,NA
+AZ Arizona,53,Female,Some college,9,4,4,2,4,2,2,2,3,4,3,2,3,3,4,3,1,3,1,3,1,1,0,0,0,0,0,1,2,NA,NA,2,4,2,2,4,2,1,1,1,5,5,1,2,2,11,11,NA,NA
