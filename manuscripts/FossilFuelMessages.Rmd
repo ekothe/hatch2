@@ -82,9 +82,6 @@ According to PMT, behaviour is determined by the two parallel cognitive processe
 knitr::include_graphics("Figure1.png")
 ```
 
-
-
-
 Despite calls for experimental tests of psychological theory within environmental and conservation psychology [e.g. @kidd2019; @nelson2011], few studies have sought to test causal connections between PMT constructs and intention within this domain [@kothe2019]. This is despite frequent recommendations for the use of PMT in designing pro-environmental campaigns [see @cismaru2011; @nelson2011; @scharks2016].
 
 Previous work shows that PMT-based messages can be effective in changing beliefs [@floyd2000; @milne2000]. By investigating messages that elicit change in different PMT constructs, researchers have identified messages types most effective at increasing a given behaviour [e.g. @pechmann2003convey]. However, as yet no studies have systematically investigated the impact of messages targeting different PMT constructs within any pro-environmental behaviour. 
