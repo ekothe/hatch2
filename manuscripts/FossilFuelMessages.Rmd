@@ -1,6 +1,6 @@
 ---
-title             : "Protection Motivation Theory Climate Change Denial"
-shorttitle        : "PMT - CCD"
+title             : "Increasing Intention to Reduce Fossil Fuels: A Protection Motivation Theory Based Experimental Study"
+shorttitle        : "Increasing Intention to Reduce Fossil Fuels"
 
 author: 
   - name          : "Emily J. Kothe"
@@ -12,20 +12,22 @@ author:
     affiliation   : "1"
   - name          : "Barbara A. Mullan"
     affiliation   : "2"  
+  - name          : "Anna Klas"
+    affiliation   : "1"  
 
 affiliation:
   - id            : "1"
     institution   : "Deakin University, Geelong, Australia, Misinformation Lab, School of Psychology"
   - id            : "2"
-    institution   : "Health Psychology and Behavioural Medicine Research Group, School of Psychology and Speech Pathology, Curtin University, Perth, Australia"
+    institution   : "Health Psychology and Behavioural Medicine Research Group, School of Psychology, Curtin University, Perth, Australia"
     
 author_note: |
-  Emily J. Kothe, Misinformation Lab, School of Psychology, Deakin University, Australia; Mathew Ling, Misinformation Lab, School of Psychology, Deakin University, Australia; Barbara A. Mullan, Health Psychology and Behavioural Medicine Research Group, School of Psychology and Speech Pathology, Curtin University, Perth, Australia.
+  Emily J. Kothe, Misinformation Lab, School of Psychology, Deakin University, Australia; Mathew Ling, Misinformation Lab, School of Psychology, Deakin University, Australia; Barbara A. Mullan, Health Psychology and Behavioural Medicine Research Group, School of Psychology, Curtin University, Perth, Australia; Anna Klas, Misinformation Lab, School of Psychology, Deakin University, Australia
   
   This research was supported in part by the Deakin University's Health ResAarch Capacity Building Grant ScHeme (HAtCH).  
   
 abstract: |
-  Enter abstract here. Each new line herein must be indented, like this line.
+  Reducing individual fossil fuel use is an important component of climate change mitigation, but motivating behaviour change to achieve this is difficult. This experimental study tests the impact of Protection Motivation Theory based messages on intention to reduce fossil fuel use in 3803 US adults recruited via Amazon MTurk. Only messages targeting self-efficacy and response efficacy increased intention to reduce fossil fuel use relative to control. However, however only the self-efficacy message had an impact on its target construct, highlighting the importance of manipulation checks in model testing. Given the urgency of responding to climate change, the potential for additive benefits of effective messages should be considered irrespective of their mechanism. 
   
 keywords          : "Protection Motivation Theory, Climate Change, Sustainability"
 wordcount         : "X"
@@ -40,23 +42,16 @@ lineno            : no
 mask              : no
 
 class             : "man"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_docx
 ---
 
 ```{r load_packages, include = FALSE}
 library("papaja")
 library(knitr)
-library(readr)
-library(tidyr)
 library(dplyr)
-library(broom)
-library(here)
-library(ggplot2)
-library(cowplot)
 library(psych)
-library(labelled)
-library(tableone)
 ```
+
 
 ```{r setglobal, cache = FALSE, include = TRUE}
 
@@ -65,77 +60,59 @@ opts_knit$set(root.dir = "..")
 options(knitr.kable.NA = '')
 ```
 
-```{r}
-dat <- read_rds(here("data", "dat.rds"))
+```{r results="asis"}
+dat <- readr::read_rds(here::here("data", "dat.rds"))
 
 climate <- dat %>% 
   filter(study=="Climate Change")
+
 ```
 
-Anthropogenic climate change represents an existential threat to humanity, affecting food security, water supply, the spread of infectious diseases, coastal inundation, and extreme weather events <!--- need some references for this point -->. The consumption of fossil fuels and the consequent increase in atmospheric carbon dioxide is considered the most influential factor in the changing climate <!--- need some references for this point -->. Therefore, strategies for mitigation of climate change focus on a combination of carbon sequestration and minimisation of fossil fuel use <!--- need some references for this point -->. Household energy use constitutes one third of total energy use in Europe and the United States of America [@stern2016opportunities]. In turn, the majority of global energy, included that used for household energy, is generated from fossil fuels [@council2016world]. Large scale adoption of behaviours that reduce fossil fuel consumption such as using more efficient appliances, avoiding driving, and switching to low emission energy sources such as wind or solar has the potential to lead to substantial reductions in total emissions [@dietz2009household; @wynes2017climate]. While individual-level behaviour will not be sufficent to meet global emissions targets alone, it plays an important role in the global response to climate change because the speed of uptake of individual behaviour can outpace the speed at which systematic changes such as construction of "green energy" based electricity grids and implementation of carbon pricing and trade policies can occur [@dietz2009household; @wynes2017climate].
 
-[Something about that textbook study showing these behaviours have been widely advocated]. However, individuals' engagement in behaviours to reduce usage of fossil fuels remains low <!--- need some references for this point -->. 
+
+
+
+Anthropogenic climate change represents an existential threat to humanity [@ipcc2018]. Consumption of fossil fuels is the most influential factor in the changing climate [@hook2013]. Large-scale reductions in fossil fuel consumption could lead to substantial reductions in total greenhouse emissions [@dietz2009household]. Individual change will not meet emissions targets alone, but are an important response to climate change [@dietz2009household]. Unfortunately, individual fossil fuel consumption remains high [@iea2017]. While structural barriers such as cost and feasibility influence use, investigating the psychological processes that underlie consumption may aid development of interventions to increase climate-friendly behaviours [@clayton2015]. Theories of persuasive communication may provide one useful avenue for understanding this behaviour [@cismaru2011].
  
-  
-  In 2015, fossil fuel sources produced 85.99% of global energy.  [@council2016world]
-
--- Local Behaviours
-
-@aman2013analysis
-
-
 ## Protection Motivation theory
 
-PMT was specifically developed to understand adaptive and maladaptive responses to persuasive messages17. Adaptive responses are characterised as increased performance of protective behaviours in response to persuasive messages. In contrast, maladaptive responses are those which drive continued failure to engage in protective behaviours. According to PMT, the propensity to engage adaptively with persuasive messages is determined by beliefs that people have about engaging in (or not engaging in) the desired protective behaviour and about the threatened event (i.e. contracting an infectious disease/climate change). Individual’s beliefs are categorised into six constructs:
-- Severity: perceived seriousness of the negative consequences of the threatened event
-- Susceptibility: perceived vulnerability to the negative consequences of the threatened event
-- Maladaptive response rewards: Benefits of the performance of the maladaptive behaviour
-- Response efficacy: The perceived effectiveness of the recommended preventative behaviour in averting the occurrence or negative consequences of the threatened event
-- Self-efficacy: confidence in one’s ability to successfully perform the preventative behaviour
-- Response costs: The barriers to performance of the preventative behaviour
-According to PMT, motivation to engage in the protective behaviour is determined by two parallel processes: Threat Appraisal and Coping Appraisal. Threat Appraisal is determined by beliefs about the severity, susceptibility, and rewards of maladaptive behaviour. Coping Appraisal is determined by response costs, response efficacy, and self-efficacy. Individuals are motivated to engage in protective behaviour when they believe that lack of action poses a threat to themselves (high threat appraisal) and that performing the preventative behaviour can ameliorate that threat (high coping appraisal). In contrast, maladaptive responses may occur when threat appraisal is low (i.e. when the maladaptive behaviour does not pose a sufficiently serious threat) or when threat appraisal is high and coping appraisal is low (i.e. the adverse event is threatening but the recommended behaviour is not thought to be an effective way to reduce the risk). 
+According to PMT, behaviour is determined by the two parallel cognitive processes - coping appraisal and threat appraisal [see Figure \@ref(fig:pmt); @rogers1975; @norman2015]. Coping appraisal is determined by three constructs: response efficacy (perceived effectiveness of behaviour in averting a threat); self-efficacy (perceived ability to perform the behaviour); and response costs [perceived costs and barriers associated with behaviour adoption; @norman2015]. Coping efficacy is maximised when response costs are low but response efficacy and self-efficacy are high. Threat appraisal is determined by three constructs: threat severity (perceived seriousness of the threat); susceptibility (perceived vulnerability to the threat); and maladaptive response rewards [perceived benefits of engaging in a maladaptive response such as avoidance or denial; @norman2015]. Threat appraisal is maximised when maladaptive response rewards are low but susceptibility and severity are high. Intention increases as a function of both threat and coping appraisals [@norman2015].
 
+```{r pmt, echo=FALSE, fig.cap="Protection Motivation Theory", out.width = '100%'}
+knitr::include_graphics("Figure1.png")
+```
 
-Previous studies  have found that coping and threat appraisal predict adaptive behaviours in response to climate change19, 20, 21
+Despite calls for experimental tests of psychological theory within environmental and conservation psychology [e.g. @kidd2019; @nelson2011], few studies have sought to test causal connections between PMT constructs and intention within this domain [@kothe2019]. This is despite frequent recommendations for the use of PMT in designing pro-environmental campaigns [see @cismaru2011; @nelson2011; @scharks2016].
 
-https://www-sciencedirect-com.ezproxy-f.deakin.edu.au/science/article/pii/S0301421512008506 
+Previous work shows that PMT-based messages can be effective in changing beliefs [@floyd2000; @milne2000]. By investigating messages that elicit change in different PMT constructs, researchers have identified messages types most effective at increasing a given behaviour [e.g. @pechmann2003convey]. However, as yet no studies have systematically investigated the impact of messages targeting different PMT constructs within any pro-environmental behaviour. 
 
+## The current study
 
-Meta-analysis indicates that persuasive messages that seek to manipulate PMT constructs are effective in changing corresponding beliefs25. By investigating messages that vary in the extent to which they elicit change in different PMT constructs researchers have used PMT identify the persuasive messages that are most likely to be effective at provoking adaptive responses. For example, one study found that anti-smoking mass media campaigns were most effective at motivating adolescents (n=1667) to avoid smoking when they emphasised specific severity perceptions (namely risk of social disapproval)26. Importantly, messages that sought to increase perceived severity of health risks were undermined by low perceived susceptibility26. 
-
-However, to date there are no experimental studies investigating whether the targeting of PMT constructs will increase adaptive behaviours climate change denial, and no studies that had systematically investigated the relative impact of messages targeting different PMT constructs within these domains. 
+We used short messages to systematically investigate the impact of messages that target PMT constructs on intention to reduce fossil fuel consumption. Each message targeted a single PMT construct and the impact of each construct on intention and its target construct was examined.
 
 ## Hypotheses 
-1. The primary outcome is protection motivation (defined as the intention to be vaccinated against seasonable influenza). It is hypothesised that intervention messages targeting PMT constructs will increase intention to be vaccinated relative to control.  
-2. The secondary outcomes are the PMT constructs. It is hypothesised that intervention messages targeting a given PMT construct will increase/decrease that construct relative to control. Specifically,  
-    a. Relative to control, the message targeting response cost will decrease perceived response cost 
-    b. Relative to control, the message targeting maladaptive response rewards will decrease perceived maladaptive response rewards  
-    c. Relative to control, the message targeting response efficacy will increase perceived response efficacy 
-    d. Relative to control, the message targeting severity will increase perceived severity 
-    e. Relative to control, the message targeting susceptibility will increase perceived susceptibility 
-    f. Relative to control, the message targeting self efficacy will increase  self-efficacy 
+1. The primary outcome is intention to reduce fossil fuel consumption. It is hypothesised that intervention messages will increase intention relative to control.  
+2. The secondary outcomes are the PMT constructs. It is hypothesised that intervention messages targeting a given PMT construct will affect that construct relative to control. Specifically, relative to control the: 
+    a. response cost message will decrease perceived response cost 
+    b. maladaptive response rewards message will decrease perceived maladaptive response rewards  
+    c. response efficacy message will increase perceived response efficacy 
+    d. severity message will increase perceived severity 
+    e. susceptibility message will increase perceived susceptibility 
+    f. self-efficacy message will increase self-efficacy 
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) --> This study was pre-registered using the template for pre-registration in social psychology developed by @van2016pre. The pre-registration for this project is available at: [https://osf.io/2g6bq/](https://osf.io/2g6bq/).
+This study was pre-registered using the template developed by @van2016pre [https://osf.io/2g6bq/](https://osf.io/2g6bq/).
 
 ## Participants
 
-Participants were recruited via Amazon MTurk to take part in a study on "Short study of responses to messages about scientific issues" in exchange for $1.10USD in Amazon credit.  Sample size was determined *a priori*, we aimed to recruit a minimum of 526 participants per cell in order to detect an effect of d =.2, with 80% power, and an alpha of 0.0083. To account for missingness, we oversampled each cell by 20, leading to recruitment target of 546 per condition and a total recruitment target of 3822. After removal of duplicate and incomplete submissions\footnote{Complete removal of data from participants with duplicate submissions was required in order to avoid contamination between conditions. Removal of incomplete submissions was required because submission of the completed survey indicated consent}, `r printnum(nrow(climate))` participants were included in this study. The final number of participants in each condition is shown in Table \@ref(tab:cond).
+Participants were recruited via Amazon MTurk to take part in a study entitled "Short study of responses to messages about scientific issues" in exchange for $1.10USD in Amazon credit.  Sample size was determined *a priori*, we aimed to recruit a minimum of 526 participants per cell in order to detect an effect of d =.2, with 80% power and alpha of 0.0083. To account for missingness, we oversampled each cell by 20, leading to recruitment target of 546 per condition and a total recruitment target of 3822. After removal of duplicate and incomplete submissions, `r printnum(nrow(climate))` participants were included in this study. 
 
-```{r cond, results="asis"}
-
-cond <- as.data.frame(table(climate$condition))
-
-apa_table(cond, caption = "Final N per Condition", placement = "htb", col.names=c("Condition", "N"))
-
-```
-
-Three participants reported an age value that was not plausible (i.e. below the allowed age for registration on MTurk or above 200 years). These ages were converted to missing but the responses of those participants were otherwise retained. Gender was recorded using a free-text field and then categorised manually, Four participants provided a response to this item that could not be meaningfully catergorised (in all cases these representated responses that did not appear to reflect gender identity e.g. "%" or "40"). These responses were converted to missing but the responses of those participants were otherwise retained. See Table \@ref(tab:demo) for a summary of participant characteristics. 
+Gender was manually categorised from free-text responses. Four responses could not be categorised (i.e. they did not appear to reflect gender identity: "%" or "40"). Three participants reported an age below the allowed age for registration on MTurk or above 200 years. For both gender and age, these problematic values were converted to missing but data were otherwise retained. See Table \@ref(tab:demo) for a summary of participant characteristics. 
 
 ```{r demo, results='asis', warning=FALSE}
 
 climate <- climate %>% 
-  set_variable_labels(
+  labelled::set_variable_labels(
     age = "Age in years",
     education = "Highest level of education",
     gender = "Gender",
@@ -144,7 +121,10 @@ climate <- climate %>%
     ideology_economic = "Ideology - Economic",
     ideology_social = "Ideology - Social")
 
-tab <- CreateTableOne(vars = c("age", 
+climate <- climate %>% 
+  mutate(gender = factor(gender))
+
+tab <- tableone::CreateTableOne(vars = c("age", 
                              "education",
                              "gender",
                              "household_income", 
@@ -158,26 +138,18 @@ tab <- print(tab, varLabels = T, printToggle = FALSE)
 papaja::apa_table(tab, caption="Demographic characteristics of participants", longtable = TRUE)
 ```
 
+
 ## Procedure
 
-The study was administered via the online survey platform Qualtrics. Participants who chose to take part in the study completed an online questionnaire that included all measures and the experimental manipulation.
+Participants completed an online questionnaire that included all measures and the experimental manipulation via Qualtrics.
 
-The first component of the questionnaire included measures of demographic variables (e.g. age, gender, household income). Participants were then randomly allocated (by Qualtrics) to one of the six intervention groups or control. Individuals allocated to receive an intervention message were  shown a message related instruction and then the target message.  Individuals in the control group did not receive the instruction or any message and instead proceeded directly to next part of the survey. Participants were not notified of their condition (or their allocation to a no message condition). In the third part of the questionnaire, participants completed the PMT questionnaire. The order of items within the PMT questionnaire was randomised to reduce order effects. At the conclusion of the study participants were invited to provided feedback on the survey via a free-text response box.
+The first component of the questionnaire included demographic items. Participants were then randomly allocated (by Qualtrics) to one of the six intervention groups or control. Individuals allocated to receive an intervention message were shown a message related instruction and then the target message. Individuals in the control group did not receive the instruction or message and instead proceeded directly to the next part of the survey. Participants were not notified of their condition. In the third part of the questionnaire, participants completed the PMT questionnaire. The order of items within the PMT questionnaire was randomised to reduce order effects. At the conclusion of the study participants were invited to provide feedback on the survey via a free-text response box.
 
-Data for this project was collected concurrently with data for a second project (described at [http://osf.io/87kwb](http://osf.io/87kwb)) in the following manner: 
-
-- A single study listing both both studies was created on Amazon MTurk
-- Interested participants read a Plain Language Statement that is relevant to both studies
-- Consenting participants were sent to a single Qualtrics survey that contained the materials for both projects
-- The randomisation feature within Qualtrics randomised participants to entry into either this project or the concurrent project
-- Participants in this study were shown a message about climate change and answered questions relating to their climate change beliefs
-- Participants in the concurrent project were shown a message about seasonal flu vaccination and answered questions to relating to their vaccination beliefs
-
-Data collection for the two projects were administered in this manner in order to ensure that the samples are not contaminated (i.e. do not contain the same participants) as although the projects were not intended to be analysed or reported together, their structural similarity could cause unexpected effects for participants who participated in both (e.g. by resulting in unblinding). This method of data collection and the intention to analyse and report the studies seperately was documented in the pre-registration for both studies.
+Data for this project was collected concurrently with data for a second project (described at [http://osf.io/87kwb](http://osf.io/87kwb)). Each participant took part in only one project. Although the projects were not intended to be analysed or reported together, their structural similarity could cause unexpected effects for participants who participated in both (e.g. unblinding). The intention to analyse and report the studies separately was documented in the pre-registration.
 
 ## Messages
 
-Participants were randomised to receive one of six intervention messages or to a no message control group. Each intervention message was designed to target a single PMT construct.\footnote{A set of 24 candidate messages (4 per PMT construct) were first developed by EJK and ML and reviewed by BAM. These messages were then tested in a pilot study with a convienence sample of X Australian adults. Participants in the pilot study viewed a single candidate message relating to climate change and/or fossil fuel usage and responsed to a single item measure related to the construct the measure was intended to target (e.g. a severity message and a single item measure of severity). The mean response was calculated for each candidate message, the candidate message with the largest (or smallest in the case of MRR and RC) mean value on the construct measure was chosen for use within this study.}  
+Participants were randomised to receive one of six intervention messages or to a no message control group. Each intervention message was designed to target a single PMT construct.\footnote{A set of 24 candidate messages (4 per PMT construct) were first developed by EJK and ML and reviewed by BAM. These messages were then tested in a pilot study with a convenience sample of 655 Australian adults. Participants in the pilot study viewed a single candidate message relating to climate change and/or fossil fuel usage and responded to a single item measure related to the construct the measure was intended to target (e.g. a severity message and a single item measure of severity). The mean response was calculated for each candidate message, the candidate message with the largest (or smallest in the case of maladaptive response rewards and response costs) mean value on the construct measure was chosen for use within this study.}  
 
 - "*The climate is changing. Climate change will lead to serious consequences in the United States including increased and more prolonged drought. Climate change is already contributing to water shortages around the globe.*" - Severity
 - "*The climate is changing. These changes put everyone at risk. Whether or not you realize it, climate change is already affecting your life, by making extreme weather events more frequent and increasing food prices.*" - Susceptibility
@@ -188,43 +160,61 @@ Participants were randomised to receive one of six intervention messages or to a
 
 ## Measures
 
+```{r reli}
+mrr <- select(climate, cc_mrr_1, cc_mrr_2,cc_mrr_3)
+re  <- select(climate, cc_re_1, cc_re_2,cc_re_3)
+se <- select(climate, cc_se_1, cc_se_2, cc_se_3)
+rc <- select(climate, cc_rc_1, cc_rc_2, cc_rc_3)
+sus <- select(climate, cc_sus_1, cc_sus_2, cc_sus_3)
+sev <- select(climate, cc_sev_1, cc_sev_2, cc_sev_3)
+int <- select(climate, cc_int_1, cc_int_2, cc_int_3)
+
+mrr_alpha <- alpha(mrr, keys = c(-1, -1, -1))
+re_alpha <- alpha(re, keys = c(-1, -1, -1))
+se_alpha <- alpha(se, keys = c(-1, 1, -1))
+rc_alpha <- alpha(rc, keys = c(-1, -1, -1))
+sus_alpha <- alpha(sus, keys = c(-1, 1, -1))
+sev_alpha <- alpha(sev, keys = c(-1, -1, -1))
+int_alpha <- alpha(int, keys = c(-1, -1, -1))
+```
+
 ### Demographics
 
 Participants completed a short demographic questionnaire at the beginning of the study. This included items regarding age, gender, highest level of education completed, annual household income, and political ideology. 
 
-Political ideology was measured using three ideological self-placement items. Participants were asked to indicate "When it comes to ... would you consider yourself" with reference to "politics in general", "economic issues" and "social issues". Each item was meaured on a 0-10 point scale (0 = "Very Liberal": 10 = "Very Conservative").
+Political ideology was measured using three ideological self-placement items. Participants were asked to indicate "When it comes to ... would you consider yourself" with reference to "politics in general", "economic issues" and "social issues". Each item was measured on a 0-10 point scale (0 = "Very Liberal": 10 = "Very Conservative").
 
 ### Intention
 
-Intention was measured as the mean of three items (1= Strongly Disagree, 5 = Strongly Agree) regarding the referent behaviour "reduce my use of fossil fuels from now on". Higher scores indicate greater intention to reduce use of fossil fuels. 
+Intention was measured as the mean of three items (1= Strongly Disagree, 5 = Strongly Agree) regarding the referent behaviour "reduce my use of fossil fuels from now on". Higher scores indicate greater intention to reduce fossil fuel consumption ($\alpha$ = `r int_alpha$total$std.alpha`). 
 
 ### Severity
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that the negative impact of climate change was severe. The three items were averaged to create a composite score. Higher scores indicate greater perceived severity of climate change. 
+Severity was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that the negative impact of climate change was severe. Higher scores indicate greater perceived severity of climate change ($\alpha$ = `r sev_alpha$total$std.alpha`). 
 
 ### Susceptibility
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that they are vulnerable to the negative impacts of climate change. The three items were averaged to create a composite score. Higher scores indicate greater perceived susceptibility to negative impacts of climate change. 
+Susceptibility was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that participants are vulnerable to the negative impacts of climate change. Higher scores indicate greater perceived susceptibility to negative impacts of climate change ($\alpha$ = `r sus_alpha$total$std.alpha`). 
 
 ### Maladaptive Response Rewards
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that there are benefits of doing nothing regarding climate change or to climate change occuring. The three items were averaged to create a composite score. Higher scores indicate greater perceived maladaptive response rewards.
+Maladaptive Response Rewards was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that there are benefits of doing nothing regarding climate change or to climate change occuring. Higher scores indicate greater perceived maladaptive response rewards ($\alpha$ = `r mrr_alpha$total$std.alpha`).
 
 ### Self-Efficacy
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that they would be capable of reducing their use of fossil fuels. The three items were averaged to create a composite score. Higher scores indicate greater self-efficacy.
+Self-Efficacy was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that individuals would be capable of reducing their use of fossil fuels. Higher scores indicate greater self-efficacy ($\alpha$ = `r se_alpha$total$std.alpha`).
 
 ### Response Efficacy
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that reducing their use of fossil fuels would be effective in reducing climate change. The three items were averaged to create a composite score. Higher scores indicate greater perceived response efficacy.
+Response Efficacy was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that reducing their use of fossil fuels would be effective in reducing climate change. Higher scores indicate greater perceived response efficacy ($\alpha$ = `r re_alpha$total$std.alpha`).
 
 ### Response Costs
 
-Participants indicated rated their agreement (from 1 = Strongly Disagree to 5 = Strongly Agree) with three items that indicated that there are costs (including non-financial costs) associated with reducing fossil fuels. The three items were averaged to create a composite score. Higher scores indicate greater perceived response costs.
+Response Costs was measured as the mean of three items (1 = Strongly Disagree, 5 = Strongly Agree) that indicated that there are costs (including non-financial costs) associated with reducing fossil fuels. Higher scores indicate greater perceived response costs ($\alpha$ = `r rc_alpha$total$std.alpha`).
 
 ## Data analysis
-We used `r cite_r("manuscripts/r-references.bib")` for all our analyses. All t-tests were conducted using Welsch's t-test. The alpha for the study was $\alpha$ = 0.0083.
 
+We used `r cite_r("manuscripts/r-references.bib")` for data cleaning, analyses, and presentation. All t-tests were conducted using Welsch's t-test. The alpha for the study was $\alpha$ = 0.0083.
 
 # Results
 
@@ -234,40 +224,26 @@ We used `r cite_r("manuscripts/r-references.bib")` for all our analyses. All t-t
 t_out <- t.test(cc_int ~ as.factor(condition), 
                 data = filter(climate, condition =="Control" | condition == "Severity"))
 
-sev_tidy<-tidy(t_out)
+sev_tidy<-broom::tidy(t_out)
 sev<-apa_print(t_out)
 ```
-
-```{r plotsev, warning=FALSE}
-sevplot <- ggplot(filter(climate, condition =="Control" | condition == "Severity"), aes(condition, cc_sev)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Severity Score")
-```
-
 
 ```{r susceptibility_int}
 
 t_out <- t.test(cc_int ~ as.factor(condition), 
                 data=filter(climate, condition =="Control" | condition == "Susceptibility"))
 
-sus_tidy<-tidy(t_out)
+sus_tidy<-broom::tidy(t_out)
 sus<-apa_print(t_out)
 ```
-
-```{r plotsus, warning=FALSE}
-susplot <- ggplot(filter(climate, condition =="Control" | condition == "Susceptibility"), aes(condition, cc_sus)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Susceptibility Score")
-```
-
 
 ```{r mrr_int, warning=FALSE}
 
 t_out <- t.test(cc_int ~ as.factor(condition), 
                 data = filter(climate, condition =="Control" | condition == "MRR"))
 
-mrr_tidy<-tidy(t_out)
+mrr_tidy<-broom::tidy(t_out)
 mrr<-apa_print(t_out)
-```
-
-```{r plotmrr, warning=FALSE}
-mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), aes(condition, cc_mrr)) + geom_boxplot(notch = TRUE) + theme_apa()  + labs(x = "Message", y = "MRR Score")
 ```
 
 ```{r se_int}
@@ -275,12 +251,8 @@ mrrplot <- ggplot(filter(climate, condition =="Control" | condition == "MRR"), a
 t_out <- t.test(cc_int ~ as.factor(condition),
                 data = filter(climate, condition =="Control" | condition == "Self-Efficacy"))
 
-se_tidy<-tidy(t_out)
+se_tidy<-broom::tidy(t_out)
 se<-apa_print(t_out)
-```
-
-```{r plotse, warning=FALSE}
-seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Efficacy"), aes(condition, cc_se)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Self-Efficacy Score")
 ```
 
 ```{r re_int}
@@ -288,12 +260,8 @@ seplot <- ggplot(filter(climate, condition =="Control" | condition == "Self-Effi
 t_out <- t.test(cc_int ~ as.factor(condition), 
                 data = filter(climate, condition =="Control" | condition == "Response Efficacy"))
 
-re_tidy<-tidy(t_out)
+re_tidy<-broom::tidy(t_out)
 re<-apa_print(t_out)
-```
-
-```{r plotre, warning=FALSE}
-replot <- ggplot(filter(climate, condition =="Control" | condition == "Response Efficacy"), aes(condition, cc_re)) + geom_boxplot(notch = TRUE) + theme_apa()  + labs(x = "Message", y = "Response Efficacy Score")
 ```
 
 ```{r rc_int, warning=FALSE}
@@ -301,24 +269,11 @@ replot <- ggplot(filter(climate, condition =="Control" | condition == "Response 
 t_out <- t.test(cc_int ~ as.factor(condition), 
                 filter(climate, condition =="Control" | condition == "Response Costs"))
 
-rc_tidy<-tidy(t_out)
+rc_tidy<-broom::tidy(t_out)
 rc<-apa_print(t_out)
 ```
 
-```{r plotrc, warning=FALSE}
-rcplot <- ggplot(filter(climate, condition =="Control" | condition == "Response Costs"), aes(condition, cc_rc)) + geom_boxplot(notch = TRUE) + theme_apa() + labs(x = "Message", y = "Response Costs Score")
-```
-
-A series of t-tests (see Table \@ref(tab:int)) were conducted to investigate the impact of each message on intention to reduce fossil fuel consumption relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
-
-
-```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
-ggplot(climate, aes(condition, cc_int)) + geom_boxplot(notch = TRUE) + theme_apa() + coord_flip() + labs(x = "", y = "Intention")
-```
-
-```{r fig.height=10, fig.cap="Message vs. Control by Target Construct and Message", warning=FALSE}
-plot_grid(sevplot, susplot, mrrplot, seplot, replot, rcplot, ncol=2, labels = c("A", "B", "C", "D", "E", "F"))
-```
+T-tests (see Table \@ref(tab:int)) examined the effect of each message on intention relative to control. Messages designed to increase self-efficacy (`r se$statistic`) and response efficacy (`r re$statistic`) were effective, although other messages were not (Severity: `r sev$statistic`; Susceptibility: `r sus$statistic`; MRR: `r mrr$statistic`; Response Costs: `r rc$statistic`).
 
 ```{r int, results="asis"}
 clim_sum <- climate  %>% 
@@ -364,7 +319,7 @@ int_tidy <- int_tidy  %>%
   left_join(tab3, by = "comparisons") %>% 
   select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisions", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisons", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 ```{r severity_coi}
@@ -372,7 +327,7 @@ apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fo
 test <-  filter(climate, condition =="Control" | condition == "Severity")
 t_out <- t.test(test$cc_sev ~ as.factor(test$condition))
 
-sev_tidy<-tidy(t_out)
+sev_tidy<-broom::tidy(t_out)
 
 sev<-apa_print(t_out)
 
@@ -383,7 +338,7 @@ sev<-apa_print(t_out)
 test <-  filter(climate, condition =="Control" | condition == "Susceptibility")
 t_out <- t.test(test$cc_sus ~ as.factor(test$condition))
 
-sus_tidy<-tidy(t_out)
+sus_tidy<-broom::tidy(t_out)
 
 sus<-apa_print(t_out)
 
@@ -394,7 +349,7 @@ sus<-apa_print(t_out)
 test <-  filter(climate, condition =="Control" | condition == "MRR")
 t_out <- t.test(test$cc_mrr ~ as.factor(test$condition))
 
-mrr_tidy<-tidy(t_out)
+mrr_tidy<-broom::tidy(t_out)
 
 mrr<-apa_print(t_out)
 
@@ -405,7 +360,7 @@ mrr<-apa_print(t_out)
 test <-  filter(climate, condition =="Control" | condition == "Self-Efficacy")
 t_out <- t.test(test$cc_se ~ as.factor(test$condition))
 
-se_tidy<-tidy(t_out)
+se_tidy<-broom::tidy(t_out)
 
 se<-apa_print(t_out)
 
@@ -416,7 +371,7 @@ se<-apa_print(t_out)
 test <-  filter(climate, condition =="Control" | condition == "Response Efficacy")
 t_out <- t.test(test$cc_re ~ as.factor(test$condition))
 
-re_tidy<-tidy(t_out)
+re_tidy<-broom::tidy(t_out)
 
 re<-apa_print(t_out)
 
@@ -427,7 +382,7 @@ re<-apa_print(t_out)
 test <-  filter(climate, condition =="Control" | condition == "Response Costs")
 t_out <- t.test(test$cc_rc ~ as.factor(test$condition))
 
-rc_tidy<-tidy(t_out)
+rc_tidy<-broom::tidy(t_out)
 
 rc<-apa_print(t_out)
 
@@ -437,9 +392,9 @@ rc<-apa_print(t_out)
 
 tab4 <- clim_sum %>%
   select(-one_of("int_sd", "int_n")) %>% 
-  gather(-condition, key = "stat", value = "value") %>%
-  separate(stat, into= c("construct", "stat"), sep="_") %>% 
-  spread(key = stat, value= value)
+  tidyr::gather(-condition, key = "stat", value = "value") %>%
+  tidyr::separate(stat, into= c("construct", "stat"), sep="_") %>% 
+  tidyr::spread(key = stat, value= value)
 
 tab4_ctr <-tab4 %>% 
   filter(condition=="Control") %>% 
@@ -484,21 +439,20 @@ coi_tidy <- coi_tidy %>%
   left_join(tab4, by = c("comparisons", "construct")) %>% 
   select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
 
-apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisions", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
+apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisons", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
-T-tests were also conducted to investigate the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy* message on *self-efficacy*) relative to Control. As shown in Table \@ref(tab:coi), only the Self-Efficacy message was successful in bringing about change in the the construct it was designed to target. 
+T-tests also tested the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy message* on *self-efficacy*) relative to Control. Only the Self-Efficacy message changed its target construct (see Table \@ref(tab:coi)). 
 
 ## Exploratory analyses
 
-In order to examine the potential pathway through which the Response Efficacy message leads to change in intention, an exploratory analysis was conducted to examine whether the Response Efficacy group differed from the Control group on any constructs other than response efficacy and intention. As shown in Table \@ref(tab:explor) the Response Efficacy group had significantly higher self-efficacy than the Control group and significantly lower perceieved response costs. 
-
+An exploratory analysis was conducted to examine whether the Response Efficacy group differed from the Control group on any constructs other than response efficacy and intention. As shown in Table \@ref(tab:explor) the Response Efficacy group had significantly higher self-efficacy than the Control group and significantly lower perceived response costs. 
 ```{r explor, results="asis"}
 re_summ <- clim_sum %>% 
   select(-one_of("int_sd", "int_n")) %>% 
-  gather(-condition, key = "stat", value = "value") %>%
-  separate(stat, into= c("construct", "stat"), sep="_") %>% 
-  spread(key = stat, value= value) 
+  tidyr::gather(-condition, key = "stat", value = "value") %>%
+  tidyr::separate(stat, into= c("construct", "stat"), sep="_") %>% 
+  tidyr::spread(key = stat, value= value) 
 
 re_ctr <-re_summ %>% 
   filter(condition=="Control") %>% 
@@ -525,7 +479,7 @@ t_out_mrr <- t.test(test$cc_mrr ~ as.factor(test$condition))
 t_out_se <- t.test(test$cc_se ~ as.factor(test$condition))
 t_out_rc <- t.test(test$cc_rc ~ as.factor(test$condition))
 
-re_tidy<-rbind(tidy(t_out_sev), tidy(t_out_sus), tidy(t_out_mrr), tidy(t_out_se), tidy(t_out_rc))
+re_tidy<-rbind(broom::tidy(t_out_sev), broom::tidy(t_out_sus), broom::tidy(t_out_mrr), broom::tidy(t_out_se), broom::tidy(t_out_rc))
 
 re_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "Response Costs")
 
@@ -542,8 +496,6 @@ apa_table(re_tidy,
 
 ```
 
-We conducted a mediation analysis to investigate the extent to which self-efficacy mediates the relationship between condition (Control vs. Self-Efficacy Message) and intention.
-
 ```{r}
 data <- filter(climate, condition =="Control" | condition == "Self-Efficacy")
 
@@ -553,23 +505,26 @@ data <- data %>%
     condition == "Self-Efficacy" ~ 1
   ) )
 
-mediation_se <- mediate(cc_int ~ cond_new + (cc_se), data = data, n.iter = 5000)
-
-psych::mediate.diagram(medi = mediation_se, main = "Self-Efficacy as a mediator of the Condition - Intention relationship")
+mediation_se <- mediate(cc_int ~ cond_new + (cc_se), data = data, n.iter = 5000, plot = FALSE)
 
 ```
 
-
+We tested a model where self-efficacy mediates the relationship between condition and intention. The difference in intention between those in the control and self-efficacy message conditions (c: `r paste0("$\\beta$ = ", round(mediation_se$total.reg$beta,2), ", t(", mediation_se$total.reg$df, ") = ", round(mediation_se$total.reg$t,2), ", p ", printp(as.numeric(mediation_se$total.reg$prob)))`) could be accounted for by differences in self-efficacy (condition – self efficacy: `r paste0("$\\beta$ = ", round(mediation_se$a.reg$beta,2), ", t(", mediation_se$a.reg$df, ") = ", round(mediation_se$a.reg$t,2), ", p ", printp(as.numeric(mediation_se$a.reg$p)))`; self efficacy - intention: `r paste0("$\\beta$ = ", round(mediation_se$b.reg$beta[2],2), ", t(", mediation_se$b.reg$df, ") = ", round(mediation_se$b.reg$t[2],2), ", p ", printp(as.numeric(mediation_se$b.reg$p[2])))`). After accounting for the indirect effect through self-efficacy, the relationship between condition and intention was not significant (c': `r paste0("$\\beta$ = ", round(mediation_se$cprime.reg$beta[1],2), ", t(", mediation_se$cprime.reg$df, ") = ", round(mediation_se$cprime.reg$t[1],2), ", p ", printp(as.numeric(mediation_se$cprime.reg$prob[1])))`).
 
 # Discussion
 
-Results from this study suggest intervening in Coping-appraisal may be more efficatious than attmepting to increase threat-appraisal. 
+The aim of this study was to systematically investigate the impact of messages targeting PMT constructs on intention to reduce fossil fuel consumption; it was hypothesised these messages would increase intention to reduce fossil fuel use relative to control. Messages designed to increase self-efficacy and response efficacy were effective, although other messages that targeted severity, susceptibility, maladaptive response rewards and response costs were not. Exploratory analyses suggest that the self-efficacy message may have impacted intention by influencing intention. However, the response efficacy message did not increase response efficacy and instead appeared to influence self-efficacy and response costs. While effect sizes suggest that, relative to control, the response efficacy message had a larger impact on intention than the self-efficacy message [Cohen’s d~response~ ~efficacy~: 0.24; Cohen’s d~self-efficacy~: 0.22], this difference is small and given the differences in the apparent mechanisms of action should be interpreted with caution.
 
-Coping appriasal does not necessitate a change in belief regarding the existence or severity of climate change, and therefore is an effective strategy irrespective of threat appraisal.  
-As past literature suggests economic factors Lorenzoni et al. (2007)
+One previous study found no difference between individuals exposed to self-efficacy and control messages in intention to reduce carbon footprint, however, their results suggested a failure of the self-efficacy manipulation [@greenhalgh2011]. As such, our results provide the first piece of experimental evidence of a causal relationship between self-efficacy, as conceptualised by PMT, and intention in the context of pro-environmental behaviour.
+ 
+Two studies have sought to experimentally manipulate response efficacy. In one study [@ahern2008] the response efficacy message did not change response efficacy, and while @kantola1983 found their message induced change in response efficacy, it did not lead to increased intention to conserve waterreduce water use in response to threatened water shortages. In our sample, the response efficacy group had higher average intention to reduce fossil fuel consumption than the control group, however, this was not accompanied by differences in response efficacy itself. Taken together with the previous studies [@ahern2008; @kantola1983], this suggests there is limited evidence for changes in response efficacy leading to changes in intention within the context of pro-environmental behaviour.
 
-Behaviours such as dietary change [@hallstrom2015environmental]
+Messages targeting response costs, severity, susceptibility, and maladaptive response rewards also did not lead to changes in intention or in their target constructs. This is the first study to attempt to experimentally manipulate maladaptive response rewards or response costs [@kothe2019], and previous attempts to experimentally manipulate severity and susceptibility in order to bring about changes in intention have met with limited success. While @huth2018 reported an effect of a severity manipulation on purchasing intention, @chen2016 found that individuals in their “high threat” condition actually reported lower evoked fear than their “low threat” condition in the context of an intervention that simultaneously targeted susceptibility and severity, and @kantola1983 found that a message that was successful in increasing severity had no impact on intention. As a result, the extent to which the causal relationship between threat appraisal constructs from the PMT and intentions to engage in pro-environmental behaviours is currently very limited. The design of messages that effectively alter these PMT constructs is a necessary precondition for evaluating causality and as such should be a focus of future research. 
 
+As this study demonstrates, even when messages are effective in increasing intention, it cannot be assumed to be a function of change in the target construct [c.f. @chen2016]. Manipulation checks are often not conducted or reported within the PMT pro-environmental literature [@kothe2019], or in experimental papers based on similar theoretical approaches [e.g. @hardeman2002]. These results highlight the importance of such manipulation checks to theory testing, particularly as the conceptual similarity between PMT constructs may make the creation of messages that target just one PMT construct difficult. However, this is only a problem within the context of theory development and testing, not for tests of effectiveness. Given the urgency of addressing climate change, the causal mechanisms may be of limited importance when presented with an approach to changing intentions or behaviour that appears to be effective. 
+
+## Conclusion
+Overall, the results of this study suggest that efficacy based messages can be effective at increasing intention to engage in pro-environmental behaviours. However, as the effects were only evaluated immediately post message presentation, the extent to which these effects can be maintained over time requires further examination as does the extent to which the effects result in subsequent increases in engagement in actual pro-environmental behaviours. Further, given that the effects are small and would reasonably be expected to diminish over time, it may be useful to consider whether efficacy messages could be combined to increase their impact.
 \newpage
 
 # References
@@ -583,3 +538,7 @@ r_refs(file = "manuscripts/r-references.bib")
 
 <div id = "refs"></div>
 \endgroup
+
+
+
+

@@ -42,7 +42,7 @@ lineno            : no
 mask              : no
 
 class             : "man"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_docx
 
 header-includes:
   - \raggedbottom
@@ -128,7 +128,7 @@ tab <- CreateTableOne(vars = c("age",
 
 tab <- print(tab, varLabels = T, printToggle = FALSE)
 
-papaja::apa_table(tab, caption="Demographic characteristics of participants", longtable = TRUE)
+papaja::apa_table(tab, caption="Demographic characteristics of participants")
 ```
 
 ## Material
