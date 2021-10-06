@@ -34,7 +34,7 @@ wordcount         : "X"
 
 bibliography      : ["../manuscripts/r-references.bib", "../manuscripts/refs.bib"]
 
-figsintext        : no
+figsintext        : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -317,9 +317,29 @@ int_tidy$p.value <- printp(int_tidy$p.value)
 
 int_tidy <- int_tidy  %>% 
   left_join(tab3, by = "comparisons") %>% 
-  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
+  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value, conf.low, conf.high)
 
-apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisons", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
+int_tidy<-int_tidy%>%
+  mutate(ctr_n=as.numeric(ctr_n),
+         int_n=as.numeric(int_n))
+
+int.effects<-metafor::escalc(
+    measure = 'SMD',
+    m1i = estimate1,
+    sd1i = int_sd,
+    n1i = int_n,
+    m2i = estimate2,
+    sd2i = ctr_sd,
+    n2i = ctr_n,
+    data = int_tidy
+    )
+
+int_tidy <- cbind(int_tidy,"yi"=int.effects$yi)
+
+int_tidy<-int_tidy%>%
+  select(comparisons, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value, conf.low, conf.high, yi)
+
+apa_table(int_tidy, caption = "Impact of interventions on intention to reduce fossil fuel consumption relative to control", placement = "htb", col.names=c("Comparisons", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}","95% CI Lower Bound", "95% CI Upper Bound","Hedge's g"), align="lcccccccc", landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 ```{r severity_coi}
@@ -437,9 +457,30 @@ coi_tidy$p.value <- printp(coi_tidy$p.value)
 
 coi_tidy <- coi_tidy %>% 
   left_join(tab4, by = c("comparisons", "construct")) %>% 
-  select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
+  select(comparisons, construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value,conf.low,conf.high)
 
-apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisons", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
+coi_tidy<-coi_tidy%>%
+  mutate(ctr_n=as.numeric(ctr_n),
+         int_n=as.numeric(int_n))
+
+coi.effects<-metafor::escalc(
+    measure = 'SMD',
+    m1i = estimate1,
+    sd1i = int_sd,
+    n1i = int_n,
+    m2i = estimate2,
+    sd2i = ctr_sd,
+    n2i = ctr_n,
+    data = coi_tidy
+    )
+
+coi_tidy <- cbind(coi_tidy,"yi"=coi.effects$yi)
+
+coi_tidy<-coi_tidy%>%
+  select(comparisons, construct,estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value, conf.low, conf.high, yi)
+
+
+apa_table(coi_tidy, caption = "Impact of interventions on target construct relative to control", placement = "htb", col.names = c("Comparisons", "Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n",  "\\textit{t}", "\\textit{p}","95% CI Lower Bound", "95% CI Upper Bound","Hedge's g"), align = "llcccccccc", small = TRUE, landscape = TRUE, note = "MRR = Maladaptive Response Rewards")
 ```
 
 T-tests also tested the impact of each message on the PMT construct it was designed to target (i.e. the effect of the *Self-Efficacy message* on *self-efficacy*) relative to Control. Only the Self-Efficacy message changed its target construct (see Table \@ref(tab:coi)). 
@@ -484,14 +525,33 @@ re_tidy<-rbind(broom::tidy(t_out_sev), broom::tidy(t_out_sus), broom::tidy(t_out
 re_tidy$construct <- c("Severity", "Susceptibility", "MRR", "Self-efficacy", "Response Costs")
 
 re_tidy$p.value <- printp(re_tidy$p.value)
-
 re_tidy <- re_tidy %>% 
   left_join(re_summ, by = "construct") %>% 
-  select(construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value)
+  select(construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value, conf.low, conf.high)
+
+re_tidy<-re_tidy%>%
+  mutate(ctr_n=as.numeric(ctr_n),
+         int_n=as.numeric(int_n))
+
+re_effects<-metafor::escalc(
+    measure = 'SMD',
+    m1i = estimate1,
+    sd1i = int_sd,
+    n1i = int_n,
+    m2i = estimate2,
+    sd2i = ctr_sd,
+    n2i = ctr_n,
+    data = re_tidy
+    )
+
+re_tidy <- cbind(re_tidy,"yi"=re_effects$yi)
+
+re_tidy<-re_tidy%>%
+  select(construct, estimate1, ctr_sd, ctr_n, estimate2, int_sd, int_n, statistic, p.value, conf.low, conf.high, yi)
 
 apa_table(re_tidy, 
           caption = "Exploratory analysis: impact of response efficacy message on other constructs", 
-          col.names = c("Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}"),
+          col.names = c("Construct", "Control Mean", "Control SD", "Control n", "Int. Mean", "Int. SD", "Int. n", "\\textit{t}", "\\textit{p}","95% CI Lower Bound", "95% CI Upper Bound","Hedge's g"),
           placement = "htb", align="lcccccccc", small = TRUE, note = "MRR = Maladaptive Response Rewards")
 
 ```
