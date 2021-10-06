@@ -127,7 +127,6 @@ climate <- climate %>%
 tab <- tableone::CreateTableOne(vars = c("age", 
                              "education",
                              "gender",
-                             "household_income", 
                              "ideology_general", 
                              "ideology_economic", 
                              "ideology_social"), 
